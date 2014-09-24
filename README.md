@@ -3,7 +3,9 @@ CocoonJS Plugins
 
 Ludei's plugins (also called extensions) are multiplatform Javascript APIs, that work in any of the three environments of CocoonJS: Canvas+, WebView+ and System webview.
 
-[Visit http://doc.ludei.com/3.0.0/ where you'll find detailed documentation](http://doc.ludei.com/3.0.0/) for all of the CocoonJS javascript plugins.
+Visit [http://doc.ludei.com/3.0.0/](http://doc.ludei.com/3.0.0/) where you'll find detailed documentation for all of the CocoonJS javascript plugins.
+
+The latest version of these plugins can be found inside the build/ folder.
 
 Here is a list of the most common APIs you'd be interested in:
 
