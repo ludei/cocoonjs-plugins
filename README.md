@@ -24,7 +24,9 @@ We hope you find everything you need to get going here, but if you stumble on an
 How to build this project
 --------------------
 Clone this repo and run the following command.
+
  `$ npm install`
+ 
  `$ grunt && grunt jsdoc`
 
 This command will create a folder called build/ that will contain cocoon.js and cocoon.min.js.
