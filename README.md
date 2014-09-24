@@ -1,4 +1,4 @@
-CocoonJS-Plugins
+CocoonJS Plugins
 ================
 
 Ludei's plugins (also called extensions) are multiplatform Javascript APIs, that work in any of the three environments of CocoonJS: Canvas+, WebView+ and System webview.
