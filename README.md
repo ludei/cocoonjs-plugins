@@ -5,7 +5,7 @@ Ludei's plugins (also called extensions) are multiplatform Javascript APIs, that
 
 Visit [http://doc.ludei.com/3.0.0/](http://doc.ludei.com/3.0.0/) where you'll find detailed documentation for all of the CocoonJS javascript plugins.
 
-The latest version of these plugins can be found inside the build/ folder.
+You can find the final, minified files in the **"build/"** directory.
 
 Here is a list of the most common APIs you'd be interested in:
 
