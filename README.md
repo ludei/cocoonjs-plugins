@@ -31,6 +31,8 @@ Clone this repo and run the following command.
 
 This command will create a folder called build/ that will contain cocoon.js and cocoon.min.js.
 
-How to use CocoonJS
+Useful links
 --------------------
-https://www.ludei.com/cocoonjs/how-to-use/
+How to use: https://www.ludei.com/cocoonjs/how-to-use/
+Documentation: http://doc.ludei.com/3.0.0/
+Cloud compiler: http://cloud.ludei.com
