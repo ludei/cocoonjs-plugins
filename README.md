@@ -25,14 +25,13 @@ How to build this project
 --------------------
 Clone this repo and run the following command.
 
- `$ npm install`
- 
+ `$ npm install`  
  `$ grunt && grunt jsdoc`
 
 This command will create a folder called build/ that will contain cocoon.js and cocoon.min.js.
 
 Useful links
 --------------------
-How to use: https://www.ludei.com/cocoonjs/how-to-use/
-Documentation: http://doc.ludei.com/3.0.0/
+How to use: https://www.ludei.com/cocoonjs/how-to-use/  
+Documentation: http://doc.ludei.com/3.0.0/  
 Cloud compiler: http://cloud.ludei.com
