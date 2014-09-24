@@ -19,7 +19,7 @@ Here is a list of the most common APIs you'd be interested in:
 * Touch
 * WebView
 
-We hope you find everything you need to get going here, but if you stumble on any problems with the docs or the extensions, just drop us a line at our forum (www.ludei.com) and we'll do our best to help you out.
+We hope you find everything you need to get going here, but if you stumble on any problems with the docs or the extensions, just drop us a line at our forum (support.ludei.com) and we'll do our best to help you out.
 
 How to build this project
 --------------------
