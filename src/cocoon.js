@@ -1,8 +1,8 @@
 /**
  * @fileOverview
- * Here you'll find detailed documentation for all of the CocoonJS javascript extensions. 
- * Just select the specific extension on the top to open the relevant documentation section.
- * Also, remember that the extensions' source code is provided in this open repository.
+ * Ludei's plugins are multiplatform Javascript APIs, that work in any of the three environments 
+ * of CocoonJS: accelerated canvas, webview+ and system webview.
+ * - Select the specific plugin bewlow to open the relevant documentation section.
  <ul>
     <li><a href="Cocoon.html">Cocoon</a></li>
     <li><a href="Cocoon.Ad.html">Ad</a></li>
@@ -21,10 +21,12 @@
     <li><a href="Cocoon.WebView.html">WebView</a></li>
     <li><a href="Cocoon.Widget.html">Widget</a></li>
 </ul>
- * In addition to all the previously mentioned, in the following link you'll find an <a href="http://support.ludei.com/hc/en-us/articles/201821276-Extensions-overview">overview of all the avaliable features</a> in which  each extensions support and availability are detailed.
- 
- * We hope you find everything you need to get going here, but if you stumble on any problems with the docs or the extensions, 
- * just drop us a line at our forum (www.ludei.com) and we'll do our best to help you out.
+ <br/>The CocoonJS Plugin's library (cocoon.js and cocoon.min.js) can be found at Github. <br/>
+ <a href="https://github.com/ludei/CocoonJS-Plugins"><img src="img/download.png" style="width:230px;height:51px;" /></a>
+ <br/><br/>In addition to all the previously mentioned, in the following link you'll find an <a href="http://support.ludei.com/hc/en-us/articles/201821276-Extensions-overview">overview of all the avaliable features</a> in which each plugin support and availability are detailed.
+ <br/><br/>
+ * We hope you find everything you need to get going here, but if you stumble on any problems with the docs or the plugins, 
+ * just drop us a line at our forum (support.ludei.com) and we'll do our best to help you out.
  * <h3>Tools</h3>
  <a href="http://support.ludei.com/hc/communities/public/topics"><img src="img/cocoon-tools-1.png" /></a>
  <a href="http://support.ludei.com/hc"><img src="img/cocoon-tools-2.png" /></a>
