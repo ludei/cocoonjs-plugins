@@ -493,6 +493,11 @@
 
 });;/**
  * This namespace represents different methods to control your application.
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/Webview">Webview demo</a>.
+ *</div>
+ *
  * @namespace Cocoon.App
  * @example
  * // Example 1: Closes the application
@@ -1187,6 +1192,10 @@ Cocoon.define("Cocoon.Utils" , function(extension){
 
 });;/**
 * Dialog functions (prompt / confirm).
+*
+* <div class="alert alert-success">
+*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Keyboard">Keyboard demo</a>.
+*</div>
 * @namespace Cocoon.Dialog
 */
 Cocoon.define("Cocoon.Dialog" , function(extension){
@@ -1400,6 +1409,11 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
 
 });;/**
 * This namespace represents all functionalities available in the WebView environment.
+*
+* <div class="alert alert-success">
+*   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/Webview">Webview demo</a>.
+*</div>
+*
 * @namespace Cocoon.WebView
 * @example
 * Cocoon.App.loadInTheWebView("wv.html", {
@@ -2619,6 +2633,11 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 
     /**
     * This namespace represents the CocoonJS camera extension API.
+    *
+    * <div class="alert alert-success">
+	*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Camera/videopuzzle">Videopuzzle demo</a>.
+	*</div>
+    *   
     * @namespace Cocoon.Camera
     * @example
     * Cocoon.Camera.start({
@@ -2866,6 +2885,11 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 
     /**
     * This namespace represents the Cocoon Advertisement extension API.
+    *
+    * <div class="alert alert-success">
+	*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Ads">Ads demo</a>.
+	*</div>
+    *
 	* <div class="alert alert-warning">
 	*    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
 	* </div>
@@ -3399,6 +3423,10 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 
     /**
     * This namespace represents the In-app purchases extension API.
+    * <div class="alert alert-success">
+	*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Store-skeleton">Store-skeleton demo</a>.
+	*</div>
+	*
     * <div class="alert alert-warning">
 	*    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
 	* </div>
@@ -4109,6 +4137,11 @@ Cocoon.define("Cocoon.Widget" , function(extension){
  * The following image illustrates how the notification would look like when it arrives to your device. 
  * <div> <img src="img/cocoon-notification.jpg"  height="35%" width="35%"/> <br/> <br/></div>
  * You will find a complete example about how to use this extension in the Local namespace. 
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Notifications">Notifications demo</a>.
+ * </div>
+ * 
  * @namespace Cocoon.Notification
  */
 Cocoon.define("Cocoon.Notification" , function(extension){
@@ -5348,6 +5381,11 @@ Cocoon.define("Cocoon.Social" , function(extension){
     return extension;
 });;/**
  * This namespace represents all the basic functionalities available in the CocoonJS extension API.
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/Google%20Play%20Games">Google Play Games demo</a>.
+ *</div>
+ *
  * <div class="alert alert-warning">
  *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
  * </div>
@@ -6071,6 +6109,11 @@ Cocoon.define("Cocoon.Social" , function(extension){
 });
 ;/**
  * This namespace represents all the basic functionalities available in the CocoonJS extension API.
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/Multiplayer">Multiplayer demo</a>.
+ *</div>
+ *
  * <div class="alert alert-warning">
  *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
  * </div>
@@ -6684,6 +6727,11 @@ Cocoon.define("Cocoon.Social" , function(extension){
 });
 ;/**
  * This namespace represents all the basic functionalities available in the CocoonJS extension API.
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/Facebook">Facebook demo</a>.
+ *</div>
+ * 
  * <div class="alert alert-warning">
  *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
  * </div>
@@ -7545,11 +7593,13 @@ Cocoon.define("Cocoon.Social" , function(extension){
     return extension;
 });;/**
  * 
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Multiplayer">Multiplayer demo</a>.
+ *</div>
+ * 
  * <div class="alert alert-warning">
  *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
- * </div>
- * <div class="alert alert-warning">
- *    <strong>Warning!</strong> You can find a complete example about how to use this extension <a href="https://cocoonjsservice.ludei.com/cocoonjslaunchersvr/demo-list/#Multiplayer">here</a>.
  * </div>
  * @namespace Cocoon.Multiplayer
  */
@@ -8114,12 +8164,13 @@ Cocoon.define("Cocoon.Multiplayer" , function(extension){
 
     return extension;
 });;/**
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Multiplayer">Multiplayer demo</a>.
+ *</div>
  * 
  * <div class="alert alert-warning">
  *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
- * </div>
- * <div class="alert alert-warning">
- *    <strong>Warning!</strong> You can find a complete example about how to use this extension <a href="https://cocoonjsservice.ludei.com/cocoonjslaunchersvr/demo-list/#Multiplayer">here</a>.
  * </div>
  * @namespace Cocoon.Multiplayer.GooglePlayGames
  * @example 
@@ -8188,12 +8239,13 @@ Cocoon.define("Cocoon.Multiplayer" , function(extension){
 	return extension;
 });
 ;/**
- * 
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Multiplayer">Multiplayer demo</a>.
+ *</div>
+ *  
  * <div class="alert alert-warning">
  *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
- * </div>
- * <div class="alert alert-warning">
- *    <strong>Warning!</strong> You can find a complete example about how to use this extension <a href="https://cocoonjsservice.ludei.com/cocoonjslaunchersvr/demo-list/#Multiplayer">here</a>.
  * </div>
  * @namespace Cocoon.Multiplayer.GameCenter
  * @example

@@ -2,6 +2,11 @@ Cocoon.define("Cocoon.Camera" , function(extension) {
 
     /**
     * This namespace represents the CocoonJS camera extension API.
+    *
+    * <div class="alert alert-success">
+	*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Camera/videopuzzle">Videopuzzle demo</a>.
+	*</div>
+    *   
     * @namespace Cocoon.Camera
     * @example
     * Cocoon.Camera.start({

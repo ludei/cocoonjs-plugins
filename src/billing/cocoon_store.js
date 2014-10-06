@@ -3,6 +3,10 @@ Cocoon.define("Cocoon.Store" , function(extension){
 
     /**
     * This namespace represents the In-app purchases extension API.
+    * <div class="alert alert-success">
+	*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Store-skeleton">Store-skeleton demo</a>.
+	*</div>
+	*
     * <div class="alert alert-warning">
 	*    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
 	* </div>

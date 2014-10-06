@@ -1,5 +1,10 @@
 /**
  * This namespace represents different methods to control your application.
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/Webview">Webview demo</a>.
+ *</div>
+ *
  * @namespace Cocoon.App
  * @example
  * // Example 1: Closes the application

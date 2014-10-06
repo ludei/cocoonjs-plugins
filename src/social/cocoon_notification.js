@@ -3,6 +3,11 @@
  * The following image illustrates how the notification would look like when it arrives to your device. 
  * <div> <img src="img/cocoon-notification.jpg"  height="35%" width="35%"/> <br/> <br/></div>
  * You will find a complete example about how to use this extension in the Local namespace. 
+ *
+ * <div class="alert alert-success">
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Notifications">Notifications demo</a>.
+ * </div>
+ * 
  * @namespace Cocoon.Notification
  */
 Cocoon.define("Cocoon.Notification" , function(extension){

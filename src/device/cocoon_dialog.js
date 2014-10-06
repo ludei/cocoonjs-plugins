@@ -1,5 +1,9 @@
 /**
 * Dialog functions (prompt / confirm).
+*
+* <div class="alert alert-success">
+*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Keyboard">Keyboard demo</a>.
+*</div>
 * @namespace Cocoon.Dialog
 */
 Cocoon.define("Cocoon.Dialog" , function(extension){
