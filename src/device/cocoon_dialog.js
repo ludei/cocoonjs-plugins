@@ -1,8 +1,10 @@
 /**
 * Dialog functions (prompt / confirm).
 *
-* <div class="alert alert-success">
-*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Keyboard">Keyboard demo</a>.
+*<div class="alert alert-success">
+* <p>Here you will find demos about this namespace: </p> 
+* <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Keyboard">Keyboard demo</a>.</ul></li>
+* <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</ul></li>
 *</div>
 * @namespace Cocoon.Dialog
 */
