@@ -6,6 +6,7 @@
  * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Rate">Rate demo</a>.</ul></li>
  * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/Sound">Sound demo</a>.</ul></li>
  * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</ul></li>
+ * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Basic%20examples">Basic examples demo</a>.</ul></li>
  *</div>
  *
  * @namespace Cocoon.App

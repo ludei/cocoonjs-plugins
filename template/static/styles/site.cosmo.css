@@ -3308,6 +3308,9 @@ input[type="submit"].btn.btn-mini {
 .alert h4 {
   margin: 0;
 }
+.alert-success a {
+  color: #519251;
+}
 .alert .close {
   position: relative;
   top: -2px;

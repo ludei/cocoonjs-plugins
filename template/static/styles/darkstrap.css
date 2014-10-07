@@ -180,6 +180,9 @@ textarea::-webkit-input-placeholder {
   border-color: #5cad4c;
 }
 
+.alert-success a {
+  color: #519251;
+}
 
 .alert-danger,
 .alert-error {

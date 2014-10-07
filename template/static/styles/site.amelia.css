@@ -3322,6 +3322,9 @@ input[type="submit"].btn.btn-mini {
 .alert-success h4 {
   color: #e1f0f0;
 }
+.alert-success a {
+  color: #519251;
+}
 .alert-danger,
 .alert-error {
   background-color: #ad1d28;
