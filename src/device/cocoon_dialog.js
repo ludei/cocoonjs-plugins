@@ -3,8 +3,8 @@
 *
 *<div class="alert alert-success">
 * <p>Here you will find demos about this namespace: </p> 
-* <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Keyboard">Keyboard demo</a>.</ul></li>
-* <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</ul></li>
+* <ul> <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Keyboard">Keyboard demo</a>.</li>
+* <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</li> </ul>
 *</div>
 * @namespace Cocoon.Dialog
 */

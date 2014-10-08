@@ -1,7 +1,7 @@
 /**
  *
  * <div class="alert alert-success">
- *   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Multiplayer">Multiplayer demo</a>.
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Multiplayer">Multiplayer demo</a>.
  *</div>
  * 
  * <div class="alert alert-warning">

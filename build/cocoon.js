@@ -496,11 +496,11 @@
  *
  * <div class="alert alert-success">
  * <p>Here you will find demos about this namespace: </p> 
- * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Rate">Rate demo</a>.</ul></li>
- * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/Sound">Sound demo</a>.</ul></li>
- * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</ul></li>
- * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Basic%20examples">Basic examples demo</a>.</ul></li>
- *</div>
+ * <ul> <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Rate">Rate demo</a>.</li>
+ * <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/Sound">Sound demo</a>.</li>
+ * <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</li>
+ * <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Basic%20examples">Basic examples demo</a>.</li></ul>
+ * </div>
  *
  * @namespace Cocoon.App
  * @example
@@ -1199,8 +1199,8 @@ Cocoon.define("Cocoon.Utils" , function(extension){
 *
 *<div class="alert alert-success">
 * <p>Here you will find demos about this namespace: </p> 
-* <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Keyboard">Keyboard demo</a>.</ul></li>
-* <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</ul></li>
+* <ul> <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Keyboard">Keyboard demo</a>.</li>
+* <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</li> </ul>
 *</div>
 * @namespace Cocoon.Dialog
 */
@@ -2641,7 +2641,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
     * This namespace represents the CocoonJS camera extension API.
     *
     * <div class="alert alert-success">
-	*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Camera/videopuzzle">Videopuzzle demo</a>.
+	*   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Camera/videopuzzle">Videopuzzle demo</a>.
 	*</div>
     *   
     * @namespace Cocoon.Camera
@@ -2893,7 +2893,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
     * This namespace represents the Cocoon Advertisement extension API.
     *
     * <div class="alert alert-success">
-	*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Ads">Ads demo</a>.
+	*   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Ads">Ads demo</a>.
 	*</div>
     *
 	* <div class="alert alert-warning">
@@ -3430,7 +3430,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
     /**
     * This namespace represents the In-app purchases extension API.
     * <div class="alert alert-success">
-	*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Store-skeleton">Store-skeleton demo</a>.
+	*   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Store-skeleton">Store-skeleton demo</a>.
 	*</div>
 	*
     * <div class="alert alert-warning">
@@ -7737,7 +7737,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
  * 
  *
  * <div class="alert alert-success">
- *   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Multiplayer">Multiplayer demo</a>.
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Multiplayer">Multiplayer demo</a>.
  *</div>
  * 
  * <div class="alert alert-warning">
@@ -8308,7 +8308,7 @@ Cocoon.define("Cocoon.Multiplayer" , function(extension){
 });;/**
  *
  * <div class="alert alert-success">
- *   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Multiplayer">Multiplayer demo</a>.
+ *   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Multiplayer">Multiplayer demo</a>.
  *</div>
  * 
  * <div class="alert alert-warning">

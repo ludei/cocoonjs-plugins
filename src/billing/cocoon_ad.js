@@ -5,7 +5,7 @@ Cocoon.define("Cocoon.Ad" , function(extension){
     * This namespace represents the Cocoon Advertisement extension API.
     *
     * <div class="alert alert-success">
-	*   Here you will find a demo about this namespace:  <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Ads">Ads demo</a>.
+	*   Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Ads">Ads demo</a>.
 	*</div>
     *
 	* <div class="alert alert-warning">

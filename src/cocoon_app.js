@@ -3,11 +3,11 @@
  *
  * <div class="alert alert-success">
  * <p>Here you will find demos about this namespace: </p> 
- * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Rate">Rate demo</a>.</ul></li>
- * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/Sound">Sound demo</a>.</ul></li>
- * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</ul></li>
- * <li> <ul> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Basic%20examples">Basic examples demo</a>.</ul></li>
- *</div>
+ * <ul> <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Rate">Rate demo</a>.</li>
+ * <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/Sound">Sound demo</a>.</li>
+ * <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/Vibration">Vibration demo</a>.</li>
+ * <li> <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Basic%20examples">Basic examples demo</a>.</li></ul>
+ * </div>
  *
  * @namespace Cocoon.App
  * @example
