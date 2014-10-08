@@ -9,7 +9,7 @@ Cocoon.define("Cocoon.Ad" , function(extension){
 	*</div>
     *
 	* <div class="alert alert-warning">
-	*    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+	*    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
 	* </div>
     * @namespace Cocoon.Ad
     * @example

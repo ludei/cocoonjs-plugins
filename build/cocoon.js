@@ -2897,7 +2897,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 	*</div>
     *
 	* <div class="alert alert-warning">
-	*    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+	*    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
 	* </div>
     * @namespace Cocoon.Ad
     * @example
@@ -3434,7 +3434,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 	*</div>
 	*
     * <div class="alert alert-warning">
-	*    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+	*    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
 	* </div>
     * @namespace Cocoon.Store
     * @example
@@ -4712,7 +4712,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
         * Checks if the current logged in user has publish permissions.
         * @function hasPublishPermissions     
         * @memberOf Cocoon.Social.Interface          
-        * @param callback The callback function. Response params: permissions granted and error
+        * @param callback The callback function. It receives the following parameters: permissions granted and error
         */
         hasPublishPermissions: function(callback) {
             callback(true);
@@ -4722,7 +4722,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
         * Requests publish permissions for the current logged in user.
         * @function requestPublishPermissions     
         * @memberOf Cocoon.Social.Interface            
-        * @param callback The callback function.  It receives the following parameters: granted and error
+        * @param callback The callback function. It receives the following parameters: granted and error
         */
         requestPublishPermissions: function(callback) {
             if (callback)
@@ -4733,7 +4733,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
         * Retrieves user information for a specific user ID.
         * @function requestUser     
         * @memberOf Cocoon.Social.Interface       
-        * @param {function} callback - The callback function.  It receives the following parameters: 
+        * @param {function} callback - The callback function. It receives the following parameters: 
         * - {@link Cocoon.Social.User}.
         * - Error.
         * @param {string} userID - The id of the user to retrieve the information from. If no userID is specified, the currently logged in user is assumed.
@@ -4818,7 +4818,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
         * @function publishMessage   
         * @memberOf Cocoon.Social.Interface            
         * @param {Cocoon.Social.Message} message A object representing the information to be published.
-        * @param {function} [callback] The callback function.  It receives the following parameters: error.
+        * @param {function} [callback] The callback function. It receives the following parameters: error.
         * @example
         * var fb = Cocoon.Social.Facebook;
         *
@@ -4854,7 +4854,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
         * @function publishMessageWithDialog   
         * @memberOf Cocoon.Social.Interface         
         * @param {Cocoon.Social.Message} message A object representing the information to be published
-        * @param {function} callback The callback function.  It receives the following parameters: error
+        * @param {function} callback The callback function. It receives the following parameters: error
         * @example 
         * var fb = Cocoon.Social.Facebook;
         *
@@ -4899,38 +4899,156 @@ Cocoon.define("Cocoon.Social" , function(extension){
         _leaderboardsTemplate: null,
         _achievementsTemplate: null,
       
+        /**
+        * Retrieves the score for a user from a specific leaderboard
+        * @function requestScore   
+        * @memberOf Cocoon.Social.Interface 
+        * @param {function} callback The callback function. It receives the following parameters: 
+        * - {@link Cocoon.Social.Score}. 
+        * - Error. 
+        * @param {Cocoon.Social.ScoreParams} [params] The params to retrieve the score. If no params are specified, the currently logged in user and the default leaderboard are assumed.
+        */      
         requestScore: function(callback, params) {
             callback(null, {message:"Not implemented!"})
         },
 
+        /**
+         * Submits the score for a user to a specific leaderboard
+         * @function submitScore   
+         * @memberOf Cocoon.Social.Interface 
+         * @param {number} score The score to submit
+         * @param {function} [callback] The callback function. Response params: error.
+         * @param {Cocoon.Social.ScoreParams} [params] The params to submit the score. If no params are specified, the currently logged in user and the default leaderboard are assumed.
+         */
         submitScore: function(score, callback, params ) {
             if (callback)
                 callback({message:"Not implemented!"})
         },
-
+        
+        /**
+        * Shows a modal leaderboard view using a platform dependant view.
+        * @param {Cocoon.Social.ScoreParams} [params] The params to choose the leaderboard and other settings. If no params are specified the default leaderboard id and settings will be assumed.
+        * @param {function} [callback] The callback function invoked when the modal leaderboard view is closed by the user. Response params: error.
+        * @function showLeaderboard   
+        * @memberOf Cocoon.Social.Interface     
+        * @example 
+        * var fb = Cocoon.Social.Facebook;
+        *
+        * fb.init({
+        *     appId: "XXXXXXXXXXXXXXXXXXXXX",
+        *     channelUrl: "//connect.facebook.net/en_US/all.js"
+        * });
+        * 
+        * var socialService = fb.getSocialInterface();
+        * var loggedIn = socialService.isLoggedIn();
+        *
+        * socialService.showLeaderboard(function(error){
+        *     if (error)
+        *         console.error("showLeaderbord error: " + error.message);
+        * });
+        */
         showLeaderboard : function(callback, params) {
             if (callback)
                 callback({message:"Not implemented!"})
         },
 
+        /**
+        * Retrieves all the achievements of the application.
+        * @function requestAllAchievements  
+        * @memberOf Cocoon.Social.Interface 
+        * @param {function} callback The callback function. It receives the following parameters: 
+        * - Array of {@link Cocoon.Social.Achievement} 
+        * - Error.
+        */
         requestAllAchievements : function(callback) {
             callback([], {message:"Not implemented!"})
         },
 
+        /**
+         * Retrieves the achievements earned by a user.
+         * @function requestAchievements  
+         * @memberOf Cocoon.Social.Interface 
+         * @param {function} callback The callback function. It receives the following parameters: 
+         * - Array of {@link Cocoon.Social.Achievement}.
+         * - Error.
+         * @param {string} [userId] The id of the user to retrieve the information from. If no userID is specified, the currently logged in user is assumed.
+         */
         requestAchievements : function(callback, userID) {
             callback([], {message:"Not implemented!"})
         },
 
+        /**
+        * Submits the achievement for the current logged In user
+        * @function submitAchievements  
+        * @memberOf Cocoon.Social.Interface 
+        * @param achievementID The achievement ID to submit
+        * @param callback [callback] The callback function. Response params: error.
+        * @example
+        * var fb = Cocoon.Social.Facebook;
+        *
+        * fb.init({
+        *     appId: "XXXXXXXXXXXXXXXXXXXXX",
+        *     channelUrl: "//connect.facebook.net/en_US/all.js"
+        * });
+        * 
+        * var socialService = fb.getSocialInterface();
+        *
+        * socialService.submitAchievement( achievementID, function(error){
+        *     if (error)
+        *         console.error("submitAchievement error: " + error.message);
+        * });
+        */       
         submitAchievement: function(achievementID, callback) {
             if (callback)
                 callback({message:"Not implemented!"})
         },
         
+        /**
+        * Resets all the achievements of the current logged in user
+        * @function resetAchievements  
+        * @memberOf Cocoon.Social.Interface          
+        * @param {function} [callback] The callback function. Response params: error.
+        * @example
+        * var fb = Cocoon.Social.Facebook;
+        *
+        * fb.init({
+        *     appId: "XXXXXXXXXXXXXXXXXXXXX",
+        *     channelUrl: "//connect.facebook.net/en_US/all.js"
+        * });
+        * 
+        * var socialService = fb.getSocialInterface();
+        *
+        * socialService.resetAchievements(function(error){
+        *     if (error)
+        *         console.error("resetAchievements error: " + error.message);
+        * });
+        */         
         resetAchievements : function(callback) {
             if (callback)
                 callback([], {message:"Not implemented!"})
         },
-        
+     
+       /**
+        * Shows a modal achievements view using a platform dependant view.
+        * @param {function} [callback] The callback function invoked when the modal achievements view is closed by the user. Response params: error.
+        * @function showAchievements  
+        * @memberOf Cocoon.Social.Interface     
+        * @example 
+        * var fb = Cocoon.Social.Facebook;
+        *
+        * fb.init({
+        *     appId: "XXXXXXXXXXXXXXXXXXXXX",
+        *     channelUrl: "//connect.facebook.net/en_US/all.js"
+        * });
+        * 
+        * var socialService = fb.getSocialInterface();
+        * var loggedIn = socialService.isLoggedIn();
+        *
+        * socialService.showAchievements(function(error){
+        *     if (error)
+        *         console.error("showAchievements error: " + error.message);
+        * });
+        */       
         showAchievements : function(callback) {
             if (!this._achievementsTemplate)
                 throw "Please, provide a html template for achievements with the setTemplates method";
@@ -4972,17 +5090,34 @@ Cocoon.define("Cocoon.Social" , function(extension){
             });
         },
 
+        /**
+         * Set the map for using custom achievement IDs.
+         * The map must be a customID to realID map (accessing map.customID must return the real achievement ID).
+         * Whenever this map is enabled users are able to submit achievements with the real achievement ID or with the custom one.
+         * @params {object} map The achievements map. A null map disables this feature.
+         * @function setAchievementsMap 
+         * @memberOf Cocoon.Social.Interface 
+         */
         setAchievementsMap: function(map) {
             this._achievementsMap = map;
             if (this._cachedAchievements) {
                this.syncAchievementsMap(this._cachedAchievements);
             }
         },
-
+        /**
+         * Provides some templates to be used in the leaderboards and achievements views
+         * Some social services (like Facebook) don't have a native view to show achievements or leaderboards views, and use html templates instead.
+         * @param {string} leaderboardsTemplate Relative path to the leaderboards template.
+         * @param {string} achievementsTemplate Relative path to the achievements template.
+         * @function setTemplates
+         * @memberOf Cocoon.Social.Interface 
+         */
         setTemplates: function(leaderboardsTemplate, achievementsTemplate) {
             this._leaderboardsTemplate = leaderboardsTemplate;
             this._achievementsTemplate = achievementsTemplate;
         },
+
+        //Internal utility methods
 
         setCachedAchievements: function(achievements) {
             this._cachedAchievements = achievements;
@@ -5394,7 +5529,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
  *</div>
  *
  * <div class="alert alert-warning">
- *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+ *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
  * </div>
  * The following example shows the full process of how to publish a message using GooglePlay extension.The following image illustrates how the result should look like.  
  * <div><br/><img src="img/cocoon-socialgp-publish3.png" heigh="50%" width="55%"/> </div>
@@ -6122,7 +6257,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
  *</div>
  *
  * <div class="alert alert-warning">
- *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+ *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
  * </div>
  * @namespace Cocoon.Social.GameCenter
  */
@@ -6740,7 +6875,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
  *</div>
  * 
  * <div class="alert alert-warning">
- *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+ *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
  * </div>
  * @namespace Cocoon.Social.Facebook
  */
@@ -7606,7 +7741,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
  *</div>
  * 
  * <div class="alert alert-warning">
- *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+ *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
  * </div>
  * @namespace Cocoon.Multiplayer
  */
@@ -7998,7 +8133,7 @@ Cocoon.define("Cocoon.Multiplayer" , function(extension){
 });;/**
  * 
  * <div class="alert alert-warning">
- *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+ *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
  * </div>
  * @private
  * @namespace Cocoon.Multiplayer.LoopbackService
@@ -8177,7 +8312,7 @@ Cocoon.define("Cocoon.Multiplayer" , function(extension){
  *</div>
  * 
  * <div class="alert alert-warning">
- *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+ *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
  * </div>
  * @namespace Cocoon.Multiplayer.GooglePlayGames
  * @example 
@@ -8252,7 +8387,7 @@ Cocoon.define("Cocoon.Multiplayer" , function(extension){
  *</div>
  *  
  * <div class="alert alert-warning">
- *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!.
+ *    <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!
  * </div>
  * @namespace Cocoon.Multiplayer.GameCenter
  * @example
