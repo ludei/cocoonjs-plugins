@@ -23,7 +23,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
             var me = this;
             iframe.onload = function(){
                 me.iframeloaded = true;
-                var js = "Cocoon = {}; Cocoon.Widget = {}; Cocoon.Widget.WebDialog = {} Cocoon.WebDialog.close = function()" +
+                var js = "Cocoon = {}; Cocoon.Widget = {}; Cocoon.Widget.WebDialog = {} Cocoon.Widget.WebDialog.close = function()" +
                     "{" +
                     "   window.parent.CocoonJSCloseWebDialog();" +
                     "};";
