@@ -6050,7 +6050,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
             else {
                 if (!this._leaderboardsTemplate)
                     throw "Please, provide a html template for leaderboards with the setTemplates method";
-                var dialog = new Cocoon.App.WebDialog();
+                var dialog = new Cocoon.Widget.WebDialog();
                 var callbackSent = false;
                 dialog.show(this._leaderboardsTemplate, function(error) {
                     dialog.closed = true;
