@@ -4159,8 +4159,10 @@ Cocoon.define("Cocoon.Notification" , function(extension){
 	 * This namespace represents the Cocoon Notification extension for local notifications.
 	 * @namespace Cocoon.Notification.Local
 	 * @example 
-	 * Cocoon.Notification.Local.on("notification", function(userData){
-     * 	console.log("A local notification has been received: " + userData);
+	 * Cocoon.Notification.Local.on("notification", {
+	 *   received: function(userData){
+     * 	      console.log("A local notification has been received: " + JSON.stringify(userData));
+     *   }
 	 * });
 	 *
 	 * var notificationConfig = {
@@ -4482,8 +4484,10 @@ Cocoon.define("Cocoon.Notification" , function(extension){
     * @event On received for local notifications callback  
     * @memberof Cocoon.Notification.Local
 	* @example
-	* Cocoon.Notification.Local.on("notification", function(userData){
-    * 	console.log("A local notification has been received: " + userData);
+	* Cocoon.Notification.Local.on("notification", {
+    *	received : function(userData){
+    * 	 	console.log("A local notification has been received: " + JSON.stringify(userData));
+    *	}
 	* });
     */
     signal.register("notification", {
@@ -4502,7 +4506,7 @@ Cocoon.define("Cocoon.Notification" , function(extension){
     * @event On register for push notifications callbacks
     * @memberof Cocoon.Notification.Push
     * @example
-	* Cocoon.Notification.Push.on("register", function(){
+	* Cocoon.Notification.Push.on("register", {
     * 	success : function(){ ... }
     *	unregister : function(){ ... }
     *	error : function(error){ ... }
@@ -4520,8 +4524,10 @@ Cocoon.define("Cocoon.Notification" , function(extension){
     * @event On received for push notifications callback
     * @memberof Cocoon.Notification.Push
 	* @example
-	* Cocoon.Notification.Push.on("notification", function(userData){
-    * 	console.log("A push notification has been received: " + userData);
+	* Cocoon.Notification.Push.on("notification",{
+	*	received : function(userData){
+    * 		console.log("A push notification has been received: " + JSON.stringify(userData));
+    *	}
 	* });
     */
     signal.register("notification", {
@@ -4535,7 +4541,7 @@ Cocoon.define("Cocoon.Notification" , function(extension){
     * @event On deliver for push notifications callbacks
     * @memberof Cocoon.Notification.Push
 	* @example 
-	* Cocoon.Notification.Push.on("deliver", function(){
+	* Cocoon.Notification.Push.on("deliver", {
     * 	success : function(notificationId){ ... }
     *	error : function(error){ ... }
 	* });
