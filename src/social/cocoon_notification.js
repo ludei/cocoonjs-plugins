@@ -119,21 +119,23 @@ Cocoon.define("Cocoon.Notification" , function(extension){
     */
 	extension.Push.create = function(params)
 	{
-
 		var properties = {
-			message : "",
-			soundEnabled : true,
-			badgeNumber : 0,
-			userData : {},
-			channels : "",
-			expirationTime : 0,
-			expirationTimeInterval : 0
+		message : "",
+		soundEnabled : true,
+		badgeNumber : 0,
+		userData : {},
+		channels : [],
+		expirationTime : 0,
+		expirationTimeInterval : 0
 		};
 
-		var args = Cocoon.clone(properties,params);		
+        for (var prop in properties) {
+            if (!params[prop]) {
+                params[prop] = properties[prop];
+            }
+        }
 
-		return args;
-
+		return params;
 	};
 
 	/**
@@ -351,7 +353,7 @@ Cocoon.define("Cocoon.Notification" , function(extension){
 	* });
     */
     signal.register("notification", {
-    	received : extension.onLocalNotificationReceived,
+    	received : extension.onLocalNotificationReceived
     });
 
 	extension.Local.on = signal.expose();
@@ -375,7 +377,7 @@ Cocoon.define("Cocoon.Notification" , function(extension){
     signal.register("register", {
     	success : extension.onRegisterForPushNotificationsSucceed,
     	unregister : extension.onUnregisterForPushNotificationsSucceed,
-    	error : extension.onRegisterForPushNotificationsFailed,
+    	error : extension.onRegisterForPushNotificationsFailed
     });
 
 	/**
@@ -408,7 +410,7 @@ Cocoon.define("Cocoon.Notification" , function(extension){
     */
     signal.register("deliver", {
     	success : extension.onPushNotificationDeliverySucceed,
-    	error : extension.onPushNotificationDeliveryFailed,
+    	error : extension.onPushNotificationDeliveryFailed
     });
 
 	extension.Push.on = signal.expose();
