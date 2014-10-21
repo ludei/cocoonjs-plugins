@@ -117,6 +117,25 @@ Cocoon.define("Cocoon.Utils" , function(extension){
         }
     };
 
+    /**
+     * Sets a max memory threshold in Canvas+ for canvas2D contexts.
+     * If the maxMemory is enabled, CocoonJS checks the total amount of texture sizes (images and canvases). 
+     * When the memory size reaches the max memory threshold CocoonJS disposes least recently used textures until the memory fits the threshold. 
+     * It disposes textures used for JS Image objects (which can be reloaded later if needed).
+     * It doesn't dispose canvas objects because they cannot be reconstructed if they are used again in a render operation.
+     * @function setMaxMemory
+     * @memberof Cocoon.Utils
+     * @param {number} memoryInMBs max memory in megabytes
+     * @example
+     * Cocoon.Utils.setMaxMemory(75);
+     */
+    extension.setMaxMemory = function (memoryInMBs) {
+        if (Cocoon.nativeAvailable) {
+            return window.ext.IDTK_APP.makeCall("setMaxMemory", memoryInMBs);
+        }
+    };
+
+    /**
     * 
     * @memberof Cocoon.Utils
     * @name Cocoon.Utils.CaptureType
