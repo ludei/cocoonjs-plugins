@@ -176,6 +176,65 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
     };
 
     /**
+      * Shows a keyboard to receive user input. The developer has to process input events and render the resulting text.
+      * @param {object} param Object information.
+      * @param [param.type] {Cocoon.Dialog.keyboardType} Default value is Cocoon.Dialog.keyboardType.TEXT. The keyboard type to be used when the text has to be introduced.
+      * @param {callback} callbacks - <i>insertText</i>, <i>deleteBackward</i>, <i>done</i>, <i>cancel</i> callbacks called when the user clicks a key, confirms or cancels the keyboard session.
+      * @memberOf Cocoon.Dialog
+      * @function showKeyboard
+      * @example 
+      * var text = "";
+      * Cocoon.Dialog.showKeyboard({ 
+      *     type : Cocoon.Dialog.keyboardType.TEXT,
+      * },{
+      *     insertText: function(inserted) { text+= inserted; console.log(text);}
+      *     deleteBackward: function() {text = text.slice(0, text.length -1); console.log(text);}
+      *     done : function(){ console.log("user clicked done key") },
+      *     cancel : function(){ console.log("user dismissed keyboard") }
+      * });
+      */
+    extension.showKeyboard = function(params, callbacks) {
+        params = params || {};
+        params.type = params.type || Cocoon.Dialog.keyboardType.TEXT;
+        var insertCallback = callbacks && callbacks.insertText;
+        var deleteCallback = callbacks && callbacks.deleteBackward;
+        var doneCallback = callbacks && callbacks.done;
+        var cancelCallback =  callbacks && callbacks.cancel;
+
+        if (Cocoon.nativeAvailable) {
+            Cocoon.callNative("IDTK_APP", "showKeyboard", 
+                [params, insertCallback, deleteBackward, doneCallback, cancelCallback], true);
+        }
+    };
+
+    /**
+      * Dimisses a keyboard which was previusly shown by {@link Cocoon.Dialog.showKeyboard}
+      *
+      * @memberOf Cocoon.Dialog
+      * @function dismissKeyboard
+      * @example 
+      * var text = "";
+      * Cocoon.Dialog.showKeyboard({ 
+      *     type : Cocoon.Dialog.keyboardType.TEXT,
+      * },{
+      *     insertText: function(inserted) { 
+      *        if (inserted === "A") { //Custom keyboard hide
+      *             Cocoon.Dialog.dimissKeyboard();
+      *        }
+      *        text+= inserted; console.log(text); 
+      *     }
+      *     deleteBackward: function() {text = text.slice(0, text.length -1); console.log(text);}
+      *     done : function(){ console.log("user clicked done key") },
+      *     cancel : function(){ console.log("user dismissed keyboard") }
+      * });
+      */
+    extension.dismissKeyboard = function() {
+        if (Cocoon.nativeAvailable) {
+            Cocoon.callNative("IDTK_APP", "dismissKeyboard", null, true);
+        }
+    }
+
+    /**
      * Allows listening to events called when the text dialog is finished by accepting it's content.
      * The callback function's documentation is represented by {@link Cocoon.Dialog.OnTextDialogFinishedListener}
      * @event

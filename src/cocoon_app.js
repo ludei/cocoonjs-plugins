@@ -222,6 +222,8 @@ Cocoon.define("Cocoon.App" , function(extension){
 
     extension.onSuspending = new Cocoon.EventHandler("IDTK_APP", "App", "onsuspending");
 
+    extension.onMemoryWarning = new Cocoon.EventHandler("IDTK_APP", "App", "onmemorywarning");
+
     var signal = new Cocoon.Signal.createSignal();
 
     /**
@@ -258,6 +260,19 @@ Cocoon.define("Cocoon.App" , function(extension){
      * });
      */
     signal.register("suspending", extension.onSuspending);
+
+    /**
+     * Allows to listen to memory warning notifications from the system
+     * It is strongly recommended that you implement this method and free up as much memory as possible by disposing of cached data objects, images on canvases that can be recreated.
+     * @event On memory warning
+     * @memberof Cocoon.App
+     * @example
+     * Cocoon.App.on("memorywarning", function(){
+     *  ...
+     * });
+     */
+     signal.register("memorywarning", extension.onMemoryWarning);
+
 
     extension.on = signal.expose();
     

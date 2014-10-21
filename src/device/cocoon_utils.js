@@ -50,28 +50,6 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     };
 
     /**
-    * Marks a audio file to be used as music by the system. Cocoon, internally, differentiates among music files and sound files.
-    * Music files are usually bigger in size and longer in duration that sound files. There can only be just one music file 
-    * playing at a specific given time. The developer can mark as many files as he/she wants to be treated as music. When the corresponding
-    * HTML5 audio object is used, the system will automatically know how to treat the audio resource as music or as sound.
-    * Note that it is not mandatory to use this function. The system automatically tries to identify if a file is suitable to be treated as music
-    * or as sound by checking file size and duration thresholds. It is recommended, though, that the developer specifies him/herself what he/she considers
-    * to be music.
-    * @function markAsMusic
-    * @param {string} filePath File path to be marked as music
-    * @memberOf Cocoon.Utils
-    * @example
-    * Cocoon.Utils.markAsMusic("path/to/file.mp3");
-    */
-    extension.markAsMusic = function(audioFilePath)
-    {
-        if (Cocoon.nativeAvailable)
-        {
-           return extension.callNative("IDTK_APP", "addForceMusic", arguments);
-        }
-    };
-
-    /**
      * Captures a image of the screen synchronously and saves it to a file. Sync mode allows to capture the screen in the middle of a frame rendering.
      * @function captureScreen
      * @memberof Cocoon.Utils
@@ -121,6 +99,39 @@ Cocoon.define("Cocoon.Utils" , function(extension){
         if (Cocoon.nativeAvailable)
         {
            return extension.callNative("IDTK_APP", "setDefaultAntialias", arguments);
+        }
+    };
+
+    /**
+     * Enables NPOT (not power of two) textures in Canvas+. 
+     * Canvas+ uses POT (power of two) textures by default. Enabling NPOT improves memory usage but may affect performance on old GPUs.
+     * @function setNPOTEnabled
+     * @memberof Cocoon.Utils
+     * @param {boolean} enabled true to enable NPOT Textures
+     * @example
+     * Cocoon.Utils.setNPOTEnabled(true);
+     */
+    extension.setNPOTEnabled = function (enabled) {
+        if (Cocoon.nativeAvailable) {
+            return window.ext.IDTK_APP.makeCall("setNPOTEnabled", enabled);
+        }
+    };
+
+    /**
+     * Sets a max memory threshold in Canvas+ for canvas2D contexts.
+     * If the maxMemory is enabled, CocoonJS checks the total amount of texture sizes (images and canvases). 
+     * When the memory size reaches the max memory threshold CocoonJS disposes least recently used textures until the memory fits the threshold. 
+     * It disposes textures used for JS Image objects (which can be reloaded later if needed).
+     * It doesn't dispose canvas objects because they cannot be reconstructed if they are used again in a render operation.
+     * @function setMaxMemory
+     * @memberof Cocoon.Utils
+     * @param {number} memoryInMBs max memory in megabytes
+     * @example
+     * Cocoon.Utils.setMaxMemory(75);
+     */
+    extension.setMaxMemory = function (memoryInMBs) {
+        if (Cocoon.nativeAvailable) {
+            return window.ext.IDTK_APP.makeCall("setMaxMemory", memoryInMBs);
         }
     };
 
