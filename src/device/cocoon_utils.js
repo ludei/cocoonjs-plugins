@@ -50,28 +50,6 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     };
 
     /**
-    * Marks a audio file to be used as music by the system. Cocoon, internally, differentiates among music files and sound files.
-    * Music files are usually bigger in size and longer in duration that sound files. There can only be just one music file 
-    * playing at a specific given time. The developer can mark as many files as he/she wants to be treated as music. When the corresponding
-    * HTML5 audio object is used, the system will automatically know how to treat the audio resource as music or as sound.
-    * Note that it is not mandatory to use this function. The system automatically tries to identify if a file is suitable to be treated as music
-    * or as sound by checking file size and duration thresholds. It is recommended, though, that the developer specifies him/herself what he/she considers
-    * to be music.
-    * @function markAsMusic
-    * @param {string} filePath File path to be marked as music
-    * @memberOf Cocoon.Utils
-    * @example
-    * Cocoon.Utils.markAsMusic("path/to/file.mp3");
-    */
-    extension.markAsMusic = function(audioFilePath)
-    {
-        if (Cocoon.nativeAvailable)
-        {
-           return extension.callNative("IDTK_APP", "addForceMusic", arguments);
-        }
-    };
-
-    /**
      * Captures a image of the screen synchronously and saves it to a file. Sync mode allows to capture the screen in the middle of a frame rendering.
      * @function captureScreen
      * @memberof Cocoon.Utils
