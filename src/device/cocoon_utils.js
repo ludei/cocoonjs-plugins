@@ -103,6 +103,20 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     };
 
     /**
+     * Enables NPOT (not power of two) textures in Canvas+. 
+     * Canvas+ uses POT (power of two) textures by default. Enabling NPOT improves memory usage but may affect performance on old GPUs.
+     * @function setNPOTEnabled
+     * @memberof Cocoon.Utils
+     * @param {boolean} enabled true to enable NPOT Textures
+     * @example
+     * Cocoon.Utils.setNPOTEnabled(true);
+     */
+    extension.setNPOTEnabled = function (enabled) {
+        if (Cocoon.nativeAvailable) {
+            return window.ext.IDTK_APP.makeCall("setNPOTEnabled", enabled);
+        }
+    };
+
     * 
     * @memberof Cocoon.Utils
     * @name Cocoon.Utils.CaptureType
