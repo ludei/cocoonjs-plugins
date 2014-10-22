@@ -32,7 +32,7 @@
  <a href="http://support.ludei.com/hc"><img src="img/cocoon-tools-2.png" /></a>
  <a href="https://cloud.ludei.com/"><img src="img/cocoon-tools-3.png" /></a>
  <a href="https://www.ludei.com/cocoonjs/how-to-use/"><img src="img/cocoon-tools-4.png" /></a>
- * @version 3.0.0
+ * @version 3.0.4
  */
 (function () {
     
