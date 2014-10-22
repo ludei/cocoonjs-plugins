@@ -179,15 +179,12 @@ Cocoon.define("Cocoon.App" , function(extension){
     * @example
     * Cocoon.App.hideTheWebView();
     */
-    extension.hideTheWebView = function()
-    {
-        if (Cocoon.App.nativeAvailable)
-        {
+    extension.hideTheWebView = function() {
+        if (Cocoon.App.nativeAvailable && navigator.isCocoonJS) {
             var javaScriptCodeToForward = "ext.IDTK_APP.makeCall('hide');";
             return Cocoon.App.forwardAsync(javaScriptCodeToForward);
         }
-        else if (!navigator.isCocoonJS)
-        {
+        else {
             checkEmulatedWebViewReady();
             Cocoon.App.EmulatedWebView.style.display = "none";
         }
