@@ -1084,8 +1084,11 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      * @function captureScreen
      * @memberof Cocoon.Utils
      * @param {string} fileName Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default
-     * @param {Cocoon.App.StorageType} storageType. The developer can specify the storage where it is stored. If no value is passed, the {@link Cocoon.Utils.StorageType.TMP_STORAGE} value is used by default.
-     * @param {Cocoon.App.StorageType} captureType. Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface 2: only captures system views]. @see Cocoon.Utils.CaptureType
+     * @param {Cocoon.App.StorageType} storageType The developer can specify the storage where it is stored. If no value is passed, the {@link Cocoon.Utils.StorageType.TMP_STORAGE} value is used by default.
+     * @param {Cocoon.App.StorageType} captureType Optional value to choose capture type. See {@link Cocoon.Utils.CaptureType}.
+     * - 0: Captures everything.
+     * - 1: Only captures cocoonjs surface.
+     * - 2: Only captures system views.
      * @throws exception if the image fails to be stored or there is another error.
      * @return The URL of the saved file.
      * @example
