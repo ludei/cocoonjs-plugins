@@ -1,8 +1,8 @@
 /**
  * @fileOverview
  * Ludei's plugins are multiplatform Javascript APIs, that work in any of the three environments 
- * of CocoonJS: accelerated canvas, webview+ and system webview.
- * - Select the specific plugin bewlow to open the relevant documentation section.
+ * of CocoonJS: accelerated Canvas+, webview+ and system webview.
+ * - Select the specific plugin below to open the relevant documentation section.
  <ul>
     <li><a href="Cocoon.html">Cocoon</a></li>
     <li><a href="Cocoon.Ad.html">Ad</a></li>
