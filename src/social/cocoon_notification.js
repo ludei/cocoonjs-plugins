@@ -129,11 +129,11 @@ Cocoon.define("Cocoon.Notification" , function(extension){
 		expirationTimeInterval : 0
 		};
 
-		for (var prop in properties) {
-			if (!params[prop]) {
-				params[prop] = properties[prop];
-			}
-		}
+        for (var prop in properties) {
+            if (!params[prop]) {
+                params[prop] = properties[prop];
+            }
+        }
 
 		return params;
 	};
