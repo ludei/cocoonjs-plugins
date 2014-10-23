@@ -204,7 +204,7 @@ Cocoon.define("Cocoon.App" , function(extension){
      * @memberof Cocoon.App
      * @name Cocoon.App.StorageType
      * @property {string} Cocoon.App.StorageType - The base object
-     * @property {string} Cocoon.App.StorageType.PORTRAIT Portrait
+     * @property {string} Cocoon.App.StorageType.APP_STORAGE The application storage.
      * @property {string} Cocoon.App.StorageType.INTERNAL_STORAGE Internal Storage
      * @property {string} Cocoon.App.StorageType.EXTERNAL_STORAGE External Storage
      * @property {string} Cocoon.App.StorageType.TEMPORARY_STORAGE Temporary Storage
