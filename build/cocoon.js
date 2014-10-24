@@ -2742,12 +2742,10 @@ Cocoon.define("Cocoon.Widget" , function(extension){
     * });
     */
 
-	navigator.getMedia = ( navigator.getUserMedia ||
-                       navigator.webkitGetUserMedia ||
-                       navigator.mozGetUserMedia ||
-                       navigator.msGetUserMedia) || {};
-
-	navigator.getMedia.cocoonStream = {};
+    navigator.getUserMedia_ = ( navigator.getUserMedia ||
+                                navigator.webkitGetUserMedia ||
+                                navigator.mozGetUserMedia ||
+                                navigator.msGetUserMedia);
     
     /**
     * 
@@ -2824,7 +2822,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 	*/
 	extension.getNumberOfCameras = function()
 	{
-		if (Cocoon.nativeAvailable)
+		if (Cocoon.nativeAvailable && navigator.isCocoonJS)
 		{
 			return Cocoon.callNative("IDTK_SRV_CAMERA", "getNumberOfCameras", arguments);
 		}else{
@@ -2842,7 +2840,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 	*/
 	extension.getAllCamerasInfo = function()
 	{
-		if (Cocoon.nativeAvailable)
+		if (Cocoon.nativeAvailable && navigator.isCocoonJS)
 		{
 			return Cocoon.callNative("IDTK_SRV_CAMERA", "getAllCamerasInfo", arguments);
 		}
@@ -2859,7 +2857,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 	*/
 	extension.getCameraInfoByIndex = function(cameraIndex)
 	{
-		if (Cocoon.nativeAvailable)
+		if (Cocoon.nativeAvailable && navigator.isCocoonJS)
 		{
 			return Cocoon.callNative("IDTK_SRV_CAMERA", "getCameraInfoByIndex", arguments);
 		}
@@ -2874,7 +2872,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 	*/
 	extension.getCameraInfoByType = function(cameraType)
 	{
-		if (Cocoon.nativeAvailable)
+		if (Cocoon.nativeAvailable && navigator.isCocoonJS)
 		{
 			return Cocoon.callNative("IDTK_SRV_CAMERA", "getCameraInfoByType", arguments);
 		}
@@ -2918,12 +2916,11 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 				cameraIndex : 0, 
 				width : 50, 
 				height : 50,
-				frameRate : 25,
-				imageFormat : extension.CaptureFormatType.JPEG
+				frameRate : 25
 			};
 
 			var args = Cocoon.clone(properties,params);
-			var img = Cocoon.callNative("IDTK_SRV_CAMERA", "startCapturing", arguments);
+			var img = Cocoon.callNative("IDTK_SRV_CAMERA", "startCapturing", args);
 			
 			if(Boolean(img)) { params.success(img); }else{ params.error(false); }
             
@@ -2949,7 +2946,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 	*/
 	extension.stop = function(cameraIndex)
 	{
-		if (Cocoon.nativeAvailable)
+		if (Cocoon.nativeAvailable && navigator.isCocoonJS)
 		{
 			return Cocoon.callNative("IDTK_SRV_CAMERA", "stopCapturing", arguments);
 		}
@@ -2964,7 +2961,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 	*/
 	extension.isCapturing = function(cameraIndex)
 	{
-		if (Cocoon.nativeAvailable)
+		if (Cocoon.nativeAvailable && navigator.isCocoonJS)
 		{
 			return Cocoon.callNative("IDTK_SRV_CAMERA", "isCapturing", arguments);
 		}
