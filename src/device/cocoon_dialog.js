@@ -145,8 +145,8 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
         var properties = {
             title : "", 
             message : "", 
-            confirmText : "Ok", 
-            cancelText : "Cancel"
+            cancelText : "Cancel",
+            confirmText : "Ok"
         };
 
         var args = Cocoon.clone(properties,params);
