@@ -842,16 +842,18 @@ Cocoon.define("Cocoon.App" , function(extension){
     * @function loadInTheWebView
     * @memberOf Cocoon.App
     * @param {string} path The path to the resource. It can be a remote URL or a path to a local file.
-    * @param {callbacks} cb  An object containing two callbacks to manage the load event, { success : callback, error: callback }.
     * @param {Cocoon.App.StorageType} [storageType] An optional parameter to specify at which storage in the device the file path is stored. By default, APP_STORAGE is used.
     * @example
-    * Cocoon.App.loadInTheWebView("wv.html", {
-    * success : function(){
-    *     Cocoon.WebView.show(0, 0, window.innerWidth * window.devicePixelratio, window.innerHeight * window.devicePixelRatio );
-    * },
-    * error : function(){
-    *     ...
+    * Cocoon.App.WebView.on("load", {
+    *   success : function(){
+    *     Cocoon.App.showTheWebView();
+    *   },
+    *   error : function(){
+    *     console.log("Cannot show the Webview for some reason :/");
+    *     console.log(JSON.stringify(arguments));
+    *   }
     * });
+    * Cocoon.App.loadInTheWebView("wv.html");
     */
     extension.loadInTheWebView = function(path, storageType)
     {
