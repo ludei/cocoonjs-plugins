@@ -2826,7 +2826,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 		{
 			return Cocoon.callNative("IDTK_SRV_CAMERA", "getNumberOfCameras", arguments);
 		}else{
-			return (navigator.getMedia) ? 1 : 0;
+			return (navigator.getUserMedia_) ? 1 : 0;
 		}
 	};
 
@@ -2925,7 +2925,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 			if(Boolean(img)) { params.success(img); }else{ params.error(false); }
             
 		}else{
-			navigator.getMedia( {
+			navigator.getUserMedia_( {
               video:true, audio:false
             },    
             function(stream) {
