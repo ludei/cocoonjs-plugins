@@ -1623,7 +1623,7 @@ Cocoon.define("Cocoon.WebView" , function(extension){
 
     window.addEventListener("load", function()
     {
-        Cocoon.App.proxifyConsole();
+        Cocoon.Proxify.console();
 
         // Only if we are completely outside CocoonJS (or CocoonJS' webview),
         // setup event forwarding from the webview (iframe) to Cocoon.
@@ -5554,16 +5554,30 @@ Cocoon.define("Cocoon.Social" , function(extension){
         },
 
         requestScore: function(callback, params) {
-            var scoreItem = localStorage.getItem(this.keys.score);
+            var key;
+            if (params && params.leaderboardID) {
+                key = this.keys.score + '.' + params.leaderboardID;
+            }
+            else {
+                key = this.keys.score;
+            }
+            var scoreItem = localStorage.getItem(key);
             var score = parseInt(scoreItem) || 0;
             setTimeout(function(){callback(new Cocoon.Social.Score("me", score))},0);
         },
 
         submitScore: function(score, callback, params ) {
-            var scoreItem = localStorage.getItem(this.keys.score);
+            var key;
+            if (params && params.leaderboardID) {
+                key = this.keys.score + '.' + params.leaderboardID;
+            }
+            else {
+                key = this.keys.score;
+            }
+            var scoreItem = localStorage.getItem(key);
             var topScore = parseInt(scoreItem) || 0;
             if (score > topScore)
-                localStorage.setItem(this.keys.score, score);
+                localStorage.setItem(key, score);
             if (callback)
                 setTimeout(function(){callback()},0);
         },

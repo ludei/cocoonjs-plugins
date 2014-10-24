@@ -123,7 +123,7 @@ Cocoon.define("Cocoon.WebView" , function(extension){
 
     window.addEventListener("load", function()
     {
-        Cocoon.App.proxifyConsole();
+        Cocoon.Proxify.console();
 
         // Only if we are completely outside CocoonJS (or CocoonJS' webview),
         // setup event forwarding from the webview (iframe) to Cocoon.
