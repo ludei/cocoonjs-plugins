@@ -6702,21 +6702,32 @@ Cocoon.define("Cocoon.Social" , function(extension){
     * @memberof Cocoon.Social.GameCenter
     * @name Cocoon.Social.GameCenter.Score
     * @property {object} Cocoon.Social.GameCenter.Score - The object itself
-    * @property {number} Cocoon.Social.GameCenter.Score.value The score value as a 64bit integer.
-    * @property {string} Cocoon.Social.GameCenter.Score.category Leaderboard category.
-    * @property {string} Cocoon.Social.GameCenter.Score.playerID The identifier of the player that recorded the score.
+    * @property {string} Cocoon.Social.GameCenter.Score.userID The identifier of the player that recorded the score.
+    * @property {number} Cocoon.Social.GameCenter.Score.score The score value as a 64bit integer.
+    * @property {string} Cocoon.Social.GameCenter.Score.userName The name of the user.
+    * @property {string} Cocoon.Social.GameCenter.Score.imageURL imageURL The url of the user image.
+    * @property {string} Cocoon.Social.GameCenter.Score.leaderboardID Leaderboard category.
     * @property {number} Cocoon.Social.GameCenter.Score.rank The rank of the player within the leaderboard.
     */
-    extension.GameCenter.Score = function(value,category) {
+    extension.GameCenter.Score = function(userID, score, userName, imageURL, leaderboardID, originalScoreObject)
+    {
 
-        this.value = value;
+        this.userID = userID;
 
-        this.category = category;
+        this.score = score || 0;
 
-        this.playerID = "";
+        this.userName = userName;
 
-        this.rank = 0;
-    }
+        this.imageURL = imageURL;
+
+        this.leaderboardID = leaderboardID;
+
+        this.rank = originalScoreObject.rank;
+
+        this.originalScoreObject = originalScoreObject;
+
+        return this;
+    };
 
 
     /**
@@ -6856,7 +6867,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
                     gcScore = response.scores[0];
                 else if (response && response.localPlayerScore)
                     gcScore = response.localPlayerScore;
-                var loadedScore = gcScore ? new Cocoon.Social.GameCenter.Score(gcScore.playerID, gcScore.value, "","", gcScore.category) : null;
+                var loadedScore = gcScore ? new Cocoon.Social.GameCenter.Score(gcScore.playerID, gcScore.value, "","", gcScore.category, gcScore) : null;
                 callback(loadedScore,error);
             }, query);
         },
