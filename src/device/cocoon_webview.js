@@ -7,15 +7,16 @@
 *
 * @namespace Cocoon.WebView
 * @example
-* Cocoon.App.loadInTheWebView("wv.html", {
-*      success: function() {
-*          Cocoon.App.showTheWebView();
-*      },
-*      error: function() {
-*          console.log("Cannot show the Webview for some reason :/");
-*          console.log(JSON.strigify(arguments));
-*      }
-*  });
+* Cocoon.App.WebView.on("load",{
+*   success : function(){
+*       Cocoon.App.showTheWebView();
+*   },
+*   error : function(){
+*        console.log("Cannot show the Webview for some reason :/");
+*        console.log(JSON.stringify(arguments));
+*   }
+* });
+* Cocoon.App.loadInTheWebView("WV.html");
 */
 
 Cocoon.define("Cocoon.WebView" , function(extension){
