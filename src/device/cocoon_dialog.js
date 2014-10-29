@@ -203,7 +203,7 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
 
         if (Cocoon.nativeAvailable) {
             Cocoon.callNative("IDTK_APP", "showKeyboard", 
-                [params, insertCallback, deleteBackward, doneCallback, cancelCallback], true);
+                [params, insertCallback, deleteCallback, doneCallback, cancelCallback], true);
         }
     };
 
@@ -230,7 +230,7 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
       */
     extension.dismissKeyboard = function() {
         if (Cocoon.nativeAvailable) {
-            Cocoon.callNative("IDTK_APP", "dismissKeyboard", null, true);
+            Cocoon.callNative("IDTK_APP", "dismissKeyboard", [], true);
         }
     }
 
