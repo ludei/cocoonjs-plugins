@@ -48,7 +48,7 @@
      * @example
      * console.log(Cocoon.version);
      */
-    Cocoon.version = "3.0.0";
+    Cocoon.version = "3.0.4";
     
     /**
      * Is the native environment available? true if so.

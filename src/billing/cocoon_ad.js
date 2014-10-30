@@ -522,7 +522,7 @@ Cocoon.define("Cocoon.Ad" , function(extension){
      */
 	signal.register("shown", extension.onFullScreenShown);
 	/**
-     * Allows to listen to events called when a banner is hidden.
+     * Allows to listen to events called when a full screen ad is hidden.
      * @event On interstitial hidden
      * @memberof Cocoon.Ad
      * @example

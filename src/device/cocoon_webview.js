@@ -13,7 +13,6 @@
 *   },
 *   error : function(){
 *        console.log("Cannot show the Webview for some reason :/");
-*        console.log(JSON.stringify(arguments));
 *   }
 * });
 * Cocoon.App.loadInTheWebView("WV.html");

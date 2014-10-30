@@ -48,7 +48,7 @@
      * @example
      * console.log(Cocoon.version);
      */
-    Cocoon.version = "3.0.0";
+    Cocoon.version = "3.0.4";
     
     /**
      * Is the native environment available? true if so.
@@ -1515,7 +1515,6 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
 *   },
 *   error : function(){
 *        console.log("Cannot show the Webview for some reason :/");
-*        console.log(JSON.stringify(arguments));
 *   }
 * });
 * Cocoon.App.loadInTheWebView("WV.html");
