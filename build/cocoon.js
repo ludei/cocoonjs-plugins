@@ -1274,9 +1274,9 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
       * @example 
       * Cocoon.Dialog.prompt({ 
       *     title : "title",
-      *     message : "message",
+      *     message : "message"
       * },{
-      *     success : function(){ ... },
+      *     success : function(text){ ... },
       *     cancel : function(){ ... }
       * });
       */
@@ -3494,7 +3494,7 @@ Cocoon.define("Cocoon.Widget" , function(extension){
      */
 	signal.register("shown", extension.onFullScreenShown);
 	/**
-     * Allows to listen to events called when a banner is hidden.
+     * Allows to listen to events called when a full screen ad is hidden.
      * @event On interstitial hidden
      * @memberof Cocoon.Ad
      * @example

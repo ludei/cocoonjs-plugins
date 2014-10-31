@@ -50,9 +50,9 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
       * @example 
       * Cocoon.Dialog.prompt({ 
       *     title : "title",
-      *     message : "message",
+      *     message : "message"
       * },{
-      *     success : function(){ ... },
+      *     success : function(text){ ... },
       *     cancel : function(){ ... }
       * });
       */
