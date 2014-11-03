@@ -215,8 +215,8 @@ Cocoon.define("Cocoon.Store" , function(extension){
         var args = Cocoon.clone(properties,params);
 
 		Cocoon.Store.requestInitialization({ 
-			sandbox: args.sandbox,
-			managed: args.managed
+			sandbox: args[0],
+			managed: args[1]
 		});
 		
 		Cocoon.Store.start();
