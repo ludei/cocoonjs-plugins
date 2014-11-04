@@ -7,7 +7,7 @@
 *
 * @namespace Cocoon.WebView
 * @example
-* Cocoon.App.WebView.on("load",{
+* Cocoon.WebView.on("load",{
 *   success : function(){
 *       Cocoon.App.showTheWebView();
 *   },

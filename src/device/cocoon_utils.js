@@ -14,7 +14,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     */
     extension.logMemoryInfo = function()
     {
-        if (Cocoon.nativeAvailable)
+        if (Cocoon.nativeAvailable && navigator.isCocoonJS)
         {
             return extension.callNative("IDTK_APP", "logMemoryInfo", arguments);
         }
@@ -43,7 +43,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     */
     extension.textureReduction = function(sizeThreshold, applyTo, forbidFor)
     {
-        if (Cocoon.nativeAvailable)
+        if (Cocoon.nativeAvailable && navigator.isCocoonJS)
         {
             extension.callNative("IDTK_APP", "setDefaultTextureReducerThreshold", arguments);
         }
@@ -99,7 +99,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     */
     extension.setAntialias = function(enable)
     {
-        if (Cocoon.nativeAvailable)
+        if (Cocoon.nativeAvailable && navigator.isCocoonJS)
         {
            return extension.callNative("IDTK_APP", "setDefaultAntialias", arguments);
         }
@@ -115,7 +115,8 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      * Cocoon.Utils.setNPOTEnabled(true);
      */
     extension.setNPOTEnabled = function (enabled) {
-        if (Cocoon.nativeAvailable) {
+        if (Cocoon.nativeAvailable && navigator.isCocoonJS) {
+            alert("npot"); 
             return window.ext.IDTK_APP.makeCall("setNPOTEnabled", enabled);
         }
     };
@@ -133,7 +134,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      * Cocoon.Utils.setMaxMemory(75);
      */
     extension.setMaxMemory = function (memoryInMBs) {
-        if (Cocoon.nativeAvailable) {
+        if (Cocoon.nativeAvailable && navigator.isCocoonJS) {
             return window.ext.IDTK_APP.makeCall("setMaxMemory", memoryInMBs);
         }
     };
@@ -183,7 +184,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     * Cocoon.Utils.setTextCacheSize(32);
     */
     extension.setTextCacheSize = function (size) {
-        if (Cocoon.nativeAvailable) {
+        if (Cocoon.nativeAvailable && navigator.isCocoonJS) {
             return Cocoon.callNative("IDTK_APP", "setTextCacheSize", arguments);
         }
     }
