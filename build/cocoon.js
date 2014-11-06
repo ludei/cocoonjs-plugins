@@ -1148,7 +1148,6 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      */
     extension.setNPOTEnabled = function (enabled) {
         if (Cocoon.nativeAvailable && navigator.isCocoonJS) {
-            alert("npot"); 
             return window.ext.IDTK_APP.makeCall("setNPOTEnabled", enabled);
         }
     };
@@ -3727,8 +3726,8 @@ Cocoon.define("Cocoon.Widget" , function(extension){
         var args = Cocoon.clone(properties,params);
 
 		Cocoon.Store.requestInitialization({ 
-			sandbox: args.sandbox,
-			managed: args.managed
+			sandbox: args[0],
+			managed: args[1]
 		});
 		
 		Cocoon.Store.start();
