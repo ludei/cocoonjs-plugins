@@ -196,10 +196,10 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
       *         console.log(text);
       *     },
       *     done: function() {
-      *         console.log("user clicked done key")
+      *         console.log("user clicked done key");
       *     },
       *     cancel: function() {
-      *         console.log("user dismissed keyboard")
+      *         console.log("user dismissed keyboard");
       *     }
       * });
       */
@@ -218,7 +218,7 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
     };
 
     /**
-      * Dimisses a keyboard which was previusly shown by {@link Cocoon.Dialog.showKeyboard}
+      * Dismisses a keyboard which was previusly shown by {@link Cocoon.Dialog.showKeyboard}
       *
       * @memberOf Cocoon.Dialog
       * @function dismissKeyboard
@@ -229,7 +229,7 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
       * }, {
       *     insertText: function(inserted) {
       *         if (inserted === "A") { //Custom keyboard hide
-      *             Cocoon.Dialog.dimissKeyboard();
+      *             Cocoon.Dialog.dismissKeyboard();
       *         }
       *         text += inserted;
       *         console.log(text);
