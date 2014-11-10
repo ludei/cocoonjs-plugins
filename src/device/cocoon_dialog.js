@@ -184,13 +184,23 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
       * @function showKeyboard
       * @example 
       * var text = "";
-      * Cocoon.Dialog.showKeyboard({ 
-      *     type : Cocoon.Dialog.keyboardType.TEXT,
-      * },{
-      *     insertText: function(inserted) { text+= inserted; console.log(text);}
-      *     deleteBackward: function() {text = text.slice(0, text.length -1); console.log(text);}
-      *     done : function(){ console.log("user clicked done key") },
-      *     cancel : function(){ console.log("user dismissed keyboard") }
+      * Cocoon.Dialog.showKeyboard({
+      *     type: Cocoon.Dialog.keyboardType.TEXT,
+      * }, {
+      *     insertText: function(inserted) {
+      *         text += inserted;
+      *         console.log(text);
+      *     },
+      *     deleteBackward: function() {
+      *         text = text.slice(0, text.length - 1);
+      *         console.log(text);
+      *     },
+      *     done: function() {
+      *         console.log("user clicked done key")
+      *     },
+      *     cancel: function() {
+      *         console.log("user dismissed keyboard")
+      *     }
       * });
       */
     extension.showKeyboard = function(params, callbacks) {
@@ -214,18 +224,26 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
       * @function dismissKeyboard
       * @example 
       * var text = "";
-      * Cocoon.Dialog.showKeyboard({ 
-      *     type : Cocoon.Dialog.keyboardType.TEXT,
-      * },{
-      *     insertText: function(inserted) { 
-      *        if (inserted === "A") { //Custom keyboard hide
+      * Cocoon.Dialog.showKeyboard({
+      *     type: Cocoon.Dialog.keyboardType.TEXT,
+      * }, {
+      *     insertText: function(inserted) {
+      *         if (inserted === "A") { //Custom keyboard hide
       *             Cocoon.Dialog.dimissKeyboard();
-      *        }
-      *        text+= inserted; console.log(text); 
+      *         }
+      *         text += inserted;
+      *         console.log(text);
+      *     },
+      *     deleteBackward: function() {
+      *         text = text.slice(0, text.length - 1);
+      *         console.log(text);
+      *     },
+      *     done: function() {
+      *         console.log("user clicked done key");
+      *     },
+      *     cancel: function() {
+      *         console.log("user dismissed keyboard");
       *     }
-      *     deleteBackward: function() {text = text.slice(0, text.length -1); console.log(text);}
-      *     done : function(){ console.log("user clicked done key") },
-      *     cancel : function(){ console.log("user dismissed keyboard") }
       * });
       */
     extension.dismissKeyboard = function() {
