@@ -78,14 +78,15 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      * @param {string} fileName Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default
      * @param {Cocoon.App.StorageType} storageType. The developer can specify the storage where it is stored. If no value is passed, the {@link Cocoon.Utils.StorageType.TMP_STORAGE} value is used by default.
      * @param {Cocoon.App.StorageType} captureType. Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface 2: only captures system views]. @see Cocoon.Utils.CaptureType
+     * @param {boolean} saveToGallery. Optional value to specify if the capture image should be stored in the device image gallery or not.
      * @throws exception if the image fails to be stored or there is another error.
      * @return The URL of the saved file.
      * @example
      * Cocoon.Utils.captureScreen("myScreenshot.png");
      */
-    extension.captureScreen = function (fileName, storageType, captureType) {
+    extension.captureScreen = function (fileName, storageType, captureType, saveToGallery) {
         if (Cocoon.nativeAvailable) {
-            return window.ext.IDTK_APP.makeCall("captureScreen", fileName, storageType, captureType);
+            return extension.callNative("IDTK_APP", "captureScreen", arguments);
         }
     };
 
@@ -97,15 +98,16 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      * @param {string} fileName Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default
      * @param {Cocoon.App.StorageType} storageType The developer can specify the storage where it is stored. If no value is passed, the {@see Cocoon.Utils.StorageType.TMP_STORAGE} value is used by default.
      * @param {Cocoon.App.StorageType} captureType Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface, 2: only captures system views]. @see Cocoon.Utils.CaptureType
+     * @param {boolean} saveToGallery. Optional value to specify if the capture image should be stored in the device image gallery or not.
      * @param {function} callback Response callback, check the error property to monitor errors. Check the 'url' property to get the URL of the saved Image
      * @example
      * Cocoon.Utils.captureScreenAsync("myScreenshot.png", Cocoon.Utils.StorageType.TMP_STORAGE, Cocoon.Utils.CaptureType.EVERYTHING, function(){
      * ...
      * });
      */
-    extension.captureScreenAsync = function (fileName, storageType, captureType, callback) {
+    extension.captureScreenAsync = function (fileName, storageType, captureType, saveToGallery, callback) {
         if (Cocoon.nativeAvailable) {
-            window.ext.IDTK_APP.makeCallAsync("captureScreen", fileName, storageType, captureType, callback);
+            extension.callNative("IDTK_APP", "captureScreen", arguments, true);
         }
     };
 
@@ -113,10 +115,27 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     * Activates or deactivates the antialas functionality from the Cocoon rendering.
     * @function setAntialias
     * @memberOf Cocoon.Utils
+    * @param {boolean} enable A boolean value to enable (true) or disable (false) antialias.
     * @example
     * Cocoon.Utils.setAntialias(true);
     */
     extension.setAntialias = function(enable)
+    {
+        if (Cocoon.nativeAvailable)
+        {
+           return extension.callNative("IDTK_APP", "setDefaultAntialias", arguments);
+        }
+    };
+
+    /**
+    * Activates or deactivates the webgl functionality from the Cocoon Canvas+ rendering.
+    * @function setWebGLEnabled
+    * @memberOf Cocoon.Utils
+    * @param {boolean} enabled A boolean value to enable (true) or disable (false) webgl in Canvas+.
+    * @example
+    * Cocoon.Utils.setWebGLEnabled(true);
+    */
+    extension.setWebGLEnabled = function(enabled)
     {
         if (Cocoon.nativeAvailable)
         {
