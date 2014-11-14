@@ -16,7 +16,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     {
         if (Cocoon.nativeAvailable)
         {
-            return extension.callNative("IDTK_APP", "logMemoryInfo", arguments);
+            return Cocoon.callNative("IDTK_APP", "logMemoryInfo", arguments);
         }
     };
 
@@ -45,7 +45,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     {
         if (Cocoon.nativeAvailable)
         {
-            extension.callNative("IDTK_APP", "setDefaultTextureReducerThreshold", arguments);
+            return Cocoon.callNative("IDTK_APP", "setDefaultTextureReducerThreshold", arguments);
         }
     };
 
@@ -67,7 +67,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     {
         if (Cocoon.nativeAvailable)
         {
-           return extension.callNative("IDTK_APP", "addForceMusic", arguments);
+           return Cocoon.callNative("IDTK_APP", "addForceMusic", arguments);
         }
     };
 
@@ -86,7 +86,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      */
     extension.captureScreen = function (fileName, storageType, captureType, saveToGallery) {
         if (Cocoon.nativeAvailable) {
-            return extension.callNative("IDTK_APP", "captureScreen", arguments);
+            return Cocoon.callNative("IDTK_APP", "captureScreen", arguments);
         }
     };
 
@@ -107,7 +107,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      */
     extension.captureScreenAsync = function (fileName, storageType, captureType, saveToGallery, callback) {
         if (Cocoon.nativeAvailable) {
-            extension.callNative("IDTK_APP", "captureScreen", arguments, true);
+            Cocoon.callNative("IDTK_APP", "captureScreen", arguments, true);
         }
     };
 
@@ -123,7 +123,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     {
         if (Cocoon.nativeAvailable)
         {
-           return extension.callNative("IDTK_APP", "setDefaultAntialias", arguments);
+           return Cocoon.callNative("IDTK_APP", "setDefaultAntialias", arguments);
         }
     };
 
@@ -139,7 +139,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     {
         if (Cocoon.nativeAvailable)
         {
-           return extension.callNative("IDTK_APP", "setDefaultAntialias", arguments);
+           return Cocoon.callNative("IDTK_APP", "setDefaultAntialias", arguments);
         }
     };
 
@@ -169,7 +169,7 @@ Cocoon.define("Cocoon.Utils" , function(extension){
     */
     extension.existsPath = function(path, storageType) {
         if (Cocoon.nativeAvailable){
-            return window.ext.IDTK_APP.makeCall("existsPath", path, storageType);
+            return Cocoon.callNative("IDTK_APP", "existsPath", arguments);
         }
         return false;
     }
