@@ -81,13 +81,12 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      * - 0: Captures everything.
      * - 1: Only captures cocoonjs surface.
      * - 2: Only captures system views.
-     * @param {boolean} saveToGallery. Optional value to specify if the capture image should be stored in the device image gallery or not.
      * @throws exception if the image fails to be stored or there is another error.
      * @return The URL of the saved file.
      * @example
      * Cocoon.Utils.captureScreen("myScreenshot.png");
      */
-    extension.captureScreen = function (fileName, storageType, captureType, saveToGallery) {
+    extension.captureScreen = function (fileName, storageType, captureType) {
         if (Cocoon.nativeAvailable) {
             return Cocoon.callNative("IDTK_APP", "captureScreen", arguments);
         }
@@ -100,15 +99,17 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      * @memberof Cocoon.Utils
      * @param {string} fileName Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default
      * @param {Cocoon.App.StorageType} storageType The developer can specify the storage where it is stored. If no value is passed, the {@see Cocoon.Utils.StorageType.TMP_STORAGE} value is used by default.
-     * @param {Cocoon.Utils.CaptureType} captureType Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface, 2: only captures system views]. @see Cocoon.Utils.CaptureType
-     * @param {boolean} saveToGallery. Optional value to specify if the capture image should be stored in the device image gallery or not.
+     * @param {Cocoon.Utils.CaptureType} captureType Optional value to choose capture type. See {@link Cocoon.Utils.CaptureType}.
+     * - 0: Captures everything.
+     * - 1: Only captures cocoonjs surface.
+     * - 2: Only captures system views.
      * @param {function} callback Response callback, check the error property to monitor errors. Check the 'url' property to get the URL of the saved Image
      * @example
      * Cocoon.Utils.captureScreenAsync("myScreenshot.png", Cocoon.Utils.StorageType.TMP_STORAGE, Cocoon.Utils.CaptureType.EVERYTHING, function(){
      * ...
      * });
      */
-    extension.captureScreenAsync = function (fileName, storageType, captureType, saveToGallery, callback) {
+    extension.captureScreenAsync = function (fileName, storageType, captureType, callback) {
         if (Cocoon.nativeAvailable) {
             Cocoon.callNative("IDTK_APP", "captureScreen", arguments, true);
         }
