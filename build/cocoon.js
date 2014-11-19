@@ -701,14 +701,12 @@ Cocoon.define("Cocoon.App" , function(extension){
      * @property {string} Cocoon.App.StorageType.INTERNAL_STORAGE Internal Storage
      * @property {string} Cocoon.App.StorageType.EXTERNAL_STORAGE External Storage
      * @property {string} Cocoon.App.StorageType.TEMPORARY_STORAGE Temporary Storage
-     * @property {string} Cocoon.App.StorageType.GALLERY_STORAGE Device image gallery 
      */
     extension.StorageType = {
         APP_STORAGE:        "APP_STORAGE",
         INTERNAL_STORAGE:   "INTERNAL_STORAGE",
         EXTERNAL_STORAGE:   "EXTERNAL_STORAGE",
-        TEMPORARY_STORAGE:  "TEMPORARY_STORAGE",
-        GALLERY_STORAGE:    "GALLERY_STORAGE"
+        TEMPORARY_STORAGE:  "TEMPORARY_STORAGE"
     };
 
     extension.onSuspended = new Cocoon.EventHandler("IDTK_APP", "App", "onsuspended");
@@ -1115,12 +1113,13 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      * - 0: Captures everything.
      * - 1: Only captures cocoonjs surface.
      * - 2: Only captures system views.
+     * @param {boolean} saveToGallery Optional value to specify if the capture image should be stored in the device image gallery or not.
      * @throws exception if the image fails to be stored or there is another error.
      * @return The URL of the saved file.
      * @example
      * Cocoon.Utils.captureScreen("myScreenshot.png");
      */
-    extension.captureScreen = function (fileName, storageType, captureType) {
+    extension.captureScreen = function (fileName, storageType, captureType, saveToGallery) {
         if (Cocoon.nativeAvailable) {
             return Cocoon.callNative("IDTK_APP", "captureScreen", arguments);
         }
@@ -1137,13 +1136,14 @@ Cocoon.define("Cocoon.Utils" , function(extension){
      * - 0: Captures everything.
      * - 1: Only captures cocoonjs surface.
      * - 2: Only captures system views.
+     * @param {boolean} saveToGallery Optional value to specify if the capture image should be stored in the device image gallery or not.
      * @param {function} callback Response callback, check the error property to monitor errors. Check the 'url' property to get the URL of the saved Image
      * @example
-     * Cocoon.Utils.captureScreenAsync("myScreenshot.png", Cocoon.Utils.StorageType.TMP_STORAGE, Cocoon.Utils.CaptureType.EVERYTHING, function(){
+     * Cocoon.Utils.captureScreenAsync("myScreenshot.png", Cocoon.Utils.StorageType.TMP_STORAGE, false, Cocoon.Utils.CaptureType.EVERYTHING, function(){
      * ...
      * });
      */
-    extension.captureScreenAsync = function (fileName, storageType, captureType, callback) {
+    extension.captureScreenAsync = function (fileName, storageType, captureType, saveToGallery, callback) {
         if (Cocoon.nativeAvailable) {
             Cocoon.callNative("IDTK_APP", "captureScreen", arguments, true);
         }
