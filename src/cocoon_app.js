@@ -208,14 +208,12 @@ Cocoon.define("Cocoon.App" , function(extension){
      * @property {string} Cocoon.App.StorageType.INTERNAL_STORAGE Internal Storage
      * @property {string} Cocoon.App.StorageType.EXTERNAL_STORAGE External Storage
      * @property {string} Cocoon.App.StorageType.TEMPORARY_STORAGE Temporary Storage
-     * @property {string} Cocoon.App.StorageType.GALLERY_STORAGE Device image gallery 
      */
     extension.StorageType = {
         APP_STORAGE:        "APP_STORAGE",
         INTERNAL_STORAGE:   "INTERNAL_STORAGE",
         EXTERNAL_STORAGE:   "EXTERNAL_STORAGE",
-        TEMPORARY_STORAGE:  "TEMPORARY_STORAGE",
-        GALLERY_STORAGE:    "GALLERY_STORAGE"
+        TEMPORARY_STORAGE:  "TEMPORARY_STORAGE"
     };
 
     extension.onSuspended = new Cocoon.EventHandler("IDTK_APP", "App", "onsuspended");
