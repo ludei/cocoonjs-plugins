@@ -469,8 +469,10 @@ Cocoon.define("Cocoon.Ad" , function(extension){
      * Allows to listen to events called when a banner is ready.
      * @event On banner ready
      * @memberof Cocoon.Ad
+     * @param {number} width The banner width
+     * @param {number} height The banner height
      * @example
-     * Cocoon.Ad.banner.on("ready", function(){
+     * Cocoon.Ad.banner.on("ready", function(width, height){
      *  ...
      * });
      */
