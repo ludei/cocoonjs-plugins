@@ -457,12 +457,12 @@ Cocoon.define("Cocoon.Social" , function(extension){
         isLoggedIn: function() {
             return this.fb._currentSession && this.fb._currentSession.status === "connected";
         },
-        login : function(callback) {
+        login : function(callback, options) {
             var me = this;
             this.fb.login(function(response){
                 if (callback)
                     callback(me.isLoggedIn(), response.error);
-            });
+            }, options);
         },
         logout: function(callback) {
             this.fb.logout(function(response){
