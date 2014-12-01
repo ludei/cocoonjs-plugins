@@ -7312,7 +7312,14 @@ Cocoon.define("Cocoon.Social" , function(extension){
         */
         getPermissions: function(callback) {
             this.api('me/permissions', function(response) {
-                callback(response.data && response.data[0] ? response.data[0] : {});
+                var result = {};
+                var data = response && response.data ? response.data : [];
+                for (var i = 0; i < data.length; ++i) {
+                    if (data[i].status === "granted") {
+                        result[data[i].permission] = true;
+                    }
+                }
+                callback(result);
             });
         },
 
@@ -7489,12 +7496,12 @@ Cocoon.define("Cocoon.Social" , function(extension){
         isLoggedIn: function() {
             return this.fb._currentSession && this.fb._currentSession.status === "connected";
         },
-        login : function(callback) {
+        login : function(callback, options) {
             var me = this;
             this.fb.login(function(response){
                 if (callback)
                     callback(me.isLoggedIn(), response.error);
-            });
+            }, options);
         },
         logout: function(callback) {
             this.fb.logout(function(response){
@@ -7573,17 +7580,26 @@ Cocoon.define("Cocoon.Social" , function(extension){
                 var me = this;
                 this.fb.getPermissions(function(perms){
                     me.currentPermissions = perms;
-                    if (perms)
+                    if (perms) {
                         me.preparePublishAction(callback);
+                    }
+                    else {
+                        callback(false);
+                    }
                 });
             }
             else if (this.currentPermissions.publish_actions) {
                 callback(true);
             }
             else{
-                this.currentPermissions = null;
+                this.currentPermissions = this.currentPermissions | {};
+                var me = this;
                 this.fb.requestAdditionalPermissions("publish", "publish_actions", function(response) {
-                     callback(response.error ? false : true);
+                    var perms = response && response.authResponse ? response.authResponse.permissions : [];
+                    for (var i = 0; i < perms.length; ++i) {
+                        me.currentPermissions[perms[i]] = true;
+                    }
+                    callback(response.error ? false : true);
                 });
             }
 
