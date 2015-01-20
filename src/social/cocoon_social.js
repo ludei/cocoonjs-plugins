@@ -428,7 +428,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
 
         /**
         * Submits the achievement for the current logged In user
-        * @function submitAchievements  
+        * @function submitAchievement
         * @memberOf Cocoon.Social.Interface 
         * @param achievementID The achievement ID to submit
         * @param callback [callback] The callback function. Response params: error.

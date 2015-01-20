@@ -2364,7 +2364,7 @@ Cocoon.define("Cocoon.WebView" , function(extension){
      * @property {string} Cocoon.Device.DeviceInfo.brand  The device manufacturer (apple, samsung, lg,...).
      * @property {string} Cocoon.Device.DeviceInfo.model The device model (iPhone 4S, SAMSUNG-SGH-I997, SAMSUNG-SGH-I997R, etc).
      * @property {string} Cocoon.Device.DeviceInfo.imei The phone IMEI.
-     * <br/>Android: The phone IMEI is returned or null if the device has not telepohny.
+     * <br/>Android: The phone IMEI is returned or null if the device has not telephony.
      * <br/>iOS: null is returned as we cannot get the IMEI in iOS, no public API available for that yet.
      * @property {string} Cocoon.Device.DeviceInfo.platformId The platform Id.
      * @property {string} Cocoon.Device.DeviceInfo.odin The Odin generated id: https://code.google.com/p/odinmobile/
@@ -5126,7 +5126,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
 
         /**
         * Submits the achievement for the current logged In user
-        * @function submitAchievements  
+        * @function submitAchievement
         * @memberOf Cocoon.Social.Interface 
         * @param achievementID The achievement ID to submit
         * @param callback [callback] The callback function. Response params: error.
