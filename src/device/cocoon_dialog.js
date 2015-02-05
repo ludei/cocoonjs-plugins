@@ -110,7 +110,7 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
             return Cocoon.callNative("IDTK_APP", "showTextDialog", args, true);
         }else{
             setTimeout(function() {
-                var result = prompt(properties.message, properties.text);
+                var result = prompt(args[1], args[2]);
                 var eventObject = result ? Cocoon.Dialog.onTextDialogFinished : Cocoon.Dialog.onTextDialogCancelled;
                 eventObject.notifyEventListeners(result);
             }, 0);
