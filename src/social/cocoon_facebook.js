@@ -588,7 +588,7 @@ Cocoon.define("Cocoon.Social" , function(extension){
                     if (response.error)
                         callback(response.error)
                     else if(!response.post_id)
-                        callback("Not posted");
+                        callback({message:"Not posted"});
                 }
             });
         },
