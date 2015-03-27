@@ -1312,6 +1312,7 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
       * @param [param.type] {Cocoon.Dialog.keyboardType} Default value is Cocoon.Dialog.keyboardType.TEXT. The keyboard type to be used when the text has to be introduced.
       * @param [param.cancelText] {string} Default value is "Cancel". The text to be displayed in the cancel button of the dialog.
       * @param [param.confirmText] {string} Default value is "Ok". The text to be displayed in the ok button of the dialog.
+      * @param [param.secureText] {boolean} Default value is "false". The text to be displayed as secure (password-like).
       * @param {callback} callbacks - <i>success</i> and <i>cancel</i> callbacks called when the user confirms or cancel the dialog.
       * @memberOf Cocoon.Dialog
       * @function prompt
@@ -1354,7 +1355,8 @@ Cocoon.define("Cocoon.Dialog" , function(extension){
             text : "",
             type : defaultKeyboard,
             cancelText : "Cancel",
-            confirmText : "Ok"
+            confirmText : "Ok",
+            secureText : false
         };
 
         var args = Cocoon.clone(properties,params);
