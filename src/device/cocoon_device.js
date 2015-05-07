@@ -28,7 +28,6 @@ Cocoon.define("Cocoon.Device" , function(extension){
         dpi:        null,
         brand:      null,
         model:      null,
-        idfa:       null,
         imei:       null,
         platformId: null,
         odin:       null,

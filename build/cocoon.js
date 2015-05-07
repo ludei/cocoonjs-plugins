@@ -3490,6 +3490,22 @@ Cocoon.define("Cocoon.Widget" , function(extension){
 		}
 	};
 
+	/**
+    * Get the IDFA code in case of being in a iOS platform
+	* @memberOf Cocoon.Ad
+	* @function getIDFA
+	* @return The IDFA identifier or an empty string in case it doens't exist
+	* @example
+	* Cocoon.Ad.getIDFA();
+	*/
+	extension.getIDFA = function()
+	{
+		if (Cocoon.Ad.nativeAvailable)
+		{
+			return Cocoon.callNative("IDTK_SRV_AD", "getIDFA", arguments);
+		}
+	};
+
 	extension.onBannerShown = new Cocoon.EventHandler("IDTK_SRV_AD", "Ad", "onbannershow");
 
 	extension.onBannerHidden = new Cocoon.EventHandler("IDTK_SRV_AD", "Ad", "onbannerhide"); 
