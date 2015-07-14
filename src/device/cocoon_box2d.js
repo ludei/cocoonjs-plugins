@@ -892,25 +892,21 @@ if ( !window.ext || typeof window.ext.IDTK_SRV_BOX2D === 'undefined' ){
 			for(j in this.m_current_contacts )
 					{		
 					var contact = this.m_current_contacts[j];
-					var a = contact.GetFixtureA().GetBody();					
-					var b = contact.GetFixtureB().GetBody();
-					if(a && b)
-						{					
-						var a_contacts = a.GetContactList();		
-						var a_touching = false;
-						for(i in a_contacts) 
-							{
-							if(a_contacts[i]==b) a_touching = true;
-							}			
-						if(!a_touching)
-							{			
-							this.m_current_contacts.splice(j,1);
-							this.m_contactListener.EndContact( new B2Contact( contact.GetFixtureA() , contact.GetFixtureB() ,false) ) ;						
-							}
+					if(contact.GetFixtureA() && contact.GetFixtureB())
+						{
+						var a = contact.GetFixtureA().GetBody();					
+						var b = contact.GetFixtureB().GetBody();						
+						var a_contacts = window.ext.IDTK_SRV_BOX2D.makeCall( "getObjectContacts" , this.m_worldID , a.m_bodyID ) ; 
+						if(a_contacts.indexOf(b.m_bodyID)==-1)
+								{
+								// End contact !			
+								this.m_current_contacts.splice(j,1);
+								this.m_contactListener.EndContact( new B2Contact( contact.GetFixtureA() , contact.GetFixtureB() ,false) ) ;						
+								}							
 						}
 						else
 						{
-						// body has been destroyed n	
+						// body has been destroyed 	
 						this.m_current_contacts.splice(j,1);
 						}			
 					}	
