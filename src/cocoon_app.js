@@ -224,6 +224,10 @@ Cocoon.define("Cocoon.App" , function(extension){
 
     extension.onMemoryWarning = new Cocoon.EventHandler("IDTK_APP", "App", "onmemorywarning");
 
+    extension.onHeadphonesPluggedIn = new Cocoon.EventHandler("IDTK_APP", "App", "onheadphonespluggedin");
+
+    extension.onHeadphonesUnplugged = new Cocoon.EventHandler("IDTK_APP", "App", "onheadphonesunplugged");
+
     var signal = new Cocoon.Signal.createSignal();
 
     /**
@@ -273,6 +277,29 @@ Cocoon.define("Cocoon.App" , function(extension){
      */
      signal.register("memorywarning", extension.onMemoryWarning);
 
+    /**
+     * Allows to listen to events called when the headphones are plugged in.
+     * The callback function does not receive any parameter.
+     * @event On headphones plugged in
+     * @memberof Cocoon.App
+     * @example
+     * Cocoon.App.on("headphonespluggedin", function(){
+     *  ...
+     * });
+     */
+    signal.register("headphonespluggedin", extension.onHeadphonesPluggedIn);
+
+    /**
+     * Allows to listen to events called when the headphones are unplugged.
+     * The callback function does not receive any parameter.
+     * @event On headphones unplugged
+     * @memberof Cocoon.App
+     * @example
+     * Cocoon.App.on("headphonesunplugged", function(){
+     *  ...
+     * });
+     */
+    signal.register("headphonesunplugged", extension.onHeadphonesUnplugged);
 
     extension.on = signal.expose();
     
