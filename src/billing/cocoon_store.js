@@ -207,7 +207,7 @@ Cocoon.define("Cocoon.Store" , function(extension){
 	    params = params || {};
 
 	    Cocoon.Store.requestInitialization(params);
-	    Cocoon.Store.start();  
+	    Cocoon.Store.start();
 	};
 
 	/**
