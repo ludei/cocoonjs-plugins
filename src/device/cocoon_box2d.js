@@ -742,7 +742,7 @@ if ( !window.ext || typeof window.ext.IDTK_SRV_BOX2D === 'undefined' ){
         window.Box2D.Dynamics.b2ContactListener = B2ContactListener ;
     
         B2ContactListener.prototype.BeginContact = function (/*contact*/) {} ;// NOTE: Only this one is called at the moment
-        B2ContactListener.prototype.EndContact   = function (/*contact*/) {} ;
+        B2ContactListener.prototype.EndContact   = function (/*contact*/) {} ;// NOTE: This is called for now ( Contribute by Jeremy Guilbault )
         B2ContactListener.prototype.PreSolve     = function (/*contact, oldManifold*/) {} ;
         B2ContactListener.prototype.PostSolve    = function (/*contact, impulse*/) {} ;
        
@@ -765,6 +765,7 @@ if ( !window.ext || typeof window.ext.IDTK_SRV_BOX2D === 'undefined' ){
             this.m_jointList = [];
             this.m_fixturesList = [];
             this.m_contactListener = null ;
+			this.m_current_contacts = [];
             this.m_jointsList = [] ;
     
             this.m_worldID = window.ext.IDTK_SRV_BOX2D.makeCall( "createWorld" , gravity.x , gravity.y , doSleep );
@@ -864,6 +865,7 @@ if ( !window.ext || typeof window.ext.IDTK_SRV_BOX2D === 'undefined' ){
                 body.m_xf.position.Set(transforms[i+1] ,transforms[i+2] ) ;
                 body.m_xf.R.Set(transforms[i+3]);
             }
+			
     
             // Handle object contacts
             if( this.m_contactListener !== null ){
@@ -880,9 +882,36 @@ if ( !window.ext || typeof window.ext.IDTK_SRV_BOX2D === 'undefined' ){
                         console.log("One of the fixtures in a contact DOESN'T EXIST!!");
                         continue ;
                     }
-    
                     this.m_contactListener.BeginContact( new B2Contact(fix1,fix2,touching) ) ;
+					// add to the currents contacts
+					this.m_current_contacts.push( new B2Contact(fix1,fix2,touching)  );
+					
                 }
+			// check all the current contacts 
+			var j;
+			for(j in this.m_current_contacts )
+					{		
+					var contact = this.m_current_contacts[j];
+					if(contact.GetFixtureA() && contact.GetFixtureB())
+						{
+						var a = contact.GetFixtureA().GetBody();					
+						var b = contact.GetFixtureB().GetBody();						
+						var a_contacts = window.ext.IDTK_SRV_BOX2D.makeCall( "getObjectContacts" , this.m_worldID , a.m_bodyID ) ; 
+						if(a_contacts.indexOf(b.m_bodyID)==-1)
+								{
+								// End contact !			
+								this.m_current_contacts.splice(j,1);
+								this.m_contactListener.EndContact( new B2Contact( contact.GetFixtureA() , contact.GetFixtureB() ,false) ) ;						
+								}							
+						}
+						else
+						{
+						// body has been destroyed 	
+						this.m_current_contacts.splice(j,1);
+						}			
+					}	
+
+
             }
         };
     
