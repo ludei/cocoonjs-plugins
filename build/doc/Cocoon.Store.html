@@ -1,0 +1,3699 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CocoonJS Plugins - Namespace: Store</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+	<script type="text/javascript">
+		if(window.location.pathname.indexOf("index.html") !== -1){
+			document.write('<style>  #toc { display:none; } </style>');
+		}
+	</script>
+	
+	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+	
+	<style type="text/css">
+		.alert-warning {
+			background-color: #fcf8e3;
+			border-color: #faebcc;
+			color: #8a6d3b;
+		}
+		.alert {
+			padding: 15px;
+			margin-bottom: 20px;
+			border: 1px solid transparent;
+			border-radius: 4px;
+		}
+		.alert a{
+			color: #8a6d3b;
+			font-weight: bold;
+		}
+		.alert-success a {
+			color: #519251;
+			font-weight: bold;
+		}
+		.alert-success a:hover{
+			color: #519251;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		.alert-warning a:hover{
+			color: #8a6d3b;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		.page-title{
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html"><img src='http://d1315078ftetqc.cloudfront.net/assets/img/layout/logo.png' style='width: 119px;height: 35px;'/> <span class='brand-adjust'>CocoonJS Plugins</span></a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							
+								<a href="Cocoon.html">Cocoon</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Ad.html">Ad</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.App.html">App</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Camera.html">Camera</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Device.html">Device</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Dialog.html">Dialog</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Motion.html">Motion</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Multiplayer.html">Multiplayer</a>
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Notification.html">Notification</a>
+							
+						</li>
+						
+						<li>
+							
+								
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Proxify.html">Proxify</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Social.html">Social</a>
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Store.html">Store</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Touch.html">Touch</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Utils.html">Utils</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.WebView.html">WebView</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Widget.html">Widget</a>
+							
+						</li>
+						
+
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+
+		
+		<div class="span8">
+			
+				<div id="main">
+					
+
+
+	<h1 class="page-title">Namespace: Store</h1>
+<section>
+
+<header>
+    <h2>
+        <span class="ancestors"><a href="Cocoon.html">Cocoon</a>.</span>
+    
+
+    
+        Store
+    
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+            <div class="description"><p>This namespace represents the In-app purchases extension API.</p>
+<div class="alert alert-success"><br>  Here you will find a demo about this namespace: <a href="https://github.com/ludei/cocoonjs-demos/tree/master/Store-skeleton">Store-skeleton demo</a>.<br></div>
+
+<div class="alert alert-warning"><br>   <strong>Warning!</strong> This JavaScript extension requires some configuration parameters on the <a href="https://ludei.zendesk.com/hc/en-us">cloud compiler</a>!<br></div></div>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3626">line 3626</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+            <h3>Example</h3>
+            
+    <pre class="sunlight-highlight-javascript">// Basic usage, register callbacks first
+Cocoon.Store.on("purchase",{
+	started: function(){ ... },
+	success: function(purchaseInfo){ console.log( JSON.stringify(purchaseInfo) ) },
+	error: function(productId, err){ ... }
+});
+Cocoon.Store.on("load",{
+	started: function(){ ... },
+	success: function(products){
+		for (var i = 0; i < products.length; i++) {
+			Cocoon.Store.addProduct(products[i]);
+			console.log("Adding product to the local database: " + JSON.stringify(products[i]));
+		};
+	},
+	error: function(errorMessage){ ... }
+});
+// Initialize store service
+Cocoon.Store.initialize({
+    sandbox: false,
+    managed: true
+});
+// Fetch the products from the store
+// The callbacks for this event are set in the Cocoon.Store.on("load"); event handler.
+Cocoon.Store.loadProducts(["magic.sword", "health.potion"]);</pre>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id=".addProduct"><span class="type-signature">&lt;static> </span>addProduct<span class="signature">(product)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Adds a product to the products local DB.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>product</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Store.html#.ProductInfo">Cocoon.Store.ProductInfo</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The product to be added to the local products DB.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4100">line 4100</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".addPurchase"><span class="type-signature">&lt;static> </span>addPurchase<span class="signature">(purchase)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Adds a purchase to the local purchases DB.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>purchase</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Store.html#.PurchaseInfo">Cocoon.Store.PurchaseInfo</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The purchase to be added.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4139">line 4139</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".canPurchase"><span class="type-signature">&lt;static> </span>canPurchase<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This method allows you to check is the  Store service is available in this platform.<br>Not all iOS and Android devices will have the Store service<br>available so you should check if it is before calling any other method.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3869">line 3869</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>True if the service is available and false otherwise.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">boolean</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".consume"><span class="type-signature">&lt;static> </span>consume<span class="signature">(transactionId, productId)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Consumes a purchase. This makes that product to be purchasable again.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>transactionId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The transaction Id of the purchase to consume.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>productId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The product Id of the product to be consumed.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3948">line 3948</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Cocoon.Store.on("consume",{
+	started: function(transactionId){ ... },
+	success: function(transactionId){ ... },
+	error: function(transactionId, err){ ... }
+});
+Cocoon.Store.consume("magic.sword");</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".finish"><span class="type-signature">&lt;static> </span>finish<span class="signature">(transactionId)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Finishes a purchase transaction and removes the transaction from the transaction queue.<br>This method must be called after a purchase finishes successfully and the &quot;success&quot;<br>event inside of the &quot;on purchase products&quot; callback has been received.<br>If the purchase includes some asset to download from an external server this method must be called after the asset has been successfully downloaded.<br>If you do not finish the transaction because the asset has not been correctly downloaded the Cocoon.Store.onProductPurchaseStarted method will be called again later on.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>transactionId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The transactionId of the purchase to finish.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3931">line 3931</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".getProducts"><span class="type-signature">&lt;static> </span>getProducts<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Cocoon.Store.html#.ProductInfo">Cocoon.Store.ProductInfo</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns all the locally stored products.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4087">line 4087</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An array with all the objects available for purchase.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Cocoon.Store.html#.ProductInfo">Cocoon.Store.ProductInfo</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".getPurchases"><span class="type-signature">&lt;static> </span>getPurchases<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Cocoon.Store.html#.PurchaseInfo">Cocoon.Store.PurchaseInfo</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns all the locally stored purchases.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4126">line 4126</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An array with all the completed purchases.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Cocoon.Store.html#.PurchaseInfo">Cocoon.Store.PurchaseInfo</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".getStoreType"><span class="type-signature">&lt;static> </span>getStoreType<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="Cocoon.Store.html#.StoreType">Cocoon.Store.StoreType</a>}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Gets the name of the native store implementation.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3798">line 3798</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The store type.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type"><a href="Cocoon.Store.html#.StoreType">Cocoon.Store.StoreType</a></span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">console.log(Cocoon.Store.getStoreType());</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".initialize"><span class="type-signature">&lt;static> </span>initialize<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Starts the Store Service. This will make the system to initialize the<br>Store Service and probably Store callbacks will start to be received<br>after calling this method. Because of this, you should have set your event handler<br>before calling this method, so you don't lose any callback.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3817">line 3817</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Cocoon.Store.initialize();</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".isProductPurchased"><span class="type-signature">&lt;static> </span>isProductPurchased<span class="signature">(productId)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns if a product has been already purchased or not.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>productId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The product id or alias of the product to be checked.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4034">line 4034</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A boolean that indicates whether the product has been already purchased.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">boolean</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".loadProducts"><span class="type-signature">&lt;static> </span>loadProducts<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Fetches the products information from the Store.<br>The request is monitored using the &quot;load&quot; signal events.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3909">line 3909</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// First register callbacks
+Cocoon.Store.on("load",{
+	started: function(){ ... },
+	success: function(products){ ... },
+	error: function(errorMessage){ ... }
+});
+// Then call the fetch method
+Cocoon.Store.loadProducts(["magic.sword", "health.potion"]);</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".purchase"><span class="type-signature">&lt;static> </span>purchase<span class="signature">(productId)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Requests a product purchase given it's product id.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>productId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id or alias of the product to be purchased.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3969">line 3969</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Cocoon.Store.on("purchase",{
+	started: function(productId){ ... },
+	success: function(purchaseInfo){ ... },
+	verification: function(productId,data){ ... }, // This callback will be fired only when using "unmanaged" mode
+	error: function(productId, err){ ... }
+});
+Cocoon.Store.purchase("magic.sword");</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".removeProduct"><span class="type-signature">&lt;static> </span>removeProduct<span class="signature">(productId)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Removes a product from the products local DB given its productId.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>productId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The product or alias of the product to be removed from the local products DB.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4113">line 4113</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".removePurchase"><span class="type-signature">&lt;static> </span>removePurchase<span class="signature">(transactionId)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Removes a purchase from the local purchases DB given it's transaction id.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>transactionId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of the transaction to be removed.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4152">line 4152</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".restore"><span class="type-signature">&lt;static> </span>restore<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Restores all the purchases from the platform's market.<br>For each already purchased product the event &quot;restore&quot; will be called.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4048">line 4048</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Cocoon.Store.on("restore",{
+	started: function(){ ... },
+	success: function(){ ... },
+	error: function(errorMessage){ ... }
+});
+Cocoon.Store.restore();</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id=".event:Onconsumeproductscallbacks">On consume products callbacks</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Allows to listen to events about the consuming process.</p>
+<ul>
+<li>The callback 'started' receives a parameters with the transaction id of the purchase being consumed when the consume purchase operation has started.</li>
+<li>The callback 'success' receives a parameters with the transaction id of the consumed purchase when the consume purchase operation has completed.</li>
+<li>The callback 'error' receives a parameters with the transaction id  of the purchase that couldn't be consumed and the error message when the consume purchase operation has failed.</li>
+</ul>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4282">line 4282</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Cocoon.Store.on("consume",{
+	started: function(transactionId){ ... },
+	success: function(transactionId){ ... },
+	error: function(transactionId, err){ ... }
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".event:Onloadproductscallbacks">On load products callbacks</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Allows to listen to events about the loading process. </p>
+<ul>
+<li>The callback 'started' receives no parameters when the products fetch has started.</li>
+<li>The callback 'success' receives a parameter with the valid products array when the products fetch has completed.</li>
+<li>The callback 'error' receives an error message as a parameter when the products fetch has failed.</li>
+</ul>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4238">line 4238</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Cocoon.Store.on("load",{
+	started: function(){ ... },
+	success: function(products){ ... },
+	error: function(errorMessage){ ... }
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".event:Onpurchaseproductscallbacks">On purchase products callbacks</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Allows to listen to events about the purchasing process.</p>
+<ul>
+<li>The callback 'started' receives a parameters with the product id of the product being purchased when the purchase of a product starts.</li>
+<li>The callback 'success' receives as parameter the information of the purchase <a href="Cocoon.Store.html#.PurchaseInfo">Cocoon.Store.PurchaseInfo</a> when the purchase of a product succeeds.     </li>
+<li>The callback 'verification' receives two parameters, one with the productId of the purchased product and another one with a JSON object containing the data to be verified when a request for purchase verification has been received from the Store.<br>In Android this JSON object will containt two keys: signedData and signature. You will need that information to verify the purchase against the backend server.</li>
+<li>The callback 'error' receives a parameters with the product id and an error message when the purchase of a product fails.</li>
+</ul>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4258">line 4258</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Cocoon.Store.on("purchase",{
+	started: function(productId){ ... },
+	success: function(purchaseInfo){ ... },
+	verification: function(productId,data){ ... }, // This callback will be fired only when using "unmanaged" mode
+	error: function(productId, err){ ... }
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".event:Onrestoreproductscallbacks">On restore products callbacks</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Allows to listen to events about the restoring process.</p>
+<ul>
+<li>The callback 'started' receives no parameters when the restore purchases operation has started.</li>
+<li>The callback 'success' receives no parameters when the restore purchases operation has completed.</li>
+<li>The callback 'error' receives an error message as a parameter when the restore purchases operation has failed.</li>
+</ul>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4302">line 4302</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Cocoon.Store.on("restore",{
+	started: function(){ ... },
+	success: function(){ ... },
+	error: function(errorMessage){ ... }
+});</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id=".ProductInfo"><span class="type-signature">&lt;static> </span>ProductInfo<span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The object that represents the information of a product in the store.</p>
+    </div>
+    
+    
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>Cocoon.Store.ProductInfo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The object itself</p>
+                <h6>Properties</h6>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>productId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of the product.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>productAlias</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The alias of the product.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>productType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Store.html#.ProductType">Cocoon.Store.ProductType</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The product type.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The title of the product.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>description</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The description of the product.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>price</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The price of the product.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>localizedPrice</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The localized price of the product.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>downloadURL</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The URL of the asset to be downloaded for this purchase.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3665">line 3665</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".ProductType"><span class="type-signature">&lt;static> </span>ProductType<span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The predefined possible states of product types.</p>
+    </div>
+    
+    
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>Cocoon.Store.ProductType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The object itself</p>
+                <h6>Properties</h6>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>CONSUMABLE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A consumable product. See platform documentation for further information.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>NON_CONSUMABLE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>See platform documentation for further information.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>AUTO_RENEWABLE_SUBSCRIPTION</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An auto-renewable subscription. See platform documentation for further information.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>FREE_SUBSCRIPTION</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A free subscription. See platform documentation for further information.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>NON_RENEWABLE_SUBSCRIPTION</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A non-renewable subscription. See platform documentation for further information.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3697">line 3697</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".PurchaseInfo"><span class="type-signature">&lt;static> </span>PurchaseInfo<span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The object that represents the information of a purchase.</p>
+    </div>
+    
+    
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>Cocoon.Store.PurchaseInfo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The object itself</p>
+                <h6>Properties</h6>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>transactionId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The transaction id of a purchase.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>purchaseTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The time when the purchase was done in seconds since 1970.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>purchaseState</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Store.html#.PurchaseState">Cocoon.Store.PurchaseState</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The state of the purchase.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>productId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The product id related to this purchase.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>quantity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The number of products of the productId kind purchased in this transaction.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3750">line 3750</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".PurchaseState"><span class="type-signature">&lt;static> </span>PurchaseState<span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The predefined possible states of a purchase.</p>
+    </div>
+    
+    
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>Cocoon.Store.PurchaseState</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The object itself</p>
+                <h6>Properties</h6>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>PURCHASED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The product has been successfully purchased. The transaction has ended successfully.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>CANCELED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The purchase has been canceled.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>REFUNDED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The purchase has been refunded.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>EXPIRED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The purchase (subscriptions only) has expired and is no longer valid.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3776">line 3776</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".StoreType"><span class="type-signature">&lt;static> </span>StoreType<span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The predefined possible store types.</p>
+    </div>
+    
+    
+    
+
+    
+<dl class="details">
+    
+
+        <h5 class="subsection-title">Properties:</h5>
+
+        <dl>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>Cocoon.Store.StoreType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The object itself</p>
+                <h6>Properties</h6>
+
+<table class="props table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>APP_STORE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Apple AppStore.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>PLAY_STORE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Android Play Store.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>MOCK_STORE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Mock Store (Used for testing).</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>CHROME_STORE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Chrome AppStore.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>AMAZON_STORE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Amazon AppStore.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>NOOK_STORE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Nook Store.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+            </td>
+        </tr>
+
+	
+	</tbody>
+</table>
+</dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-3722">line 3722</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+</dd>
+
+        </dl>
+    
+</article>
+
+</section>
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					
+		<span class="copyright">
+		CocoonJS Documentation by Ludei, DocStrap Copyright © 2012-2013 The contributors to the JSDoc3 and DocStrap projects.
+		</span>
+					<br />
+					
+		<span class="jsdoc-message">
+		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
+		on Tue Apr 05 2016 23:26:58 GMT+0200 (CEST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		</span>
+				</footer>
+			</div>
+
+			
+			<div class="span3">
+				<div id="toc"></div>
+			</div>
+			
+			<br clear="both">
+		</div>
+
+	</div>
+	<script src="scripts/sunlight.js"></script>
+	<script src="scripts/sunlight.javascript.js"></script>
+	<script src="scripts/sunlight-plugin.doclinks.js"></script>
+	<script src="scripts/sunlight-plugin.linenumbers.js"></script>
+	<script src="scripts/sunlight-plugin.menu.js"></script>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/jquery.scrollTo.js"></script>
+	<script src="scripts/jquery.localScroll.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
+
+
+	<script>  Sunlight.highlightAll({lineNumbers:true,  showMenu: true, enableDoclinks :true}); </script>
+
+	<script>
+		$( function () {
+			$( "#toc" ).toc( {
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : 60
+			} );
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+
+			var prefix = $(".toc-h2").text();
+			$($(".toc-h3").nextAll()).each(function(){
+
+				if($(this).attr("class") === "toc-h3")
+					return false;
+				// Mega ugly hack, ask karliky
+				// Replace the "<static>" word
+				var str = prefix + "." + $(this).text().toString().replace("<static> ","");
+				// Replace the "function(args)" string
+
+				str = str.replace(/ /g, "").replace(/\n/g, "");
+				str = str.split("(");
+				str = (str.length == 1) ? str.join("") : str[0] + "(" + ")";
+				$($($(this)[0]).children()[0]).text(str);
+			});
+			$(".toc-h4 a").each(function(){
+				var el 	= $(this);
+				var str = el.text().toString().replace("<static> ","");
+				
+				str = str.split("(");
+				str = (str.length == 1) ? str.join("") : str[0] + "(" + ")";
+				el.text(str);
+			});
+			$(".description p").each(function(){
+				var el = $(this);
+				el.html(el.text());
+			});
+		} );
+	</script>
+
+	
+
+</body>
+</html>

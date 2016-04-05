@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CocoonJS Plugins - Class: Match</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+	<script type="text/javascript">
+		if(window.location.pathname.indexOf("index.html") !== -1){
+			document.write('<style>  #toc { display:none; } </style>');
+		}
+	</script>
+	
+	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+	
+	<style type="text/css">
+		.alert-warning {
+			background-color: #fcf8e3;
+			border-color: #faebcc;
+			color: #8a6d3b;
+		}
+		.alert {
+			padding: 15px;
+			margin-bottom: 20px;
+			border: 1px solid transparent;
+			border-radius: 4px;
+		}
+		.alert a{
+			color: #8a6d3b;
+			font-weight: bold;
+		}
+		.alert-success a {
+			color: #519251;
+			font-weight: bold;
+		}
+		.alert-success a:hover{
+			color: #519251;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		.alert-warning a:hover{
+			color: #8a6d3b;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		.page-title{
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html"><img src='http://d1315078ftetqc.cloudfront.net/assets/img/layout/logo.png' style='width: 119px;height: 35px;'/> <span class='brand-adjust'>CocoonJS Plugins</span></a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							
+								<a href="Cocoon.html">Cocoon</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Ad.html">Ad</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.App.html">App</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Camera.html">Camera</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Device.html">Device</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Dialog.html">Dialog</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Motion.html">Motion</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Multiplayer.html">Multiplayer</a>
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Notification.html">Notification</a>
+							
+						</li>
+						
+						<li>
+							
+								
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Proxify.html">Proxify</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Social.html">Social</a>
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Store.html">Store</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Touch.html">Touch</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Utils.html">Utils</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.WebView.html">WebView</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Widget.html">Widget</a>
+							
+						</li>
+						
+
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+
+		
+		<div class="span8">
+			
+				<div id="main">
+					
+
+
+	<h1 class="page-title">Class: Match</h1>
+<section>
+
+<header>
+    <h2>
+        <span class="ancestors"><a href="Cocoon.html">Cocoon</a><a href="Cocoon.Multiplayer.html">.Multiplayer</a>.</span>
+    
+
+    
+        Match
+    
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+<dt>
+    <h4 class="name" id="Match"><span class="type-signature"></span>new Match<span class="signature">(nativeExtensionName, extensionName, matchID)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>This type provides a transmission network between a group of users.<br>The match might be returned before connections have been established between players. At this stage, all the players are in the process of connecting to each other.<br>Always check the getExpectedPlayerCount value before starting a match. When its value reaches zero, all expected players are connected, and your game can begin the match.<br>Do not forget to call the start method of the match when your game is ready to process received messages via onMatchDataReceived listener.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>nativeExtensionName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the native ext object extension property name.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>extensionName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the CocoonJS object extension property name.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>matchID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The match ID user for native service bridge.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8097">line 8097</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id=".disconnect"><span class="type-signature">&lt;static> </span>disconnect<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Disconnects the local player from the match and releases the match. Calling disconnect notifies other players that you have left the match.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8215">line 8215</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".getExpectedPlayerCount"><span class="type-signature">&lt;static> </span>getExpectedPlayerCount<span class="signature">()</span><span class="type-signature"> &rarr; {number}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns the remaining players count who have not yet connected to the match.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8238">line 8238</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The remaining number of players who have not yet connected to the match.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">number</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".getLocalPlayerID"><span class="type-signature">&lt;static> </span>getLocalPlayerID<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Gets the local playerID taking part in the match.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8262">line 8262</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the playerID attached to the match manager.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">string</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".getPlayerIDs"><span class="type-signature">&lt;static> </span>getPlayerIDs<span class="signature">()</span><span class="type-signature"> &rarr; {array}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns an array with all the player identifiers taking part in the match.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8250">line 8250</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The player identifiers for the players in the match.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">array</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".requestPlayersInfo"><span class="type-signature">&lt;static> </span>requestPlayersInfo<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Requests additional information of the current players in the match.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function. Response params: players array and error</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8226">line 8226</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".sendData"><span class="type-signature">&lt;static> </span>sendData<span class="signature">(data, playerIDs, <span class="optional">sendMode</span>)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Transmits data to a list of connected players. The match queues the data and transmits it when the network becomes available.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The data to transmit</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>playerIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An array containing the identifier strings for the list of players who should receive the data.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>sendMode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Multiplayer.html#.SendDataMode">Cocoon.Multiplayer.SendDataMode</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The optional <a href="Cocoon.Multiplayer.html#.SendDataMode">Cocoon.Multiplayer.SendDataMode</a> value. The default value is RELIABLE.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8200">line 8200</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>TRUE if the data was successfully queued for transmission; FALSE if the match was unable to queue the data.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">boolean</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".sendDataToAllPlayers"><span class="type-signature">&lt;static> </span>sendDataToAllPlayers<span class="signature">(data, <span class="optional">sendMode</span>)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Transmits data to all players connected to the match. The match queues the data and transmits it when the network becomes available.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The data to transmit.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>sendMode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Multiplayer.html#.SendDataMode">Cocoon.Multiplayer.SendDataMode</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The optional <a href="Cocoon.Multiplayer.html#.SendDataMode">Cocoon.Multiplayer.SendDataMode</a> value. The default value is RELIABLE.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8186">line 8186</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>TRUE if the data was successfully queued for transmission; FALSE if the match was unable to queue the data.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">boolean</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".start"><span class="type-signature">&lt;static> </span>start<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Starts processing received messages. The user must call this method when the game is ready to process messages. Messages received before being prepared are stored and processed later.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8175">line 8175</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+        <h3 class="subsection-title">Events</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id=".event:Onrestoreproductscallbacks">On restore products callbacks</h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Allows to listen to events about the restoring process.</p>
+<ul>
+<li>The callback 'dataReceived' </li>
+<li>The callback 'stateChanged' </li>
+<li>The callback 'connectionWithPlayerFailed' allows listening to events called when a netowrk connection with a player fails</li>
+<li>The callback 'failed' allows listening to events called when the match fails.</li>
+</ul>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-8147">line 8147</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">Cocoon.Store.on("restore",{
+ dataReceived: function(match, data, playerId){ ... },
+ stateChanged: function(match, playerId, connectionState){ ... },
+ connectionWithPlayerFailed: function(match, playerId, errorMsg){ ... }
+ failed: function(match, errorMsg){ ... }
+});</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					
+		<span class="copyright">
+		CocoonJS Documentation by Ludei, DocStrap Copyright © 2012-2013 The contributors to the JSDoc3 and DocStrap projects.
+		</span>
+					<br />
+					
+		<span class="jsdoc-message">
+		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
+		on Tue Apr 05 2016 23:26:58 GMT+0200 (CEST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		</span>
+				</footer>
+			</div>
+
+			
+			<div class="span3">
+				<div id="toc"></div>
+			</div>
+			
+			<br clear="both">
+		</div>
+
+	</div>
+	<script src="scripts/sunlight.js"></script>
+	<script src="scripts/sunlight.javascript.js"></script>
+	<script src="scripts/sunlight-plugin.doclinks.js"></script>
+	<script src="scripts/sunlight-plugin.linenumbers.js"></script>
+	<script src="scripts/sunlight-plugin.menu.js"></script>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/jquery.scrollTo.js"></script>
+	<script src="scripts/jquery.localScroll.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
+
+
+	<script>  Sunlight.highlightAll({lineNumbers:true,  showMenu: true, enableDoclinks :true}); </script>
+
+	<script>
+		$( function () {
+			$( "#toc" ).toc( {
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : 60
+			} );
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+
+			var prefix = $(".toc-h2").text();
+			$($(".toc-h3").nextAll()).each(function(){
+
+				if($(this).attr("class") === "toc-h3")
+					return false;
+				// Mega ugly hack, ask karliky
+				// Replace the "<static>" word
+				var str = prefix + "." + $(this).text().toString().replace("<static> ","");
+				// Replace the "function(args)" string
+
+				str = str.replace(/ /g, "").replace(/\n/g, "");
+				str = str.split("(");
+				str = (str.length == 1) ? str.join("") : str[0] + "(" + ")";
+				$($($(this)[0]).children()[0]).text(str);
+			});
+			$(".toc-h4 a").each(function(){
+				var el 	= $(this);
+				var str = el.text().toString().replace("<static> ","");
+				
+				str = str.split("(");
+				str = (str.length == 1) ? str.join("") : str[0] + "(" + ")";
+				el.text(str);
+			});
+			$(".description p").each(function(){
+				var el = $(this);
+				el.html(el.text());
+			});
+		} );
+	</script>
+
+	
+
+</body>
+</html>

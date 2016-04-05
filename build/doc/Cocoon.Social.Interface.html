@@ -1,0 +1,3497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CocoonJS Plugins - Namespace: Interface</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+	<script type="text/javascript">
+		if(window.location.pathname.indexOf("index.html") !== -1){
+			document.write('<style>  #toc { display:none; } </style>');
+		}
+	</script>
+	
+	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+	
+	<style type="text/css">
+		.alert-warning {
+			background-color: #fcf8e3;
+			border-color: #faebcc;
+			color: #8a6d3b;
+		}
+		.alert {
+			padding: 15px;
+			margin-bottom: 20px;
+			border: 1px solid transparent;
+			border-radius: 4px;
+		}
+		.alert a{
+			color: #8a6d3b;
+			font-weight: bold;
+		}
+		.alert-success a {
+			color: #519251;
+			font-weight: bold;
+		}
+		.alert-success a:hover{
+			color: #519251;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		.alert-warning a:hover{
+			color: #8a6d3b;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		.page-title{
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<a class="brand" href="index.html"><img src='http://d1315078ftetqc.cloudfront.net/assets/img/layout/logo.png' style='width: 119px;height: 35px;'/> <span class='brand-adjust'>CocoonJS Plugins</span></a>
+			<ul class="nav">
+				
+				<li class="dropdown">
+					<a href="namespaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b
+						class="caret"></b></a>
+
+					<ul class="dropdown-menu ">
+						
+						<li>
+							
+								<a href="Cocoon.html">Cocoon</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Ad.html">Ad</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.App.html">App</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Camera.html">Camera</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Device.html">Device</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Dialog.html">Dialog</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Motion.html">Motion</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Multiplayer.html">Multiplayer</a>
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Notification.html">Notification</a>
+							
+						</li>
+						
+						<li>
+							
+								
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Proxify.html">Proxify</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Social.html">Social</a>
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Store.html">Store</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Touch.html">Touch</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Utils.html">Utils</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.WebView.html">WebView</a>
+							
+						</li>
+						
+						<li>
+							
+								<a href="Cocoon.Widget.html">Widget</a>
+							
+						</li>
+						
+
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+
+		
+		<div class="span8">
+			
+				<div id="main">
+					
+
+
+	<h1 class="page-title">Namespace: Interface</h1>
+<section>
+
+<header>
+    <h2>
+        <span class="ancestors"><a href="Cocoon.html">Cocoon</a><a href="Cocoon.Social.html">.Social</a>.</span>
+    
+
+    
+        Interface
+    
+    </h2>
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+
+    
+        
+            <div class="description"><p>This interface provides an abstraction API for all the Social Services, this is an interface and never should be call directly.<br>Each Social service has it's own official API but can also be used within this API interface. In order to use this<br>interface you should call the method getSocialInterface(); that is available in the following classes:</p>
+<ul>
+<li><a href="Cocoon.Social.Facebook.html">Facebook</a></li>
+<li><a href="Cocoon.Social.GooglePlayGames.html">Google Play Games</a></li>
+<li><a href="Cocoon.Social.GameCenter.html">Game Center</a></li>
+</ul></div>
+        
+
+        
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4756">line 4756</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+            <h3>Example</h3>
+            
+    <pre class="sunlight-highlight-javascript">// You can use one of these 3 services with the same API.
+// In this example we'll use Facebook
+var service = Cocoon.Social.Facebook;
+//var service = Cocoon.Social.GameCenter;
+//var service = Cocoon.Social.GooglePlayGames;
+
+// Each service has it's own init method,
+// Refer to each service API to know how to initialize it.
+service.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = service.getSocialInterface();
+ 
+function loginFacebook() {
+  if (!socialService.isLoggedIn()) {
+      socialService.login(function(loggedIn, error) {
+          if (error) {
+              console.error("login error: " + error.message);
+          }
+          else if (loggedIn) {
+              var message = new Cocoon.Social.Message(
+                  "Hello from the CocoonJS Launcher App! Are you a HTML5 game developer? Come and check out CocoonJS!",
+                  "https://cocoonjsadmin.ludei.com/static/images/cocoon_logo.png",
+                  "http://ludei.com",
+                  "Ludei & CocoonJS",
+                  "We love HTML5 games!");
+
+              socialService.publishMessageWithDialog(message, function(error) {
+                  if (error) {
+                      console.error("Error publishing message: " + error.message);
+                  }
+              });
+           }
+           else {
+              console.log("login cancelled");
+           }
+      });
+  }
+}   
+loginFacebook(); </pre>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<dt>
+    <h4 class="name" id=".getLoggedInUser"><span class="type-signature">&lt;static> </span>getLoggedInUser<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Returns the information of the currently logged in user.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4893">line 4893</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p><a href="Cocoon.Social.html#.User">Cocoon.Social.User</a></p>
+</div>
+
+
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".hasPublishPermissions"><span class="type-signature">&lt;static> </span>hasPublishPermissions<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Checks if the current logged in user has publish permissions.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: permissions granted and error</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4903">line 4903</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".isLoggedIn"><span class="type-signature">&lt;static> </span>isLoggedIn<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Checks if the user is logged in.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4821">line 4821</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>true if the user is still logged in, false otherwise.</p>
+</div>
+
+
+
+<dl>
+	<dt>
+		Type
+	</dt>
+	<dd>
+		
+<span class="param-type">boolean</span>
+
+
+	</dd>
+</dl>
+
+
+        
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".login"><span class="type-signature">&lt;static> </span>login<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Authenticates the user.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function. Response params: loggedIn(boolean) and error</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4831">line 4831</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+var loggedIn = socialService.isLoggedIn();
+
+function loginFacebook() {
+  if (!socialService.isLoggedIn()) {
+      socialService.login(function(loggedIn, error) {
+           if (error) {
+              console.error("login error: " + error.message);
+           }
+           else if (loggedIn) {
+              console.log("login succeeded");
+           }
+           else {
+              console.log("login cancelled");
+           }
+      });
+  }
+}
+loginFacebook();</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".logout"><span class="type-signature">&lt;static> </span>logout<span class="signature">(<span class="optional">callback</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Logs the user out of your application.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback function. Response params: error.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4869">line 4869</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+
+socialService.logout(function(error){
+
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".publishMessage"><span class="type-signature">&lt;static> </span>publishMessage<span class="signature">(message, <span class="optional">callback</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Shares a message without the intervention of the user.<br>This action might require publish permissions. If the user has not publish permissions they are automatically requested.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Social.html#.Message">Cocoon.Social.Message</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>A object representing the information to be published.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: error.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5007">line 5007</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+var loggedIn = socialService.isLoggedIn();
+
+if (loggedIn) {
+    var message = new Cocoon.Social.Message(
+    "Hello from the CocoonJS Launcher App! Are you a HTML5 game developer? Come and check out CocoonJS!",
+    "https://cocoonjsadmin.ludei.com/static/images/cocoon_logo.png",
+    "http://ludei.com",
+    "Ludei & CocoonJS",
+    "We love HTML5 games!");
+
+    socialService.publishMessage(message, function(error) {
+         if (error) {
+             console.error("Error publishing message: " + error.message);
+         }
+     });
+}</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".publishMessageWithDialog"><span class="type-signature">&lt;static> </span>publishMessageWithDialog<span class="signature">(message, callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Presents a native/web dialog that allows the user to share a message.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Social.html#.Message">Cocoon.Social.Message</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>A object representing the information to be published</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: error</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5044">line 5044</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+var loggedIn = socialService.isLoggedIn();
+
+if (loggedIn) {
+    var message = new Cocoon.Social.Message(
+    "Hello from the CocoonJS Launcher App! Are you a HTML5 game developer? Come and check out CocoonJS!",
+    "https://cocoonjsadmin.ludei.com/static/images/cocoon_logo.png",
+    "http://ludei.com",
+    "Ludei & CocoonJS",
+    "We love HTML5 games!");
+
+    socialService.publishMessageWithDialog(message, function(error) {
+         if (error) {
+             console.error("Error publishing message: " + error.message);
+         }
+     });
+}   </pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".requestAchievements"><span class="type-signature">&lt;static> </span>requestAchievements<span class="signature">(callback, <span class="optional">userId</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieves the achievements earned by a user.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: </p>
+<ul>
+<li>Array of <a href="Cocoon.Social.html#.Achievement">Cocoon.Social.Achievement</a>.</li>
+<li>Error.</li>
+</ul></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>userId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The id of the user to retrieve the information from. If no userID is specified, the currently logged in user is assumed.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5159">line 5159</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".requestAllAchievements"><span class="type-signature">&lt;static> </span>requestAllAchievements<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieves all the achievements of the application.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: </p>
+<ul>
+<li>Array of <a href="Cocoon.Social.html#.Achievement">Cocoon.Social.Achievement</a> </li>
+<li>Error.</li>
+</ul></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5147">line 5147</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".requestFriends"><span class="type-signature">&lt;static> </span>requestFriends<span class="signature">(callback, userID)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieves user friends for a specific user ID.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: </p>
+<ul>
+<li>Array of <a href="Cocoon.Social.html#.User">Cocoon.Social.User</a>. </li>
+<li>Error.</li>
+</ul></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>userID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of the user to retrieve the information from. If no userID is specified, the currently logged in user is assumed.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4972">line 4972</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+
+var loggedIn = socialService.isLoggedIn();
+
+if (loggedIn) {
+  socialService.requestFriends(function(friends, error) {
+       if (error) {
+           console.error("requestFriends error: " + error.message);
+      }
+      else {
+         console.log("You have " + friends.length + " friends.");
+       }
+  });
+}</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".requestPublishPermissions"><span class="type-signature">&lt;static> </span>requestPublishPermissions<span class="signature">(callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Requests publish permissions for the current logged in user.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: granted and error</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4913">line 4913</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".requestScore"><span class="type-signature">&lt;static> </span>requestScore<span class="signature">(callback, <span class="optional">params</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieves the score for a user from a specific leaderboard</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: </p>
+<ul>
+<li><a href="Cocoon.Social.html#.Score">Cocoon.Social.Score</a>. </li>
+<li>Error.</li>
+</ul></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Social.html#.ScoreParams">Cocoon.Social.ScoreParams</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The params to retrieve the score. If no params are specified, the currently logged in user and the default leaderboard are assumed.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5094">line 5094</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".requestUser"><span class="type-signature">&lt;static> </span>requestUser<span class="signature">(callback, userID)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Retrieves user information for a specific user ID.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: </p>
+<ul>
+<li><a href="Cocoon.Social.html#.User">Cocoon.Social.User</a>.</li>
+<li>Error.</li>
+</ul></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>userID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of the user to retrieve the information from. If no userID is specified, the currently logged in user is assumed.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4924">line 4924</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+var loggedIn = socialService.isLoggedIn();
+
+if (loggedIn) {
+  socialService.requestUser(function(user, error) {
+       if (error) {
+           console.error("requestUser error: " + error.message);
+      }
+      else {
+          console.log(user.userName);
+       }
+  }, userID);
+}</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".requestUserImage"><span class="type-signature">&lt;static> </span>requestUserImage<span class="signature">(callback, userID, imageSize)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Requests to retrieve the profile image of a user.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function. It receives the following parameters: </p>
+<ul>
+<li>ImageURL. </li>
+<li>Error.</li>
+</ul></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>userID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The id of the user to get the image for. If no userID is specified, the currently logged user is used.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>imageSize</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Social.html#.ImageSize">Cocoon.Social.ImageSize</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The desired size of the image. Default value: SMALL.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-4958">line 4958</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".resetAchievements"><span class="type-signature">&lt;static> </span>resetAchievements<span class="signature">(<span class="optional">callback</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Resets all the achievements of the current logged in user</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback function. Response params: error.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5198">line 5198</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+
+socialService.resetAchievements(function(error){
+    if (error)
+        console.error("resetAchievements error: " + error.message);
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".setAchievementsMap"><span class="type-signature">&lt;static> </span>setAchievementsMap<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Set the map for using custom achievement IDs.<br>The map must be a customID to realID map (accessing map.customID must return the real achievement ID).<br>Whenever this map is enabled users are able to submit achievements with the real achievement ID or with the custom one.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5285">line 5285</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".setTemplates"><span class="type-signature">&lt;static> </span>setTemplates<span class="signature">(leaderboardsTemplate, achievementsTemplate)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Provides some templates to be used in the leaderboards and achievements views<br>Some social services (like Facebook) don't have a native view to show achievements or leaderboards views, and use html templates instead.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>leaderboardsTemplate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Relative path to the leaderboards template.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>achievementsTemplate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Relative path to the achievements template.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5299">line 5299</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".showAchievements"><span class="type-signature">&lt;static> </span>showAchievements<span class="signature">(<span class="optional">callback</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Shows a modal achievements view using a platform dependant view.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback function invoked when the modal achievements view is closed by the user. Response params: error.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5223">line 5223</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+var loggedIn = socialService.isLoggedIn();
+
+socialService.showAchievements(function(error){
+    if (error)
+        console.error("showAchievements error: " + error.message);
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".showLeaderboard"><span class="type-signature">&lt;static> </span>showLeaderboard<span class="signature">(<span class="optional">params</span>, <span class="optional">callback</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Shows a modal leaderboard view using a platform dependant view.</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Social.html#.ScoreParams">Cocoon.Social.ScoreParams</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The params to choose the leaderboard and other settings. If no params are specified the default leaderboard id and settings will be assumed.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback function invoked when the modal leaderboard view is closed by the user. Response params: error.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5120">line 5120</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+var loggedIn = socialService.isLoggedIn();
+
+socialService.showLeaderboard(function(error){
+    if (error)
+        console.error("showLeaderbord error: " + error.message);
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".submitAchievement"><span class="type-signature">&lt;static> </span>submitAchievement<span class="signature">(achievementID, callback)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Submits the achievement for the current logged In user</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>achievementID</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The achievement ID to submit</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>[callback] The callback function. Response params: error.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5172">line 5172</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">var fb = Cocoon.Social.Facebook;
+
+fb.init({
+    appId: "XXXXXXXXXXXXXXXXXXXXX",
+    channelUrl: "//connect.facebook.net/en_US/all.js"
+});
+
+var socialService = fb.getSocialInterface();
+
+socialService.submitAchievement( achievementID, function(error){
+    if (error)
+        console.error("submitAchievement error: " + error.message);
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<dt>
+    <h4 class="name" id=".submitScore"><span class="type-signature">&lt;static> </span>submitScore<span class="signature">(score, <span class="optional">callback</span>, <span class="optional">params</span>)</span><span class="type-signature"></span></h4>
+    
+    
+</dt>
+<dd>
+    
+    
+    <div class="description">
+        <p>Submits the score for a user to a specific leaderboard</p>
+    </div>
+    
+
+    
+    
+    
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+	<tr>
+		
+		<th>Name</th>
+		
+
+		<th>Type</th>
+
+		
+		<th>Argument</th>
+		
+
+		
+
+		<th class="last">Description</th>
+	</tr>
+	</thead>
+
+	<tbody>
+	
+
+        <tr>
+            
+                <td class="name"><code>score</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The score to submit</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The callback function. Response params: error.</p></td>
+        </tr>
+
+	
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Cocoon.Social.html#.ScoreParams">Cocoon.Social.ScoreParams</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The params to submit the score. If no params are specified, the currently logged in user and the default leaderboard are assumed.</p></td>
+        </tr>
+
+	
+	</tbody>
+</table>
+
+    
+    
+    
+<dl class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html">/Users/imanolmartin/Development/Projects/CocoonJS/cocoonjs-plugins/build/cocoon.js</a>, <a href="-_Users_imanolmartin_Development_Projects_CocoonJS_cocoonjs-plugins_build_cocoon.js.html#sunlight-1-line-5107">line 5107</a>
+    </li></ul></dd>
+    -->
+
+    
+
+    
+
+    
+</dl>
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+				</div>
+
+				<div class="clearfix"></div>
+				<footer>
+					
+					
+		<span class="copyright">
+		CocoonJS Documentation by Ludei, DocStrap Copyright © 2012-2013 The contributors to the JSDoc3 and DocStrap projects.
+		</span>
+					<br />
+					
+		<span class="jsdoc-message">
+		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
+		on Tue Apr 05 2016 23:26:58 GMT+0200 (CEST) using the <a href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
+		</span>
+				</footer>
+			</div>
+
+			
+			<div class="span3">
+				<div id="toc"></div>
+			</div>
+			
+			<br clear="both">
+		</div>
+
+	</div>
+	<script src="scripts/sunlight.js"></script>
+	<script src="scripts/sunlight.javascript.js"></script>
+	<script src="scripts/sunlight-plugin.doclinks.js"></script>
+	<script src="scripts/sunlight-plugin.linenumbers.js"></script>
+	<script src="scripts/sunlight-plugin.menu.js"></script>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="scripts/jquery.scrollTo.js"></script>
+	<script src="scripts/jquery.localScroll.js"></script>
+	<script src="scripts/bootstrap-dropdown.js"></script>
+	<script src="scripts/toc.js"></script>
+
+
+	<script>  Sunlight.highlightAll({lineNumbers:true,  showMenu: true, enableDoclinks :true}); </script>
+
+	<script>
+		$( function () {
+			$( "#toc" ).toc( {
+				selectors   : "h1,h2,h3,h4",
+				showAndHide : false,
+				scrollTo    : 60
+			} );
+			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
+			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+
+			var prefix = $(".toc-h2").text();
+			$($(".toc-h3").nextAll()).each(function(){
+
+				if($(this).attr("class") === "toc-h3")
+					return false;
+				// Mega ugly hack, ask karliky
+				// Replace the "<static>" word
+				var str = prefix + "." + $(this).text().toString().replace("<static> ","");
+				// Replace the "function(args)" string
+
+				str = str.replace(/ /g, "").replace(/\n/g, "");
+				str = str.split("(");
+				str = (str.length == 1) ? str.join("") : str[0] + "(" + ")";
+				$($($(this)[0]).children()[0]).text(str);
+			});
+			$(".toc-h4 a").each(function(){
+				var el 	= $(this);
+				var str = el.text().toString().replace("<static> ","");
+				
+				str = str.split("(");
+				str = (str.length == 1) ? str.join("") : str[0] + "(" + ")";
+				el.text(str);
+			});
+			$(".description p").each(function(){
+				var el = $(this);
+				el.html(el.text());
+			});
+		} );
+	</script>
+
+	
+
+</body>
+</html>
