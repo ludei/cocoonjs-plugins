@@ -1,0 +1,200 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="PUNC">(</span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>  2</span> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>  3</span> </span><span class="WHIT">    </span><span class="COMM">// The CocoonJS must exist before creating the extension.</span><span class="WHIT">
+<span class='line'>  4</span> </span><span class="WHIT">    </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="KEYW">typeof</span><span class="WHIT"> </span><span class="NAME">window.CocoonJS</span><span class="WHIT"> </span><span class="PUNC">===</span><span class="WHIT"> </span><span class="STRN">'undefined'</span><span class="WHIT"> </span><span class="PUNC">||</span><span class="WHIT"> </span><span class="NAME">window.CocoonJS</span><span class="WHIT"> </span><span class="PUNC">===</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="KEYW">throw</span><span class="PUNC">(</span><span class="STRN">"The CocoonJS object must exist and be valid before creating any extension object."</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>  5</span> 
+<span class='line'>  6</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>  7</span>     * This namespace represents the CocoonJS camera extension API.
+<span class='line'>  8</span>     * @namespace
+<span class='line'>  9</span>     */</span><span class="WHIT">
+<span class='line'> 10</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.Camera</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 11</span> 
+<span class='line'> 12</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.Camera.nativeExtensionObjectAvailable</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">CocoonJS.nativeExtensionObjectAvailable</span><span class="WHIT"> </span><span class="PUNC">&&</span><span class="WHIT"> </span><span class="KEYW">typeof</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_SRV_CAMERA</span><span class="WHIT"> </span><span class="PUNC">!==</span><span class="WHIT"> </span><span class="STRN">'undefined'</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 13</span> 
+<span class='line'> 14</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'> 15</span>     * The predefined possible camera types.
+<span class='line'> 16</span>     * @namespace 
+<span class='line'> 17</span>     */</span><span class="WHIT">
+<span class='line'> 18</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.CameraType</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 19</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 20</span> 		* Represents the front camera on the device.
+<span class='line'> 21</span> 		*/</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="WHIT">	    </span><span class="NAME">FRONT</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"FRONT"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 23</span> 
+<span class='line'> 24</span> </span><span class="WHIT">	    </span><span class="COMM">/**
+<span class='line'> 25</span> 	    * Represents the back camera on the device.
+<span class='line'> 26</span> 	    */</span><span class="WHIT">
+<span class='line'> 27</span> </span><span class="WHIT">	    </span><span class="NAME">BACK</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"BACK"</span><span class="WHIT">
+<span class='line'> 28</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 29</span> 
+<span class='line'> 30</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'> 31</span>     * The predefined possible camera video capturing image format types.
+<span class='line'> 32</span>     * @namespace 
+<span class='line'> 33</span>     */</span><span class="WHIT">
+<span class='line'> 34</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.CaptureFormatType</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 35</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 36</span> 		*/</span><span class="WHIT">
+<span class='line'> 37</span> </span><span class="WHIT">	    </span><span class="NAME">JPEG</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"JPEG"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 38</span> 
+<span class='line'> 39</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 40</span> 		*/</span><span class="WHIT">
+<span class='line'> 41</span> </span><span class="WHIT">	    </span><span class="NAME">RGB_565</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"RGB_565"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 42</span> 
+<span class='line'> 43</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 44</span> 		*/</span><span class="WHIT">
+<span class='line'> 45</span> </span><span class="WHIT">	    </span><span class="NAME">NV21</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"NV21"</span><span class="PUNC">,</span><span class="WHIT"> 
+<span class='line'> 46</span> 
+<span class='line'> 47</span> 		</span><span class="COMM">/**
+<span class='line'> 48</span> 		*/</span><span class="WHIT">
+<span class='line'> 49</span> </span><span class="WHIT">	    </span><span class="NAME">NV16</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"NV16"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 50</span> 
+<span class='line'> 51</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 52</span> 		*/</span><span class="WHIT">
+<span class='line'> 53</span> </span><span class="WHIT">	    </span><span class="NAME">YUY2</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"YUY2"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 54</span> 
+<span class='line'> 55</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 56</span> 		*/</span><span class="WHIT">
+<span class='line'> 57</span> </span><span class="WHIT">	    </span><span class="NAME">YV12</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"YV12"</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 58</span> 
+<span class='line'> 59</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 60</span> 		*/</span><span class="WHIT">
+<span class='line'> 61</span> </span><span class="WHIT">	    </span><span class="NAME">BGRA32</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="STRN">"32BGRA"</span><span class="WHIT">
+<span class='line'> 62</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 63</span> 
+<span class='line'> 64</span> </span><span class="WHIT">	</span><span class="COMM">/**
+<span class='line'> 65</span> 	* The data structure that represents the information of a camera. It includes all the information to be able to setup a camera to capture video or to take pictures.
+<span class='line'> 66</span> 	* @namespace
+<span class='line'> 67</span> 	*/</span><span class="WHIT">
+<span class='line'> 68</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.CameraInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT">  </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 69</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 70</span> 		* The index of the camera.
+<span class='line'> 71</span> 		*/</span><span class="WHIT">
+<span class='line'> 72</span> </span><span class="WHIT">		</span><span class="NAME">cameraIndex</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 73</span> 
+<span class='line'> 74</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 75</span> 		* The type of the camera among the possible values in {@link CocoonJS.Camera.CameraType}.
+<span class='line'> 76</span> 		*/</span><span class="WHIT">
+<span class='line'> 77</span> </span><span class="WHIT">		</span><span class="NAME">cameraType</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="NAME">CocoonJS.Camera.CameraType.BACK</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 78</span> 
+<span class='line'> 79</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 80</span> 		* An array of {@link CocoonJS.Size} values that represent the supported video sizes for the camera.
+<span class='line'> 81</span> 		*/</span><span class="WHIT">
+<span class='line'> 82</span> </span><span class="WHIT">		</span><span class="NAME">supportedVideoSizes</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 83</span> 
+<span class='line'> 84</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 85</span> 		* An array of numbers that represent the supported video frame rates for the camera.
+<span class='line'> 86</span> 		*/</span><span class="WHIT">
+<span class='line'> 87</span> </span><span class="WHIT">		</span><span class="NAME">supportedVideoFrameRates</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'> 88</span> 
+<span class='line'> 89</span> </span><span class="WHIT">		</span><span class="COMM">/**
+<span class='line'> 90</span> 		* An array of {@link CocoonJS.Camera.CaptureFormatType} values that represent the supported video format types for the camera.
+<span class='line'> 91</span> 		*/</span><span class="WHIT">
+<span class='line'> 92</span> </span><span class="WHIT">		</span><span class="NAME">supportedVideoCaptureImageFormats</span><span class="WHIT"> </span><span class="PUNC">:</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="WHIT">
+<span class='line'> 93</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 94</span> 
+<span class='line'> 95</span> </span><span class="WHIT">	</span><span class="COMM">/**
+<span class='line'> 96</span> 	* Returns the number of available camera in the platform/device.
+<span class='line'> 97</span> 	* @returns {number} The number of cameras available in the platform/device.
+<span class='line'> 98</span> 	*/</span><span class="WHIT">
+<span class='line'> 99</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.getNumberOfCameras</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>100</span> </span><span class="WHIT">	</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>101</span> </span><span class="WHIT">		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.Camera.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>102</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>103</span> </span><span class="WHIT">			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">CocoonJS.makeNativeExtensionObjectFunctionCall</span><span class="PUNC">(</span><span class="STRN">"IDTK_SRV_CAMERA"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"getNumberOfCameras"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>104</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>105</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>106</span> 
+<span class='line'>107</span> </span><span class="WHIT">	</span><span class="COMM">/**
+<span class='line'>108</span> 	* Returns an array of {@link CocoonJS.Camera.CameraInfo} objects representing all the information of all the cameras available in the platform/device.
+<span class='line'>109</span> 	* @returns {Array} An array of {@link CocoonJS.Camera.CameraInfo} objects.
+<span class='line'>110</span> 	*/</span><span class="WHIT">
+<span class='line'>111</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.getAllCamerasInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>112</span> </span><span class="WHIT">	</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>113</span> </span><span class="WHIT">		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.Camera.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>114</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>115</span> </span><span class="WHIT">			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">CocoonJS.makeNativeExtensionObjectFunctionCall</span><span class="PUNC">(</span><span class="STRN">"IDTK_SRV_CAMERA"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"getAllCamerasInfo"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>116</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>117</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>118</span> 
+<span class='line'>119</span> </span><span class="WHIT">	</span><span class="COMM">/**
+<span class='line'>120</span> 	* Returns the {@link CocoonJS.Camera.CameraInfo} object that represents all the information of the specified camera index in the platform/device.
+<span class='line'>121</span> 	* @param {number} cameraIndex The index of the camera to get the info from. The index should be inside 0 and N (N being the value returned by {@link CocoonJS.Camera.getNumberOfCameras}).
+<span class='line'>122</span> 	* @returns {CocoonJS.Camera.CameraInfo} The {@link CocoonJS.Camera.CameraInfo} of the given camera index.
+<span class='line'>123</span> 	*/</span><span class="WHIT">
+<span class='line'>124</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.getCameraInfoByIndex</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">cameraIndex</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>125</span> </span><span class="WHIT">	</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>126</span> </span><span class="WHIT">		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.Camera.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>127</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>128</span> </span><span class="WHIT">			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">CocoonJS.makeNativeExtensionObjectFunctionCall</span><span class="PUNC">(</span><span class="STRN">"IDTK_SRV_CAMERA"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"getCameraInfoByIndex"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>129</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>130</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>131</span> 
+<span class='line'>132</span> </span><span class="WHIT">	</span><span class="COMM">/**
+<span class='line'>133</span> 	* Returns the {@link CocoonJS.Camera.CameraInfo} object that represents all the information of the first camera of the specified type found in the platform/device.
+<span class='line'>134</span> 	* @param {CocoonJS.Camera.CameraType} cameraType The type of the camera to get the info from. 
+<span class='line'>135</span> 	* @returns {CocoonJS.Camera.CameraInfo} The {@link CocoonJS.Camera.CameraInfo} of the first camera of the given camera type that has been found in the platform/device.
+<span class='line'>136</span> 	*/</span><span class="WHIT">
+<span class='line'>137</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.getCameraInfoByType</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">cameraType</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>138</span> </span><span class="WHIT">	</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>139</span> </span><span class="WHIT">		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.Camera.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>140</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>141</span> </span><span class="WHIT">			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">CocoonJS.makeNativeExtensionObjectFunctionCall</span><span class="PUNC">(</span><span class="STRN">"IDTK_SRV_CAMERA"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"getCameraInfoByType"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>142</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>143</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>144</span> 
+<span class='line'>145</span> </span><span class="WHIT">	</span><span class="COMM">/**
+<span class='line'>146</span> 	* Starts a camera to capture video. The developer must specify at least the index of the camera to be used. Some other setup parameters can also be passed to control the video capture. A image object
+<span class='line'>147</span> 	* that will be automatically updated with the captured frames is returned so the developer just need to draw the image in every frame. A null image object is returned if the setup did not work or there is
+<span class='line'>148</span> 	* no available camera.
+<span class='line'>149</span> 	* @param {number} cameraIndex The index of the camera to start video capture with.
+<span class='line'>150</span> 	* @param captureWidth The hozirontal size of the video capture resolution. If the value does not correspond to any of the sizes supported by the camera, the closest one is used. See {@link CocoonJS.Camera.CameraInfo}.
+<span class='line'>151</span> 	* If no value is given, the maximum size available is used.
+<span class='line'>152</span> 	* @param captureHeight The vertical size of the video capture resolution. If value does not correspond to any of the sizes supported by the camera, the closest one is used. See {@link CocoonJS.Camera.CameraInfo}.
+<span class='line'>153</span> 	* If no value is given, the maximum size available is used.
+<span class='line'>154</span> 	* @param captureFrameRate The frame rate to capture the video at. If the value does not correspond to any of the frame rates supported by the camera, the closest one is used. See {@link CocoonJS.Camera.CameraInfo}.
+<span class='line'>155</span> 	* If no value is given, the maximum frame rate available is used.
+<span class='line'>156</span> 	* @param captureImageFormat A value from the available {@link CocoonJS.Camera.CaptureFormatType} formats to specify the format of the images that will be captured. See {@link CocoonJS.Camera.CameraInfo}.
+<span class='line'>157</span> 	* If no value is given, the first available capture image format is used.
+<span class='line'>158</span> 	* @returns {image} A image object that will automatically update itself with the captured frames or null if the camera capture could not start.
+<span class='line'>159</span> 	*/</span><span class="WHIT">
+<span class='line'>160</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.startCapturing</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">cameraIndex</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureWidth</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureHeight</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureFrameRate</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureImageFormat</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>161</span> </span><span class="WHIT">	</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>162</span> </span><span class="WHIT">		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.Camera.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>163</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>164</span> </span><span class="WHIT">			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">CocoonJS.makeNativeExtensionObjectFunctionCall</span><span class="PUNC">(</span><span class="STRN">"IDTK_SRV_CAMERA"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"startCapturing"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>165</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>166</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>167</span> 
+<span class='line'>168</span> </span><span class="WHIT">	</span><span class="COMM">/**
+<span class='line'>169</span> 	* Stops a camera that is already started capturing video.
+<span class='line'>170</span> 	* @param cameraIndex The index of the camera to stop capturing video.
+<span class='line'>171</span> 	*/</span><span class="WHIT">
+<span class='line'>172</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.stopCapturing</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">cameraIndex</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>173</span> </span><span class="WHIT">	</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>174</span> </span><span class="WHIT">		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.Camera.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>175</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>176</span> </span><span class="WHIT">			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">CocoonJS.makeNativeExtensionObjectFunctionCall</span><span class="PUNC">(</span><span class="STRN">"IDTK_SRV_CAMERA"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"stopCapturing"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>177</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>178</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>179</span> 
+<span class='line'>180</span> </span><span class="WHIT">	</span><span class="COMM">/**
+<span class='line'>181</span> 	* Indicates if a camera is capturing video or not.
+<span class='line'>182</span> 	* @param cameraIndex The index of the camera to check if is capturing video or not.
+<span class='line'>183</span> 	* @returns {boolean} A flag indicating if the given camera (by index) is capturing video (true) or not (false).
+<span class='line'>184</span> 	*/</span><span class="WHIT">
+<span class='line'>185</span> </span><span class="WHIT">	</span><span class="NAME">CocoonJS.Camera.isCapturing</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">cameraIndex</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>186</span> </span><span class="WHIT">	</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>187</span> </span><span class="WHIT">		</span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.Camera.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>188</span> </span><span class="WHIT">		</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>189</span> </span><span class="WHIT">			</span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">CocoonJS.makeNativeExtensionObjectFunctionCall</span><span class="PUNC">(</span><span class="STRN">"IDTK_SRV_CAMERA"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"isCapturing"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">arguments</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>190</span> </span><span class="WHIT">		</span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>191</span> </span><span class="WHIT">	</span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>192</span> 
+<span class='line'>193</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span></pre></body></html>

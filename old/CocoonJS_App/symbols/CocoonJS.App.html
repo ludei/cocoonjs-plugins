@@ -1,0 +1,2182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - CocoonJS.App</title>
+
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+body {
+	margin: 0 auto;
+	padding: 250px 0 0 0;
+	font-family: 'Droid Sans', arial, sans-serif; 
+	background: #fff;
+	color: #494949;
+	width: 940px;
+	font-size: 15px;
+	line-height: 1.3em;
+}
+
+#header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 210px;
+	background: url(http://wiki.ludei.com/lib/tpl/ludei/static/img/body.png) no-repeat 50% 0;
+	color: #fff;
+}
+	#headerlogo {
+		position: absolute;
+		left: 50%;
+		top: 38px;
+		width: 76px;
+		height: 84px;
+		margin-left: -472px;
+		text-align: left; overflow: hidden; text-indent: -9999px;
+	}
+
+#index {
+	float: left;
+	width: 300px;
+	padding-bottom: 40px;
+}
+
+	#index a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	#index a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+	
+	#index .classList {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		margin: 0 0 0 8px;
+		font-size: 1em;
+		overflow: auto;
+	}
+		
+		#index .classList li
+		{
+			padding: 0;
+			margin: 0 0 8px 0;
+		}
+
+#content {
+	float: right;
+	width: 600px;
+	margin-top: -120px;
+	position: relative;
+	z-index: 10;
+	padding-bottom: 40px;
+}
+	
+	#content a {
+		color: #9A1A29;
+	}
+	
+.fineprint {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1em 0;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	background: #fff;
+	z-index: 20;
+}	
+
+	.fineprint a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	.fineprint a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+
+
+
+
+
+
+
+
+
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #ddd;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ddd;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:190%;
+	line-height:130%;
+	font-weight: normal;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #333;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #333 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #333 solid;
+	border-right: 1px #333 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #333 solid;
+	width: 240px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #9A1A29;
+	font-family: "Droid Sans",arial,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #444;
+	font-style: italic;
+}
+
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+	<a href="/" id="headerlogo">Home</a>
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../../index.html">Extensions Index</a>
+| <a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li></li>
+	
+	<li><a href="../symbols/CocoonJS.App.html">CocoonJS.App</a></li>
+	
+	<li><a href="../symbols/CocoonJS.App.CaptureType.html">CocoonJS.App.CaptureType</a></li>
+	
+	<li><a href="../symbols/CocoonJS.App.FPSLayout.html">CocoonJS.App.FPSLayout</a></li>
+	
+	<li><a href="../symbols/CocoonJS.App.KeyboardType.html">CocoonJS.App.KeyboardType</a></li>
+	
+	<li><a href="../symbols/CocoonJS.App.Orientations.html">CocoonJS.App.Orientations</a></li>
+	
+	<li><a href="../symbols/CocoonJS.App.StorageType.html">CocoonJS.App.StorageType</a></li>
+	
+	<li><a href="../symbols/CocoonJS.App.WebDialog.html">CocoonJS.App.WebDialog</a></li>
+	
+</ul>
+<hr />
+
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Namespace CocoonJS.App
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_src_CocoonJS_App.js.html">CocoonJS_App.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class CocoonJS.App.">
+				<caption>Namespace Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/CocoonJS.App.html#constructor">CocoonJS.App</a></b>
+							</div>
+							<div class="description">This namespace represents all the basic functionalities available in the CocoonJS extension API.</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class CocoonJS.App.">
+					<caption>Field Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Field Attributes</th>
+							<th scope="col">Field Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.DeviceInfo">DeviceInfo</a></b>
+								</div>
+								<div class="description">Structure that defines the getDeviceInfo returned information</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class CocoonJS.App.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.captureScreen">captureScreen</a></b>(fileName, storageType)
+								</div>
+								<div class="description">Captures a image of the screen synchronously and saves it to a file.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.captureScreenAsync">captureScreenAsync</a></b>(Desired, storageType)
+								</div>
+								<div class="description">Captures a image of the screen asynchronously and saves it to a file.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.createScreenCanvas">createScreenCanvas</a></b>()
+								</div>
+								<div class="description">Creates a canvas element that is automatically resized to the screen size.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.deleteOriginProxyObject">deleteOriginProxyObject</a></b>(object)
+								</div>
+								<div class="description">Deletes everything related to a proxy object in both environments.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.disableTouchInCocoonJS">disableTouchInCocoonJS</a></b>()
+								</div>
+								<div class="description">Disables the touch events in the CocoonJS environment.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.disableTouchInTheWebView">disableTouchInTheWebView</a></b>()
+								</div>
+								<div class="description">Disables the touch events in the WebView environment.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.enableTouchInCocoonJS">enableTouchInCocoonJS</a></b>()
+								</div>
+								<div class="description">Enables the touch events in the CocoonJS environment.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.enableTouchInTheWebView">enableTouchInTheWebView</a></b>()
+								</div>
+								<div class="description">Enables the touch events in the WebView environment.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.existsPath">existsPath</a></b>(path, storageType)
+								</div>
+								<div class="description">Queries if a file exists in the specified path and storage type.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.forceToFinish">forceToFinish</a></b>()
+								</div>
+								<div class="description">Forces the app to be finished.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.forward">forward</a></b>(javaScriptCode)
+								</div>
+								<div class="description">Makes a forward call of some javascript code to be executed in a different environment (i.e.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.forwardAsync">forwardAsync</a></b>(javaScriptCode, returnCallback)
+								</div>
+								<div class="description">Makes a forward call of some javascript code to be executed in a different environment (i.e.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.getAccelerometerUpdateIntervalInSeconds">getAccelerometerUpdateIntervalInSeconds</a></b>()
+								</div>
+								<div class="description">Returns the update interval in seconds that is currently set for accelerometer related events.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.getDeviceId">getDeviceId</a></b>()
+								</div>
+								<div class="description">Returns the device UUID</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.getDeviceInfo">getDeviceInfo</a></b>()
+								</div>
+								<div class="description">Returns the device Info</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.getGyroscopeUpdateIntervalInSeconds">getGyroscopeUpdateIntervalInSeconds</a></b>()
+								</div>
+								<div class="description">Returns the update interval in seconds that is currently set for gyroscope related events.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.getPreferredOrientation">getPreferredOrientation</a></b>()
+								</div>
+								<div class="description">Retrieves the preferred orientation that has been set in the system.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.load">load</a></b>(path, storageType)
+								</div>
+								<div class="description">It allows to load a new JavaScript/HTML5 resource that can be loaded either locally (inside the platform/device storage) or using a remote URL.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.openURL">openURL</a></b>(url)
+								</div>
+								<div class="description">Opens a given URL using a system service that is able to open it.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.proxifyAudio">proxifyAudio</a></b>()
+								</div>
+								<div class="description">Proxifies the Audio type for the environment where this call is made.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.proxifyXHR">proxifyXHR</a></b>()
+								</div>
+								<div class="description">Proxifies the XMLHttpRequest type for the environment where this call is made.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.reload">reload</a></b>()
+								</div>
+								<div class="description">Reloads the last loaded path in the current context.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setAccelerometerUpdateIntervalInSeconds">setAccelerometerUpdateIntervalInSeconds</a></b>(updateIntervalInSeconds)
+								</div>
+								<div class="description">Setups the update interval in seconds (1 second / X frames) to receive the accelerometer updates.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setAutoLockEnabled">setAutoLockEnabled</a></b>(enabled)
+								</div>
+								<div class="description">Enables or disables the auto lock to control if the screen keeps on after an inactivity period.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setGyroscopeUpdateIntervalInSeconds">setGyroscopeUpdateIntervalInSeconds</a></b>(updateIntervalInSeconds)
+								</div>
+								<div class="description">Setups the update interval in seconds (1 second / X frames) to receive the gyroscope updates.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setPreferredOrientation">setPreferredOrientation</a></b>(preferredOrientation)
+								</div>
+								<div class="description">Sets the preferred orientation in the system.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setupOriginProxyType">setupOriginProxyType</a></b>(typeName, attributeNames, functionNames, eventHandlerNames)
+								</div>
+								<div class="description">Setups a origin proxy for a given typeName.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.share">share</a></b>(textToShare)
+								</div>
+								<div class="description">Opens a given share native window to share some specific text content in any system specific social sharing options.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.showMessageBox">showMessageBox</a></b>(title, message, confirmButtonText, denyButtonText)
+								</div>
+								<div class="description">Pops up a message dialog so the user can decide between a yes or no like confirmation.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.showTextDialog">showTextDialog</a></b>(title, message, text, keyboardType, cancelButtonText, okButtonText)
+								</div>
+								<div class="description">Pops up a text dialog so the user can introduce some text and the application can get it back.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.takedownOriginProxyType">takedownOriginProxyType</a></b>(typeName)
+								</div>
+								<div class="description">Takes down the proxification of a type and restores it to it's original type.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the events documented in the class CocoonJS.App.">
+					<caption>Event Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Event Attributes</th>
+							<th scope="col">Event Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.event:onActivated">onActivated</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the application is activated.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.event:onMessageBoxConfirmed">onMessageBoxConfirmed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the text dialog is finished by accepting it's content.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.event:onMessageBoxDenied">onMessageBoxDenied</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the text dialog is finished by dismissing it's content.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.event:onSuspended">onSuspended</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the application is suspended.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.event:onSuspending">onSuspending</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the application is suspending.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.event:onTextDialogCancelled">onTextDialogCancelled</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the text dialog is finished by dismissing it's content.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.event:onTextDialogFinished">onTextDialogFinished</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the text dialog is finished by accepting it's content.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Namespace Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>CocoonJS.App</b>
+				</div>
+				
+				<div class="description">
+					This namespace represents all the basic functionalities available in the CocoonJS extension API.
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+				<div class="sectionTitle">
+					Field Detail
+				</div>
+				
+					<a name=".DeviceInfo"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>DeviceInfo</b>
+					
+					</div>
+					<div class="description">
+						Structure that defines the getDeviceInfo returned information
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					
+				
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".captureScreen"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>captureScreen</b>(fileName, storageType)
+					
+					</div>
+					<div class="description">
+						Captures a image of the screen synchronously and saves it to a file. Sync mode allows to capture the screen in the middle of a frame rendering.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>fileName</b>
+									
+								</dt>
+								<dd>Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.StorageType.html">CocoonJS.App.StorageType</a>}</span> <b>storageType</b>
+									
+								</dt>
+								<dd>The developer can specify the storage where it is stored. If no value is passed, the CocoonJS.App.StorageType.TMP_STORAGE value is used by default.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.CaptureType.html">CocoonJS.App.CaptureType</a>}</span> <b>captureType.</b>
+									
+								</dt>
+								<dd>Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface 2: only captures system views]. @see CocoonJS.App.CaptureType</dd>
+							
+							</dl>
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Throws:</dt>
+							
+								<dt>
+									 <b></b>
+								</dt>
+								<dd>exception if the image fails to be stored or there is another error.</dd>
+							
+							</dl>
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>The URL of the saved file.</dd>
+							
+							</dl>
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.App.onCaptureScreenSucceeded</dd>
+							
+								<dd>CocoonJS.App.onCaptureScreenFailed</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name=".captureScreenAsync"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>captureScreenAsync</b>(Desired, storageType)
+					
+					</div>
+					<div class="description">
+						Captures a image of the screen asynchronously and saves it to a file.
+Async mode captures a final frame as soon as possible.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>Desired</b>
+									
+								</dt>
+								<dd>file name and format (png or jpg). If no value is passed, "capture.png" value is used by default</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.StorageType.html">CocoonJS.App.StorageType</a>}</span> <b>storageType</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The developer can specify the storage where it is stored. If no value is passed, the CocoonJS.App.StorageType.TMP_STORAGE value is used by default.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.CaptureType.html">CocoonJS.App.CaptureType</a>}</span> <b>captureType.</b>
+									
+								</dt>
+								<dd>Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface, 2: only captures system views]. @see CocoonJS.App.CaptureType</dd>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback.</b>
+									
+								</dt>
+								<dd>Response callback, check the error property to monitor errors. Check the 'url' property to get the URL of the saved Image</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".createScreenCanvas"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{object}</span>
+					<span class="light">CocoonJS.App.</span><b>createScreenCanvas</b>()
+					
+					</div>
+					<div class="description">
+						Creates a canvas element that is automatically resized to the screen size. When the app is being executed
+inside CocoonJS. This canvas is optimized for rendering so it is higly recommended to use it if it fits
+your app needs. If your app uses one canvas as the main canvas where all other canvases and images are displayed, Ludei recommends to
+call this function in order to create this main canvas. A usual 2x performance gain is achieved by doing so
+depending on the device and the graphics card driver.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{object}</span> The canvas object that should be used as the main canvas and that is resized to the screen resolution.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".deleteOriginProxyObject"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>deleteOriginProxyObject</b>(object)
+					
+					</div>
+					<div class="description">
+						Deletes everything related to a proxy object in both environments. Do not worry of you do not pass a proxified object to the
+function. For compatibility reasons, you can still have calls to this function even when no poxification of a type has been done.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>object</b>
+									
+								</dt>
+								<dd>The proxified object to be deleted.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".disableTouchInCocoonJS"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>disableTouchInCocoonJS</b>()
+					
+					</div>
+					<div class="description">
+						Disables the touch events in the CocoonJS environment.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".disableTouchInTheWebView"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>disableTouchInTheWebView</b>()
+					
+					</div>
+					<div class="description">
+						Disables the touch events in the WebView environment.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".enableTouchInCocoonJS"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>enableTouchInCocoonJS</b>()
+					
+					</div>
+					<div class="description">
+						Enables the touch events in the CocoonJS environment.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".enableTouchInTheWebView"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>enableTouchInTheWebView</b>()
+					
+					</div>
+					<div class="description">
+						Enables the touch events in the WebView environment.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".existsPath"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>existsPath</b>(path, storageType)
+					
+					</div>
+					<div class="description">
+						Queries if a file exists in the specified path and storage type. If none or unknown storage type is specified, the TEMPORARY_STORAGE is used as default.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>path</b>
+									
+								</dt>
+								<dd>The relative path to look for inside the storage of the underlying system.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.StorageType.html">CocoonJS.App.StorageType</a>}</span> <b>storageType</b>
+									
+								</dt>
+								<dd>The storage type where to look for the specified path inside the system.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".forceToFinish"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>forceToFinish</b>()
+					
+					</div>
+					<div class="description">
+						Forces the app to be finished.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".forward"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">CocoonJS.App.</span><b>forward</b>(javaScriptCode)
+					
+					</div>
+					<div class="description">
+						Makes a forward call of some javascript code to be executed in a different environment (i.e. from CocoonJS to the WebView and viceversa).
+It waits until the code is executed and the result of it is returned === synchronous.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>javaScriptCode</b>
+									
+								</dt>
+								<dd>Some JavaScript code in a string to be forwarded and executed in a different JavaScript environment (i.e. from CocoonJS to the WebView and viceversa).</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> The result of the execution of the passed JavaScript code in the different JavaScript environment.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".forwardAsync"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>forwardAsync</b>(javaScriptCode, returnCallback)
+					
+					</div>
+					<div class="description">
+						Makes a forward call of some javascript code to be executed in a different environment (i.e. from CocoonJS to the WebView and viceversa).
+It is asyncrhonous so it does not wait until the code is executed and the result of it is returned. Instead, it calls a callback function when the execution has finished to pass the result.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>javaScriptCode</b>
+									
+								</dt>
+								<dd>Some JavaScript code in a string to be forwarded and executed in a different JavaScript environment (i.e. from CocoonJS to the WebView and viceversa).</dd>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>returnCallback</b>
+									<i>Optional</i>
+								</dt>
+								<dd>A function callback that will be called when the passed JavaScript code is executed in a different thread to pass the result of the execution in the different JavaScript environment.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getAccelerometerUpdateIntervalInSeconds"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{number}</span>
+					<span class="light">CocoonJS.App.</span><b>getAccelerometerUpdateIntervalInSeconds</b>()
+					
+					</div>
+					<div class="description">
+						Returns the update interval in seconds that is currently set for accelerometer related events.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{number}</span> The update interval in seconds that is currently set for accelerometer related events.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getDeviceId"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{string}</span>
+					<span class="light">CocoonJS.App.</span><b>getDeviceId</b>()
+					
+					</div>
+					<div class="description">
+						Returns the device UUID
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> The device UUID</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getDeviceInfo"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{<a href="../symbols/CocoonJS.App.html#.DeviceInfo">CocoonJS.App.DeviceInfo</a>}</span>
+					<span class="light">CocoonJS.App.</span><b>getDeviceInfo</b>()
+					
+					</div>
+					<div class="description">
+						Returns the device Info
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/CocoonJS.App.html#.DeviceInfo">CocoonJS.App.DeviceInfo</a>}</span> The device Info</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getGyroscopeUpdateIntervalInSeconds"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{number}</span>
+					<span class="light">CocoonJS.App.</span><b>getGyroscopeUpdateIntervalInSeconds</b>()
+					
+					</div>
+					<div class="description">
+						Returns the update interval in seconds that is currently set for gyroscope related events.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{number}</span> The update interval in seconds that is currently set for gyroscope related events.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getPreferredOrientation"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{number}</span>
+					<span class="light">CocoonJS.App.</span><b>getPreferredOrientation</b>()
+					
+					</div>
+					<div class="description">
+						Retrieves the preferred orientation that has been set in the system.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{number}</span> The preferred orientation in the system as a combination of the possible <a href="../symbols/CocoonJS.App.Orientations.html">CocoonJS.App.Orientations</a></dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".load"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>load</b>(path, storageType)
+					
+					</div>
+					<div class="description">
+						It allows to load a new JavaScript/HTML5 resource that can be loaded either locally (inside the platform/device storage) or using a remote URL.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>path</b>
+									
+								</dt>
+								<dd>A path to a resource stored in the platform or in a URL to a remote resource.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.StorageType.html">CocoonJS.App.StorageType</a>}</span> <b>storageType</b>
+									<i>Optional</i>
+								</dt>
+								<dd>If the path argument represents a locally stored resource, the developer can specify the storage where it is stored. If no value is passes, the <a href="../symbols/CocoonJS.App.StorageType.html#.APP_STORAGE">CocoonJS.App.StorageType.APP_STORAGE</a> value is used by default.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".openURL"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>openURL</b>(url)
+					
+					</div>
+					<div class="description">
+						Opens a given URL using a system service that is able to open it. For example, open a HTTP URL using the system WebBrowser.+
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>url</b>
+									
+								</dt>
+								<dd>The URL to be opened by a system service.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".proxifyAudio"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>proxifyAudio</b>()
+					
+					</div>
+					<div class="description">
+						Proxifies the Audio type for the environment where this call is made. After calling this function, all the new objects
+of Audio that are instantiated, will be proxified objects that will make calls to the counterparts in the other environment (CocoonJS <-> WebView viceversa).
+IMPORTANT NOTE: Remember to take down the proxification once you are done or to delete proxy objects whenever they are not needed anymore or memory leaks may occur.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".proxifyXHR"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>proxifyXHR</b>()
+					
+					</div>
+					<div class="description">
+						Proxifies the XMLHttpRequest type for the environment where this call is made. After calling this function, all the new objects
+of XMLHttpRequest that are instantiated, will be proxified objects that will make calls to the counterparts in the other environment (CocoonJS <-> WebView viceversa).
+IMPORTANT NOTE: Remember to take down the proxification once you are done or to delete proxy objects whenever they are not needed anymore or memory leaks may occur.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".reload"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>reload</b>()
+					
+					</div>
+					<div class="description">
+						Reloads the last loaded path in the current context.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".setAccelerometerUpdateIntervalInSeconds"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>setAccelerometerUpdateIntervalInSeconds</b>(updateIntervalInSeconds)
+					
+					</div>
+					<div class="description">
+						Setups the update interval in seconds (1 second / X frames) to receive the accelerometer updates.
+It defines the rate at which the devicemotion events are updated.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>updateIntervalInSeconds</b>
+									
+								</dt>
+								<dd>The update interval in seconds to be set.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".setAutoLockEnabled"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>setAutoLockEnabled</b>(enabled)
+					
+					</div>
+					<div class="description">
+						Enables or disables the auto lock to control if the screen keeps on after an inactivity period.
+When the auto lock is enabled and the application has no user input for a short period, the system puts the device into a "sleep” state where the screen dims or turns off.
+When the auto lock is disabled the screen keeps on even when there is no user input for long times.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>enabled</b>
+									
+								</dt>
+								<dd>A boolean value that controls whether to enable or disable the auto lock.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".setGyroscopeUpdateIntervalInSeconds"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>setGyroscopeUpdateIntervalInSeconds</b>(updateIntervalInSeconds)
+					
+					</div>
+					<div class="description">
+						Setups the update interval in seconds (1 second / X frames) to receive the gyroscope updates.
+It defines the rate at which the devicemotion and deviceorientation events are updated.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>updateIntervalInSeconds</b>
+									
+								</dt>
+								<dd>The update interval in seconds to be set.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".setPreferredOrientation"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>setPreferredOrientation</b>(preferredOrientation)
+					
+					</div>
+					<div class="description">
+						Sets the preferred orientation in the system.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>preferredOrientation</b>
+									
+								</dt>
+								<dd>The preferred orientation to be set. A combinatio of the possible <a href="../symbols/CocoonJS.App.Orientations.html">CocoonJS.App.Orientations</a></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".setupOriginProxyType"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>setupOriginProxyType</b>(typeName, attributeNames, functionNames, eventHandlerNames)
+					
+					</div>
+					<div class="description">
+						Setups a origin proxy for a given typeName. What this means is that after calling this function the environment that makes this call will suddenly
+have a way of creating instances of the given typeName and those instances will act as a transparent proxy to counterpart instances in the destination environment.
+Manipulating attributes, calling funcitions or handling events will all be performed in the destination environment but the developer will think they will be
+happening in the origin environment.
+IMPORTANT NOTE: These proxies only work with types that use attributes and function parameters and return types that are primitive like numbers, strings or arrays.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>typeName</b>
+									
+								</dt>
+								<dd>The name of the type to be proxified.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{array}</span> <b>attributeNames</b>
+									<i>Optional</i>
+								</dt>
+								<dd>A list of the names of the attributes to be proxified.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{array}</span> <b>functionNames</b>
+									<i>Optional</i>
+								</dt>
+								<dd>A list of the names of the functions to be proxified.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{array}</span> <b>eventHandlerNames</b>
+									<i>Optional</i>
+								</dt>
+								<dd>A list of the names of the event handlers to be proxified (onXXXX like attributes that represent callbacks).
+A valid typeName and at least one valid array for attribute, function or event handler names is mandatory.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".share"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>share</b>(textToShare)
+					
+					</div>
+					<div class="description">
+						Opens a given share native window to share some specific text content in any system specific social sharing options. For example, Twitter, Facebook, SMS, Mail, ...
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>textToShare</b>
+									
+								</dt>
+								<dd>The text content that will be shared.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".showMessageBox"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>showMessageBox</b>(title, message, confirmButtonText, denyButtonText)
+					
+					</div>
+					<div class="description">
+						Pops up a message dialog so the user can decide between a yes or no like confirmation. The message box execution events are passed to the application through the CocoonJS.App.onMessageBoxConfirmed and the CocoonJS.App.onMessageBoxDenied event objects.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>title</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is "". The title to be displayed in the dialog.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>message</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is "". The message to be displayed in the dialog, next to the text input field.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>confirmButtonText</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is "Yes". The text to be displayed for the confirm button.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>denyButtonText</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is "No". The text to be displayed for the deny button.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.App.onMessageBoxConfirmed</dd>
+							
+								<dd>CocoonJS.App.onMessageBoxDenied</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name=".showTextDialog"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>showTextDialog</b>(title, message, text, keyboardType, cancelButtonText, okButtonText)
+					
+					</div>
+					<div class="description">
+						Pops up a text dialog so the user can introduce some text and the application can get it back. It is the first approach CocoonJS has taken to be able to introduce
+text input in a easy way. The dialog execution events are passed to the application through the CocoonJS.App.onTextDialogFinished and the CocoonJS.App.onTextDialogCancelled event objects.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>title</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is "". The title to be displayed in the dialog.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>message</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is "". The message to be displayed in the dialog, next to the text input field.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>text</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is "". The initial text to be introduced in the text input field.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.KeyboardType.html">CocoonJS.App.KeyboardType</a>}</span> <b>keyboardType</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is <a href="../symbols/CocoonJS.App.KeyboardType.html#.TEXT">CocoonJS.App.KeyboardType.TEXT</a>. The keyboard type to be used when the text has to be introduced.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>cancelButtonText</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is "". The text to be displayed in the cancel button of the dialog.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>okButtonText</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Default value is "". The text to be displayed in the ok button of the dialog.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.App.onTextDialogFinished</dd>
+							
+								<dd>CocoonJS.App.onTextDialogCancelled</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name=".takedownOriginProxyType"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>takedownOriginProxyType</b>(typeName)
+					
+					</div>
+					<div class="description">
+						Takes down the proxification of a type and restores it to it's original type. Do not worry if you pass a type name that is not proxified yet. The
+function will handle it correctly for compativility reasons.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>typeName</b>
+									
+								</dt>
+								<dd>The name of the type to be deproxified (take down the proxification and restore the type to it's original state)</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+				<div class="sectionTitle">
+					Event Detail
+				</div>
+				
+					<a name=".event:onActivated"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>onActivated</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the application is activated.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onMessageBoxConfirmed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>onMessageBoxConfirmed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the text dialog is finished by accepting it's content.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onMessageBoxDenied"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>onMessageBoxDenied</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the text dialog is finished by dismissing it's content.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onSuspended"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>onSuspended</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the application is suspended.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onSuspending"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>onSuspending</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the application is suspending.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onTextDialogCancelled"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>onTextDialogCancelled</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the text dialog is finished by dismissing it's content.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onTextDialogFinished"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>onTextDialogFinished</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the text dialog is finished by accepting it's content.
+The callback function's documentation is represented by CocoonJS.App.OnTextDialogFinishedListener
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Apr 13 2016 10:55:24 GMT+0200 (CEST)
+		</div>
+	</body>
+</html>

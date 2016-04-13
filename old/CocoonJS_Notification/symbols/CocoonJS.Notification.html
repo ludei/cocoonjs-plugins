@@ -1,0 +1,1299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - CocoonJS.Notification</title>
+
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+body {
+	margin: 0 auto;
+	padding: 250px 0 0 0;
+	font-family: 'Droid Sans', arial, sans-serif; 
+	background: #fff;
+	color: #494949;
+	width: 940px;
+	font-size: 15px;
+	line-height: 1.3em;
+}
+
+#header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 210px;
+	background: url(http://wiki.ludei.com/lib/tpl/ludei/static/img/body.png) no-repeat 50% 0;
+	color: #fff;
+}
+	#headerlogo {
+		position: absolute;
+		left: 50%;
+		top: 38px;
+		width: 76px;
+		height: 84px;
+		margin-left: -472px;
+		text-align: left; overflow: hidden; text-indent: -9999px;
+	}
+
+#index {
+	float: left;
+	width: 300px;
+	padding-bottom: 40px;
+}
+
+	#index a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	#index a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+	
+	#index .classList {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		margin: 0 0 0 8px;
+		font-size: 1em;
+		overflow: auto;
+	}
+		
+		#index .classList li
+		{
+			padding: 0;
+			margin: 0 0 8px 0;
+		}
+
+#content {
+	float: right;
+	width: 600px;
+	margin-top: -120px;
+	position: relative;
+	z-index: 10;
+	padding-bottom: 40px;
+}
+	
+	#content a {
+		color: #9A1A29;
+	}
+	
+.fineprint {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1em 0;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	background: #fff;
+	z-index: 20;
+}	
+
+	.fineprint a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	.fineprint a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+
+
+
+
+
+
+
+
+
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #ddd;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ddd;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:190%;
+	line-height:130%;
+	font-weight: normal;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #333;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #333 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #333 solid;
+	border-right: 1px #333 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #333 solid;
+	width: 240px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #9A1A29;
+	font-family: "Droid Sans",arial,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #444;
+	font-style: italic;
+}
+
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+	<a href="/" id="headerlogo">Home</a>
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../../index.html">Extensions Index</a>
+| <a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li></li>
+	
+	<li><a href="../symbols/CocoonJS.Notification.html">CocoonJS.Notification</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Notification.createLocalNotification.html">CocoonJS.Notification.createLocalNotification</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Notification.LocalNotification.html">CocoonJS.Notification.LocalNotification</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Notification.PushNotification.html">CocoonJS.Notification.PushNotification</a></li>
+	
+</ul>
+<hr />
+
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Namespace CocoonJS.Notification
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_src_CocoonJS_Notification.js.html">CocoonJS_Notification.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class CocoonJS.Notification.">
+				<caption>Namespace Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/CocoonJS.Notification.html#constructor">CocoonJS.Notification</a></b>
+							</div>
+							<div class="description">This namespace represents the CocoonJS Notification extension.</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class CocoonJS.Notification.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.cancelAllLocalNotifications">cancelAllLocalNotifications</a></b>()
+								</div>
+								<div class="description">Cancel all sent local notifications.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.cancelLastSentLocalNotificiation">cancelLastSentLocalNotificiation</a></b>()
+								</div>
+								<div class="description">Cancel the last sent local notification.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.cancelLocalNotification">cancelLocalNotification</a></b>()
+								</div>
+								<div class="description">Cancel the local notification with Id provided.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.getBadgeNumber">getBadgeNumber</a></b>()
+								</div>
+								<div class="description">(iOS only) Returns the current badge number.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.getLastReceivedLocalNotificationData">getLastReceivedLocalNotificationData</a></b>()
+								</div>
+								<div class="description">Returns the last received user data from a Local notification.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.getLastReceivedPushNotificationData">getLastReceivedPushNotificationData</a></b>()
+								</div>
+								<div class="description">Returns the last received user data from a Push notification.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.registerForPushNotifications">registerForPushNotifications</a></b>()
+								</div>
+								<div class="description">Register to be able to receive push notifications.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.sendLocalNotification">sendLocalNotification</a></b>(localNotification)
+								</div>
+								<div class="description">Send a local notification.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.sendPushNotification">sendPushNotification</a></b>(pushNotification)
+								</div>
+								<div class="description">Send a push notification.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.setBadgeNumber">setBadgeNumber</a></b>(badgeNumber)
+								</div>
+								<div class="description">(iOS only) Set the badge number for this application.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.start">start</a></b>()
+								</div>
+								<div class="description">Start processing received notifications.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.subscribeToChannel">subscribeToChannel</a></b>(channel)
+								</div>
+								<div class="description">Subscribe to a channel in order to receive notifications targeted to that channel.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.unregisterForPushNotifications">unregisterForPushNotifications</a></b>()
+								</div>
+								<div class="description">Unregister from receiving push notifications.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.unsubscribeFromChannel">unsubscribeFromChannel</a></b>(channel)
+								</div>
+								<div class="description">Unsubscribe from a channel in order to stop receiving notifications targeted to it.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the events documented in the class CocoonJS.Notification.">
+					<caption>Event Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Event Attributes</th>
+							<th scope="col">Event Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.event:onLocalNotificationReceived">onLocalNotificationReceived</a></b>(userData)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a local notification is received.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.event:onPushNotificationDeliveryFailed">onPushNotificationDeliveryFailed</a></b>(msg)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the delivery of push a notification fails.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.event:onPushNotificationDeliverySucceed">onPushNotificationDeliverySucceed</a></b>(userData)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a notification is successfully delivered.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.event:onPushNotificationReceived">onPushNotificationReceived</a></b>(userData)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a push notification is received.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.event:onRegisterForPushNotificationsFailed">onRegisterForPushNotificationsFailed</a></b>(msg)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the registration for push notifications fails.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.event:onRegisterForPushNotificationsSucceed">onRegisterForPushNotificationsSucceed</a></b>(token)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the registration for push notification succeeds.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Notification.<b><a href="../symbols/CocoonJS.Notification.html#.event:onUnregisterForPushNotificationsSucceed">onUnregisterForPushNotificationsSucceed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the unregistration for push notifications succeeds.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Namespace Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>CocoonJS.Notification</b>
+				</div>
+				
+				<div class="description">
+					This namespace represents the CocoonJS Notification extension.
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".cancelAllLocalNotifications"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>cancelAllLocalNotifications</b>()
+					
+					</div>
+					<div class="description">
+						Cancel all sent local notifications.
+All the notifications will ve removed from the notifications bar.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".cancelLastSentLocalNotificiation"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>cancelLastSentLocalNotificiation</b>()
+					
+					</div>
+					<div class="description">
+						Cancel the last sent local notification.
+The last sent local notification will be remove from the notifications bar.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".cancelLocalNotification"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>cancelLocalNotification</b>()
+					
+					</div>
+					<div class="description">
+						Cancel the local notification with Id provided.
+The last sent local notification will be remove from the notifications bar.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getBadgeNumber"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{number}</span>
+					<span class="light">CocoonJS.Notification.</span><b>getBadgeNumber</b>()
+					
+					</div>
+					<div class="description">
+						(iOS only) Returns the current badge number.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{number}</span> The badge number.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getLastReceivedLocalNotificationData"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{object}</span>
+					<span class="light">CocoonJS.Notification.</span><b>getLastReceivedLocalNotificationData</b>()
+					
+					</div>
+					<div class="description">
+						Returns the last received user data from a Local notification.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{object}</span> The last received user data from a Local notification.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getLastReceivedPushNotificationData"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{object}</span>
+					<span class="light">CocoonJS.Notification.</span><b>getLastReceivedPushNotificationData</b>()
+					
+					</div>
+					<div class="description">
+						Returns the last received user data from a Push notification.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{object}</span> The last received user data from a Push notification.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".registerForPushNotifications"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>registerForPushNotifications</b>()
+					
+					</div>
+					<div class="description">
+						Register to be able to receive push notifications.
+The registration process is controlled using the CocoonJS.Notification.onRegisterForPushNotificationsSucceed and CocoonJS.Notification.onRegisterForPushNotificationsFailed event handlers.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd></dd>
+							
+								<dd></dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name=".sendLocalNotification"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>sendLocalNotification</b>(localNotification)
+					
+					</div>
+					<div class="description">
+						Send a local notification.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Notification.LocalNotification.html">CocoonJS.Notification.LocalNotification</a>}</span> <b>localNotification</b>
+									
+								</dt>
+								<dd>The local notification to be sent.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".sendPushNotification"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>sendPushNotification</b>(pushNotification)
+					
+					</div>
+					<div class="description">
+						Send a push notification.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Notification.PushNotification.html">CocoonJS.Notification.PushNotification</a>}</span> <b>pushNotification</b>
+									
+								</dt>
+								<dd>The push notification object to be sent.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Notification.onPushNotificationDeliverySucceed</dd>
+							
+								<dd>CocoonJS.Notification.onPushNotificationDeliveryFailed</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name=".setBadgeNumber"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>setBadgeNumber</b>(badgeNumber)
+					
+					</div>
+					<div class="description">
+						(iOS only) Set the badge number for this application.
+This is useful if you want to modify the badge number set by a notification.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>badgeNumber</b>
+									
+								</dt>
+								<dd>The number of the badge.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".start"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>start</b>()
+					
+					</div>
+					<div class="description">
+						Start processing received notifications. The user must call this method when the game is ready to process notifications. Notifications received before being prepared are stored and processed later.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".subscribeToChannel"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>subscribeToChannel</b>(channel)
+					
+					</div>
+					<div class="description">
+						Subscribe to a channel in order to receive notifications targeted to that channel.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>channel</b>
+									
+								</dt>
+								<dd>The channel id to subscribe to.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".unregisterForPushNotifications"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>unregisterForPushNotifications</b>()
+					
+					</div>
+					<div class="description">
+						Unregister from receiving push notifications.
+The unregistration process is controlled using the CocoonJS.Notification.onUnregisterForPushNotificationsSucceed event handler.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Notification.onUnregisterForPushNotificationsSucceed</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name=".unsubscribeFromChannel"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>unsubscribeFromChannel</b>(channel)
+					
+					</div>
+					<div class="description">
+						Unsubscribe from a channel in order to stop receiving notifications targeted to it.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>channel</b>
+									
+								</dt>
+								<dd>The channel id to unsubscribe from.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+				<div class="sectionTitle">
+					Event Detail
+				</div>
+				
+					<a name=".event:onLocalNotificationReceived"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>onLocalNotificationReceived</b>(userData)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when a local notification is received.
+The callback function receives a parameter with the userData of the received notification.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>userData</b>
+									
+								</dt>
+								<dd>An object with the notification userData information.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onPushNotificationDeliveryFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>onPushNotificationDeliveryFailed</b>(msg)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the delivery of push a notification fails.
+The callback function receives a parameter with error information.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>msg</b>
+									
+								</dt>
+								<dd>The error message.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onPushNotificationDeliverySucceed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>onPushNotificationDeliverySucceed</b>(userData)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when a notification is successfully delivered.
+The callback function receives a parameter with the notificationId of the delivered notification.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userData</b>
+									
+								</dt>
+								<dd>A string with the notification userData information.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onPushNotificationReceived"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>onPushNotificationReceived</b>(userData)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when a push notification is received.
+The callback function receives a parameter with the userData of the received notification.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>userData</b>
+									
+								</dt>
+								<dd>An object with the notification userData information.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRegisterForPushNotificationsFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>onRegisterForPushNotificationsFailed</b>(msg)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the registration for push notifications fails.
+The callback function receives a parameter with error information.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>msg</b>
+									
+								</dt>
+								<dd>The error message.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRegisterForPushNotificationsSucceed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>onRegisterForPushNotificationsSucceed</b>(token)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the registration for push notification succeeds.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>token</b>
+									
+								</dt>
+								<dd>The token (apid or device token) received at registration time.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onUnregisterForPushNotificationsSucceed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Notification.</span><b>onUnregisterForPushNotificationsSucceed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the unregistration for push notifications succeeds.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Apr 13 2016 10:55:35 GMT+0200 (CEST)
+		</div>
+	</body>
+</html>

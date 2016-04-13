@@ -1,0 +1,976 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - CocoonJS.Social.SocialService</title>
+
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+body {
+	margin: 0 auto;
+	padding: 250px 0 0 0;
+	font-family: 'Droid Sans', arial, sans-serif; 
+	background: #fff;
+	color: #494949;
+	width: 940px;
+	font-size: 15px;
+	line-height: 1.3em;
+}
+
+#header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 210px;
+	background: url(http://wiki.ludei.com/lib/tpl/ludei/static/img/body.png) no-repeat 50% 0;
+	color: #fff;
+}
+	#headerlogo {
+		position: absolute;
+		left: 50%;
+		top: 38px;
+		width: 76px;
+		height: 84px;
+		margin-left: -472px;
+		text-align: left; overflow: hidden; text-indent: -9999px;
+	}
+
+#index {
+	float: left;
+	width: 300px;
+	padding-bottom: 40px;
+}
+
+	#index a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	#index a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+	
+	#index .classList {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		margin: 0 0 0 8px;
+		font-size: 1em;
+		overflow: auto;
+	}
+		
+		#index .classList li
+		{
+			padding: 0;
+			margin: 0 0 8px 0;
+		}
+
+#content {
+	float: right;
+	width: 600px;
+	margin-top: -120px;
+	position: relative;
+	z-index: 10;
+	padding-bottom: 40px;
+}
+	
+	#content a {
+		color: #9A1A29;
+	}
+	
+.fineprint {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1em 0;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	background: #fff;
+	z-index: 20;
+}	
+
+	.fineprint a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	.fineprint a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+
+
+
+
+
+
+
+
+
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #ddd;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ddd;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:190%;
+	line-height:130%;
+	font-weight: normal;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #333;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #333 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #333 solid;
+	border-right: 1px #333 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #333 solid;
+	width: 240px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #9A1A29;
+	font-family: "Droid Sans",arial,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #444;
+	font-style: italic;
+}
+
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+	<a href="/" id="headerlogo">Home</a>
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../../index.html">Extensions Index</a>
+| <a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li></li>
+	
+	<li><a href="../symbols/CocoonJS.Social.html">CocoonJS.Social</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Social.Achievement.html">CocoonJS.Social.Achievement</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Social.ImageSize.html">CocoonJS.Social.ImageSize</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Social.Message.html">CocoonJS.Social.Message</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Social.Score.html">CocoonJS.Social.Score</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Social.ScoreParams.html">CocoonJS.Social.ScoreParams</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Social.SocialGamingService.html">CocoonJS.Social.SocialGamingService</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Social.SocialService.html">CocoonJS.Social.SocialService</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Social.User.html">CocoonJS.Social.User</a></li>
+	
+</ul>
+<hr />
+
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Class CocoonJS.Social.SocialService
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_src_CocoonJS_Social.js.html">CocoonJS_Social.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class CocoonJS.Social.SocialService.">
+				<caption>Class Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/CocoonJS.Social.SocialService.html#constructor">CocoonJS.Social.SocialService</a></b>()
+							</div>
+							<div class="description">This class provides an abstraction API for all the Social Services
+Each Social service has it's own official API but can also be used within this API interface</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class CocoonJS.Social.SocialService.">
+					<caption>Field Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Field Attributes</th>
+							<th scope="col">Field Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								CocoonJS.Social.SocialService.<b><a href="../symbols/CocoonJS.Social.SocialService.html#.onLoginStatusChanged">onLoginStatusChanged</a></b>
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user login status changes
+The callback parameters: loggedIn status (boolean) and error</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class CocoonJS.Social.SocialService.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#getLoggedInUser">getLoggedInUser</a></b>()
+								</div>
+								<div class="description">Returns the information of the currently logged in user.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#hasPublishPermissions">hasPublishPermissions</a></b>(callback)
+								</div>
+								<div class="description">Checks if the current logged in user has publish permissions</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#isLoggedIn">isLoggedIn</a></b>()
+								</div>
+								<div class="description">Check if the user is logged in.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#login">login</a></b>()
+								</div>
+								<div class="description">Authenticate the user</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#logout">logout</a></b>(callback)
+								</div>
+								<div class="description">Log the user out of your application.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#publishMessage">publishMessage</a></b>(message, callback)
+								</div>
+								<div class="description">Shares a message without the intervention of the user
+This action might require publish permissions.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#publishMessageWithDialog">publishMessageWithDialog</a></b>(message, callback)
+								</div>
+								<div class="description">Presents a native/web dialog that allows the user to share a message</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#requestFriends">requestFriends</a></b>(callback, userID)
+								</div>
+								<div class="description">Retrieves user friends for a specific user ID.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#requestPublishPermissions">requestPublishPermissions</a></b>(callback)
+								</div>
+								<div class="description">Requests publish permissions for the current logged in user</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#requestUser">requestUser</a></b>(callback, userID)
+								</div>
+								<div class="description">Retrieves user information for a specific user ID.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.SocialService.html#requestUserImage">requestUserImage</a></b>(callback, userID, imageSize)
+								</div>
+								<div class="description">Request to retrieve the profile image of a user</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Class Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>CocoonJS.Social.SocialService</b>()
+				</div>
+				
+				<div class="description">
+					This class provides an abstraction API for all the Social Services
+Each Social service has it's own official API but can also be used within this API interface
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+				<div class="sectionTitle">
+					Field Detail
+				</div>
+				
+					<a name=".onLoginStatusChanged"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.SocialService.</span><b>onLoginStatusChanged</b>
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user login status changes
+The callback parameters: loggedIn status (boolean) and error
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					
+				
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name="getLoggedInUser"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{@link CocoonJS.Social.User}</span>
+					<b>getLoggedInUser</b>()
+					
+					</div>
+					<div class="description">
+						Returns the information of the currently logged in user.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{@link CocoonJS.Social.User}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="hasPublishPermissions"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>hasPublishPermissions</b>(callback)
+					
+					</div>
+					<div class="description">
+						Checks if the current logged in user has publish permissions
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>callback</b>
+									
+								</dt>
+								<dd>The callback function. Response params: permissions granted and error</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="isLoggedIn"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{boolean}</span>
+					<b>isLoggedIn</b>()
+					
+					</div>
+					<div class="description">
+						Check if the user is logged in.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> true if the user is still logged in, false otherwise.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="login"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>login</b>()
+					
+					</div>
+					<div class="description">
+						Authenticate the user
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback.</b>
+									
+								</dt>
+								<dd>The callback function. Response params: loggedIn(boolean) and error</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="logout"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>logout</b>(callback)
+					
+					</div>
+					<div class="description">
+						Log the user out of your application.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The callback function. Response params: error</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="publishMessage"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>publishMessage</b>(message, callback)
+					
+					</div>
+					<div class="description">
+						Shares a message without the intervention of the user
+This action might require publish permissions. If the user has not publish permissions they are automatically requested.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.Message.html">CocoonJS.Social.Message</a>}</span> <b>message</b>
+									
+								</dt>
+								<dd>A object representing the information to be published.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The callback function. Response params: error</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="publishMessageWithDialog"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>publishMessageWithDialog</b>(message, callback)
+					
+					</div>
+					<div class="description">
+						Presents a native/web dialog that allows the user to share a message
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.Message.html">CocoonJS.Social.Message</a>}</span> <b>message</b>
+									
+								</dt>
+								<dd>A object representing the information to be published.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The callback function. Response params: error</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="requestFriends"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestFriends</b>(callback, userID)
+					
+					</div>
+					<div class="description">
+						Retrieves user friends for a specific user ID.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>The callback function. Response params: Array of <a href="../symbols/CocoonJS.Social.User.html">CocoonJS.Social.User</a> and error.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The id of the user to retrieve the information from. If no userID is specified, the currently logged in user is assumed.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="requestPublishPermissions"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestPublishPermissions</b>(callback)
+					
+					</div>
+					<div class="description">
+						Requests publish permissions for the current logged in user
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>callback</b>
+									
+								</dt>
+								<dd>The callback function. Response params: granted and error</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="requestUser"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestUser</b>(callback, userID)
+					
+					</div>
+					<div class="description">
+						Retrieves user information for a specific user ID.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>The callback function. Response params: <a href="../symbols/CocoonJS.Social.User.html">CocoonJS.Social.User</a> and error.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The id of the user to retrieve the information from. If no userID is specified, the currently logged in user is assumed.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="requestUserImage"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestUserImage</b>(callback, userID, imageSize)
+					
+					</div>
+					<div class="description">
+						Request to retrieve the profile image of a user
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>The callback function. Response params: ImageURL and error.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The id of the user to get the image for. If no userID is specified, the currently logged user is used.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.ImageSize.html">CocoonJS.Social.ImageSize</a>}</span> <b>imageSize</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The desired size of the image. Default value: SMALL.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Apr 13 2016 10:55:37 GMT+0200 (CEST)
+		</div>
+	</body>
+</html>

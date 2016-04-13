@@ -1,0 +1,752 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - CocoonJS.Camera</title>
+
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+body {
+	margin: 0 auto;
+	padding: 250px 0 0 0;
+	font-family: 'Droid Sans', arial, sans-serif; 
+	background: #fff;
+	color: #494949;
+	width: 940px;
+	font-size: 15px;
+	line-height: 1.3em;
+}
+
+#header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 210px;
+	background: url(http://wiki.ludei.com/lib/tpl/ludei/static/img/body.png) no-repeat 50% 0;
+	color: #fff;
+}
+	#headerlogo {
+		position: absolute;
+		left: 50%;
+		top: 38px;
+		width: 76px;
+		height: 84px;
+		margin-left: -472px;
+		text-align: left; overflow: hidden; text-indent: -9999px;
+	}
+
+#index {
+	float: left;
+	width: 300px;
+	padding-bottom: 40px;
+}
+
+	#index a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	#index a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+	
+	#index .classList {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		margin: 0 0 0 8px;
+		font-size: 1em;
+		overflow: auto;
+	}
+		
+		#index .classList li
+		{
+			padding: 0;
+			margin: 0 0 8px 0;
+		}
+
+#content {
+	float: right;
+	width: 600px;
+	margin-top: -120px;
+	position: relative;
+	z-index: 10;
+	padding-bottom: 40px;
+}
+	
+	#content a {
+		color: #9A1A29;
+	}
+	
+.fineprint {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1em 0;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	background: #fff;
+	z-index: 20;
+}	
+
+	.fineprint a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	.fineprint a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+
+
+
+
+
+
+
+
+
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #ddd;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ddd;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:190%;
+	line-height:130%;
+	font-weight: normal;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #333;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #333 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #333 solid;
+	border-right: 1px #333 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #333 solid;
+	width: 240px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #9A1A29;
+	font-family: "Droid Sans",arial,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #444;
+	font-style: italic;
+}
+
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+	<a href="/" id="headerlogo">Home</a>
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../../index.html">Extensions Index</a>
+| <a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li></li>
+	
+	<li><a href="../symbols/CocoonJS.Camera.html">CocoonJS.Camera</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Camera.CameraType.html">CocoonJS.Camera.CameraType</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Camera.CaptureFormatType.html">CocoonJS.Camera.CaptureFormatType</a></li>
+	
+</ul>
+<hr />
+
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Namespace CocoonJS.Camera
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_src_CocoonJS_Camera.js.html">CocoonJS_Camera.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class CocoonJS.Camera.">
+				<caption>Namespace Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/CocoonJS.Camera.html#constructor">CocoonJS.Camera</a></b>
+							</div>
+							<div class="description">This namespace represents the CocoonJS camera extension API.</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+				
+				
+				
+				
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class CocoonJS.Camera.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Camera.<b><a href="../symbols/CocoonJS.Camera.html#.getAllCamerasInfo">getAllCamerasInfo</a></b>()
+								</div>
+								<div class="description">Returns an array of <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a> objects representing all the information of all the cameras available in the platform/device.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Camera.<b><a href="../symbols/CocoonJS.Camera.html#.getCameraInfoByIndex">getCameraInfoByIndex</a></b>(cameraIndex)
+								</div>
+								<div class="description">Returns the <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a> object that represents all the information of the specified camera index in the platform/device.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Camera.<b><a href="../symbols/CocoonJS.Camera.html#.getCameraInfoByType">getCameraInfoByType</a></b>(cameraType)
+								</div>
+								<div class="description">Returns the <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a> object that represents all the information of the first camera of the specified type found in the platform/device.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Camera.<b><a href="../symbols/CocoonJS.Camera.html#.getNumberOfCameras">getNumberOfCameras</a></b>()
+								</div>
+								<div class="description">Returns the number of available camera in the platform/device.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Camera.<b><a href="../symbols/CocoonJS.Camera.html#.isCapturing">isCapturing</a></b>(cameraIndex)
+								</div>
+								<div class="description">Indicates if a camera is capturing video or not.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Camera.<b><a href="../symbols/CocoonJS.Camera.html#.startCapturing">startCapturing</a></b>(cameraIndex, captureWidth, captureHeight, captureFrameRate, captureImageFormat)
+								</div>
+								<div class="description">Starts a camera to capture video.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Camera.<b><a href="../symbols/CocoonJS.Camera.html#.stopCapturing">stopCapturing</a></b>(cameraIndex)
+								</div>
+								<div class="description">Stops a camera that is already started capturing video.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Namespace Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>CocoonJS.Camera</b>
+				</div>
+				
+				<div class="description">
+					This namespace represents the CocoonJS camera extension API.
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".getAllCamerasInfo"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{Array}</span>
+					<span class="light">CocoonJS.Camera.</span><b>getAllCamerasInfo</b>()
+					
+					</div>
+					<div class="description">
+						Returns an array of <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a> objects representing all the information of all the cameras available in the platform/device.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{Array}</span> An array of <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a> objects.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getCameraInfoByIndex"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{<a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a>}</span>
+					<span class="light">CocoonJS.Camera.</span><b>getCameraInfoByIndex</b>(cameraIndex)
+					
+					</div>
+					<div class="description">
+						Returns the <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a> object that represents all the information of the specified camera index in the platform/device.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>cameraIndex</b>
+									
+								</dt>
+								<dd>The index of the camera to get the info from. The index should be inside 0 and N (N being the value returned by <a href="../symbols/CocoonJS.Camera.html#.getNumberOfCameras">CocoonJS.Camera.getNumberOfCameras</a>).</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a>}</span> The <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a> of the given camera index.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getCameraInfoByType"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{<a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a>}</span>
+					<span class="light">CocoonJS.Camera.</span><b>getCameraInfoByType</b>(cameraType)
+					
+					</div>
+					<div class="description">
+						Returns the <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a> object that represents all the information of the first camera of the specified type found in the platform/device.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Camera.CameraType.html">CocoonJS.Camera.CameraType</a>}</span> <b>cameraType</b>
+									
+								</dt>
+								<dd>The type of the camera to get the info from.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a>}</span> The <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a> of the first camera of the given camera type that has been found in the platform/device.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".getNumberOfCameras"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{number}</span>
+					<span class="light">CocoonJS.Camera.</span><b>getNumberOfCameras</b>()
+					
+					</div>
+					<div class="description">
+						Returns the number of available camera in the platform/device.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{number}</span> The number of cameras available in the platform/device.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".isCapturing"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{boolean}</span>
+					<span class="light">CocoonJS.Camera.</span><b>isCapturing</b>(cameraIndex)
+					
+					</div>
+					<div class="description">
+						Indicates if a camera is capturing video or not.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>cameraIndex</b>
+									
+								</dt>
+								<dd>The index of the camera to check if is capturing video or not.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> A flag indicating if the given camera (by index) is capturing video (true) or not (false).</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".startCapturing"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{image}</span>
+					<span class="light">CocoonJS.Camera.</span><b>startCapturing</b>(cameraIndex, captureWidth, captureHeight, captureFrameRate, captureImageFormat)
+					
+					</div>
+					<div class="description">
+						Starts a camera to capture video. The developer must specify at least the index of the camera to be used. Some other setup parameters can also be passed to control the video capture. A image object
+that will be automatically updated with the captured frames is returned so the developer just need to draw the image in every frame. A null image object is returned if the setup did not work or there is
+no available camera.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>cameraIndex</b>
+									
+								</dt>
+								<dd>The index of the camera to start video capture with.</dd>
+							
+								<dt>
+									<b>captureWidth</b>
+									
+								</dt>
+								<dd>The hozirontal size of the video capture resolution. If the value does not correspond to any of the sizes supported by the camera, the closest one is used. See <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a>.
+If no value is given, the maximum size available is used.</dd>
+							
+								<dt>
+									<b>captureHeight</b>
+									
+								</dt>
+								<dd>The vertical size of the video capture resolution. If value does not correspond to any of the sizes supported by the camera, the closest one is used. See <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a>.
+If no value is given, the maximum size available is used.</dd>
+							
+								<dt>
+									<b>captureFrameRate</b>
+									
+								</dt>
+								<dd>The frame rate to capture the video at. If the value does not correspond to any of the frame rates supported by the camera, the closest one is used. See <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a>.
+If no value is given, the maximum frame rate available is used.</dd>
+							
+								<dt>
+									<b>captureImageFormat</b>
+									
+								</dt>
+								<dd>A value from the available <a href="../symbols/CocoonJS.Camera.CaptureFormatType.html">CocoonJS.Camera.CaptureFormatType</a> formats to specify the format of the images that will be captured. See <a href="../symbols/CocoonJS.Camera.CameraInfo.html">CocoonJS.Camera.CameraInfo</a>.
+If no value is given, the first available capture image format is used.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{image}</span> A image object that will automatically update itself with the captured frames or null if the camera capture could not start.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".stopCapturing"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Camera.</span><b>stopCapturing</b>(cameraIndex)
+					
+					</div>
+					<div class="description">
+						Stops a camera that is already started capturing video.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>cameraIndex</b>
+									
+								</dt>
+								<dd>The index of the camera to stop capturing video.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Apr 13 2016 10:55:30 GMT+0200 (CEST)
+		</div>
+	</body>
+</html>
