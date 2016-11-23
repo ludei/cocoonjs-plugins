@@ -244,21 +244,11 @@ ul.inheritsList
 	
 	<li><a href="../symbols/CocoonJS.Social.html">CocoonJS.Social</a></li>
 	
-	<li><a href="../symbols/CocoonJS.Social.Achievement.html">CocoonJS.Social.Achievement</a></li>
-	
-	<li><a href="../symbols/CocoonJS.Social.ImageSize.html">CocoonJS.Social.ImageSize</a></li>
+	<li><a href="../symbols/CocoonJS.Social.ImageSizeType.html">CocoonJS.Social.ImageSizeType</a></li>
 	
 	<li><a href="../symbols/CocoonJS.Social.Message.html">CocoonJS.Social.Message</a></li>
 	
-	<li><a href="../symbols/CocoonJS.Social.Score.html">CocoonJS.Social.Score</a></li>
-	
-	<li><a href="../symbols/CocoonJS.Social.ScoreParams.html">CocoonJS.Social.ScoreParams</a></li>
-	
-	<li><a href="../symbols/CocoonJS.Social.SocialGamingService.html">CocoonJS.Social.SocialGamingService</a></li>
-	
-	<li><a href="../symbols/CocoonJS.Social.SocialService.html">CocoonJS.Social.SocialService</a></li>
-	
-	<li><a href="../symbols/CocoonJS.Social.User.html">CocoonJS.Social.User</a></li>
+	<li><a href="../symbols/CocoonJS.Social.UserInfo.html">CocoonJS.Social.UserInfo</a></li>
 	
 </ul>
 <hr />
@@ -281,7 +271,7 @@ ul.inheritsList
 				
 				
 				
-					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_src_CocoonJS_Social.js.html">CocoonJS_Social.js</a>.
+					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_CocoonJS_Social.js.html">CocoonJS_Social.js</a>.
 				
 			</p>
 
@@ -302,7 +292,7 @@ ul.inheritsList
 							<div class="fixedFont">
 								<b><a href="../symbols/CocoonJS.Social.html#constructor">CocoonJS.Social</a></b>
 							</div>
-							<div class="description"></div>
+							<div class="description">This type represents the access to a native Social extension API.</div>
 						</td>
 					</tr>
 				</tbody>
@@ -313,23 +303,219 @@ ul.inheritsList
 			
 				
 				
-				<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class CocoonJS.Social.">
-					<caption>Field Summary</caption>
+				
+				
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class CocoonJS.Social.">
+					<caption>Method Summary</caption>
 					<thead>
 						<tr>
-							<th scope="col">Field Attributes</th>
-							<th scope="col">Field Name and Description</th>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
 						</tr>
 					</thead>
 					<tbody>
 					
 						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#getLoggedInUserInfo">getLoggedInUserInfo</a></b>()
+								</div>
+								<div class="description">Returns the information of the currently logged in user.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#isInitialized">isInitialized</a></b>()
+								</div>
+								<div class="description">Returns a flag to indicate if the underlying service has been initialized or not.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#isLoggedIn">isLoggedIn</a></b>()
+								</div>
+								<div class="description">Check if the user is logged in.</div>
+							</td>
+						</tr>
+					
+						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont">
-								CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.TimeScope">TimeScope</a></b>
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestInitializationFailedListener">OnRequestInitializationFailedListener</a></b>(initializationData, errorMessage)
 								</div>
-								<div class="description"></div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestInitializationFailed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestInitializationSucceedListener">OnRequestInitializationSucceedListener</a></b>(initializationData)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestInitializationSucceed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestLoginFailedListener">OnRequestLoginFailedListener</a></b>(errorMessage)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestLoginFailed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestLoginSucceedListener">OnRequestLoginSucceedListener</a></b>(userInfo)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestLoginSucceed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestMessagePublicationFailedListener">OnRequestMessagePublicationFailedListener</a></b>(message, errorMessage)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestMessagePublicationFailed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestMessagePublicationSucceedListener">OnRequestMessagePublicationSucceedListener</a></b>(message)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestMessagePublicationSucceed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestUserFriendsUserInfosFailedListener">OnRequestUserFriendsUserInfosFailedListener</a></b>(, userID, errorMessage)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserFriendsUserInfosFailed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestUserFriendsUserInfosSucceedListener">OnRequestUserFriendsUserInfosSucceedListener</a></b>(userID, friendsInfo)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserFriendsUserInfosSucceed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestUserImageURLFailedListener">OnRequestUserImageURLFailedListener</a></b>(userID, errorMessage)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserImageURLFailed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestUserImageURLSucceedListener">OnRequestUserImageURLSucceedListener</a></b>(userID, imageURL)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserImageURLSucceed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestUserInfoFailedListener">OnRequestUserInfoFailedListener</a></b>(userID, errorMessage)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserInfoFailed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.OnRequestUserInfoSucceedListener">OnRequestUserInfoSucceedListener</a></b>(userInfo)
+								</div>
+								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserInfoSucceed event calls.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#requestInitialization">requestInitialization</a></b>(paramsObject)
+								</div>
+								<div class="description">Request initialization of the underlying social service.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#requestLogin">requestLogin</a></b>()
+								</div>
+								<div class="description">Request to log in the social gaming application.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#requestLogout">requestLogout</a></b>()
+								</div>
+								<div class="description">Request to log out of the social gaming application.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#requestMessagePublicationWithDialog">requestMessagePublicationWithDialog</a></b>(message)
+								</div>
+								<div class="description">Request the publication of a message using a dialog.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#requestUserFriendsUserInfos">requestUserFriendsUserInfos</a></b>(userID)
+								</div>
+								<div class="description">Request for the information of all the friends of the currently logged user.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#requestUserImageURL">requestUserImageURL</a></b>(userID, imageSizeType)
+								</div>
+								<div class="description">Request to retrieve the Image of a user</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Social.html#requestUserInfo">requestUserInfo</a></b>(userId)
+								</div>
+								<div class="description">Request to retrieve the current or a specific user's id.</div>
 							</td>
 						</tr>
 					
@@ -339,10 +525,142 @@ ul.inheritsList
 				
 				
 			
-
-<!-- ============================== methods summary ======================== -->
-			
 <!-- ============================== events summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the events documented in the class CocoonJS.Social.">
+					<caption>Event Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Event Attributes</th>
+							<th scope="col">Event Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onLogout">onLogout</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user logs out.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestInitializationFailed">onRequestInitializationFailed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user information request fails.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestInitializationSucceed">onRequestInitializationSucceed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user information request suceeds.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestLoginFailed">onRequestLoginFailed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user login request fails.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestLoginSucceed">onRequestLoginSucceed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user login request succeeds.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestMessagePublicationFailed">onRequestMessagePublicationFailed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user message publication request fails.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestMessagePublicationSucceed">onRequestMessagePublicationSucceed</a></b>(message)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user message publication request succeeds.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestUserFriendsUserInfosFailed">onRequestUserFriendsUserInfosFailed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user's friends info fails to be retrieved.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestUserFriendsUserInfosSucceed">onRequestUserFriendsUserInfosSucceed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user's friends info is successfully retrieved.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestUserImageURLFailed">onRequestUserImageURLFailed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user image URL request fails.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestUserImageURLSucceed">onRequestUserImageURLSucceed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user image URL request succeeds.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestUserInfoFailed">onRequestUserInfoFailed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user information request fails.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Social.<b><a href="../symbols/CocoonJS.Social.html#.event:onRequestUserInfoSucceed">onRequestUserInfoSucceed</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the user information request suceeds.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
 			
 
 <!-- ============================== constructor details ==================== -->		
@@ -357,13 +675,31 @@ ul.inheritsList
 				</div>
 				
 				<div class="description">
-					
+					This type represents the access to a native Social extension API. As there can be more than
+one service of this type, more than one instance can be created.
 					
 				</div>
 				
 				
 				
 				
+					
+						<dl class="detailList">
+						<dt class="heading">Parameters:</dt>
+						
+							<dt>
+								<span class="light fixedFont">{string}</span>  <b>nativeExtensionName</b>
+								
+							</dt>
+								<dd>The name of the native ext object extension property name.</dd>
+						
+							<dt>
+								<span class="light fixedFont">{string}</span>  <b>extensionName</b>
+								
+							</dt>
+								<dd>The name of the CocoonJS object extension property name.</dd>
+						
+						</dl>
 					
 					
 					
@@ -377,38 +713,1247 @@ ul.inheritsList
 
 <!-- ============================== field details ========================== -->		
 			
-				<div class="sectionTitle">
-					Field Detail
-				</div>
-				
-					<a name=".TimeScope"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.Social.</span><b>TimeScope</b>
-					
-					</div>
-					<div class="description">
-						
-						
-						
-					</div>
-					
-					
-
-						
-						
-						
-						
-
-					
-				
-			
 
 <!-- ============================== method details ========================= -->		
 			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name="getLoggedInUserInfo"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{@link CocoonJS.Social.UserInfo}</span>
+					<b>getLoggedInUserInfo</b>()
+					
+					</div>
+					<div class="description">
+						Returns the information of the currently logged in user.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{@link CocoonJS.Social.UserInfo}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="isInitialized"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{boolean}</span>
+					<b>isInitialized</b>()
+					
+					</div>
+					<div class="description">
+						Returns a flag to indicate if the underlying service has been initialized or not.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> If the underlying service had been initialized using the requestInitialization function call.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="isLoggedIn"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{boolean}</span>
+					<b>isLoggedIn</b>()
+					
+					</div>
+					<div class="description">
+						Check if the user is logged in.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> true if the user is still logged in, false otherwise.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestInitializationFailedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestInitializationFailedListener</b>(initializationData, errorMessage)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestInitializationFailed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>initializationData</b>
+									
+								</dt>
+								<dd>The data structure passed when the requestInitialization function was called.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>errorMessage</b>
+									
+								</dt>
+								<dd>The message that describes why the request did fail.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestInitializationSucceedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestInitializationSucceedListener</b>(initializationData)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestInitializationSucceed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>initializationData</b>
+									
+								</dt>
+								<dd>The data structure passed when requestInitialization was called.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestLoginFailedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestLoginFailedListener</b>(errorMessage)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestLoginFailed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>errorMessage</b>
+									
+								</dt>
+								<dd>The message that describes why the request did fail.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestLoginSucceedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestLoginSucceedListener</b>(userInfo)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestLoginSucceed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.UserInfo.html">CocoonJS.Social.UserInfo</a>}</span> <b>userInfo</b>
+									
+								</dt>
+								<dd>The structure that describes the information of the user that logged in.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestMessagePublicationFailedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestMessagePublicationFailedListener</b>(message, errorMessage)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestMessagePublicationFailed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.Message.html">CocoonJS.Social.Message</a>}</span> <b>message</b>
+									
+								</dt>
+								<dd>The message that was supposed to be published.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>errorMessage</b>
+									
+								</dt>
+								<dd>The error message.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestMessagePublicationSucceedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestMessagePublicationSucceedListener</b>(message)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestMessagePublicationSucceed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.Message.html">CocoonJS.Social.Message</a>}</span> <b>message</b>
+									
+								</dt>
+								<dd>The message that has been published.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestUserFriendsUserInfosFailedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestUserFriendsUserInfosFailedListener</b>(, userID, errorMessage)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserFriendsUserInfosFailed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b></b>
+									
+								</dt>
+								<dd></dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									
+								</dt>
+								<dd>The id of the user fro whom the friends infos were requested.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>errorMessage</b>
+									
+								</dt>
+								<dd>The error message.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestUserFriendsUserInfosSucceedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestUserFriendsUserInfosSucceedListener</b>(userID, friendsInfo)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserFriendsUserInfosSucceed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									
+								</dt>
+								<dd>The id of the user for whom the friend user infos where requested.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{array}</span> <b>friendsInfo</b>
+									
+								</dt>
+								<dd>An array of <a href="../symbols/CocoonJS.Social.UserInfo.html">CocoonJS.Social.UserInfo</a> objects representing the information of the friends of the user.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestUserImageURLFailedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestUserImageURLFailedListener</b>(userID, errorMessage)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserImageURLFailed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									
+								</dt>
+								<dd>The id of the user the request was placed for.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>errorMessage</b>
+									
+								</dt>
+								<dd>The message that describes why the request did fail.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestUserImageURLSucceedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestUserImageURLSucceedListener</b>(userID, imageURL)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserImageURLSucceed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									
+								</dt>
+								<dd>The id used in the request.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>imageURL</b>
+									
+								</dt>
+								<dd>The URL of the image of the requested user.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestUserInfoFailedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestUserInfoFailedListener</b>(userID, errorMessage)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserInfoFailed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									
+								</dt>
+								<dd>The id used in the request.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>errorMessage</b>
+									
+								</dt>
+								<dd>The message that describes why the request did fail.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".OnRequestUserInfoSucceedListener"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>OnRequestUserInfoSucceedListener</b>(userInfo)
+					
+					</div>
+					<div class="description">
+						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.Social.onRequestUserInfoSucceed event calls.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.UserInfo.html">CocoonJS.Social.UserInfo</a>}</span> <b>userInfo</b>
+									
+								</dt>
+								<dd>The structure that describes the information of the request user id.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="requestInitialization"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestInitialization</b>(paramsObject)
+					
+					</div>
+					<div class="description">
+						Request initialization of the underlying social service.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>paramsObject</b>
+									
+								</dt>
+								<dd>A data structure to initialize the service. It will be dependable of the underlying service.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Social.onRequestInitializationSucceed</dd>
+							
+								<dd>CocoonJS.Social.onRequestInitializationFailed</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="requestLogin"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestLogin</b>()
+					
+					</div>
+					<div class="description">
+						Request to log in the social gaming application.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Social.onRequestLoginSucceed</dd>
+							
+								<dd>CocoonJS.Socual.onRequestLoginFailed</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="requestLogout"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestLogout</b>()
+					
+					</div>
+					<div class="description">
+						Request to log out of the social gaming application.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Social.onRequestLoginSucceed</dd>
+							
+								<dd>CocoonJS.Social.onRequestLoginFailed</dd>
+							
+								<dd>CocoonJS.Social.onLogout</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="requestMessagePublicationWithDialog"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestMessagePublicationWithDialog</b>(message)
+					
+					</div>
+					<div class="description">
+						Request the publication of a message using a dialog.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.Message.html">CocoonJS.Social.Message</a>}</span> <b>message</b>
+									
+								</dt>
+								<dd>A object representing the information to be published.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Social.onRequestMessagePublicationSucceed</dd>
+							
+								<dd>CocoonJS.Social.onRequestMessagePublicationFailed</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="requestUserFriendsUserInfos"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestUserFriendsUserInfos</b>(userID)
+					
+					</div>
+					<div class="description">
+						Request for the information of all the friends of the currently logged user.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The id of the user to get the friends infos for. If no userID is specified, the currently logged user is used.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Social.onRequestUserFriendsUserInfosSucceed;</dd>
+							
+								<dd>CocoonJS.Social.onRequestUserFriendsUserInfosFailed;</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="requestUserImageURL"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestUserImageURL</b>(userID, imageSizeType)
+					
+					</div>
+					<div class="description">
+						Request to retrieve the Image of a user
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userID</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The id of the user to get the image for. If no userID is specified, the currently logged user is used.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.ImageSizeType.html">CocoonJS.Social.ImageSizeType</a>}</span> <b>imageSizeType</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The size of the image. One of the possible values among the ones in the <a href="../symbols/CocoonJS.Social.ImageSizeType.html">CocoonJS.Social.ImageSizeType</a>. If no value is specified, SMALL is used.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Social.onRequestUserImageURLSucceed;</dd>
+							
+								<dd>CocoonJS.Social.onRequestUserImageURLFailed;</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="requestUserInfo"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>requestUserInfo</b>(userId)
+					
+					</div>
+					<div class="description">
+						Request to retrieve the current or a specific user's id. The request can be monitored using the CocoonJS.Social.onUserInfoRequestSucceed and CocoonJS.Social.onUserInfoRequestFailed event handlers.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>userId</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The id of the user to retireve the information from. If no userID is specified, the currently logged in user is assumed.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Social.onRequestUserInfoSucceed</dd>
+							
+								<dd>CocoonJS.Social.onRequestUserInfoFailed</dd>
+							
+							</dl>
+						
+
+					
+				
+			
 			
 <!-- ============================== event details ========================= -->		
+			
+				<div class="sectionTitle">
+					Event Detail
+				</div>
+				
+					<a name=".event:onLogout"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onLogout</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user logs out.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestInitializationFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestInitializationFailed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user information request fails.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestInitializationFailedListener">CocoonJS.Social.OnRequestInitializationFailedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestInitializationSucceed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestInitializationSucceed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user information request suceeds.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestInitializationSucceedListener">CocoonJS.Social.OnRequestInitializationSucceedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestLoginFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestLoginFailed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user login request fails.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestLoginFailedListener">CocoonJS.Social.OnRequestLoginFailedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestLoginSucceed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestLoginSucceed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user login request succeeds.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestLoginSucceedListener">CocoonJS.Social.OnRequestLoginSucceedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestMessagePublicationFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestMessagePublicationFailed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user message publication request fails.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestMessagePublicationFailedListener">CocoonJS.Social.OnRequestMessagePublicationFailedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestMessagePublicationSucceed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestMessagePublicationSucceed</b>(message)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user message publication request succeeds.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestMessagePublicationSucceedListener">CocoonJS.Social.OnRequestMessagePublicationSucceedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Social.Message.html">CocoonJS.Social.Message</a>}</span> <b>message</b>
+									
+								</dt>
+								<dd>The message that has been published.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestUserFriendsUserInfosFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestUserFriendsUserInfosFailed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user's friends info fails to be retrieved.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestUserFriendsUserInfosFailedListener">CocoonJS.Social.OnRequestUserFriendsUserInfosFailedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestUserFriendsUserInfosSucceed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestUserFriendsUserInfosSucceed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user's friends info is successfully retrieved.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestUserFriendsUserInfosSucceedListener">CocoonJS.Social.OnRequestUserFriendsUserInfosSucceedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestUserImageURLFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestUserImageURLFailed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user image URL request fails.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestUserImageURLFailedListener">CocoonJS.Social.OnRequestUserImageURLFailedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestUserImageURLSucceed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestUserImageURLSucceed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user image URL request succeeds.
+The callback function's documentation is represented by <a href="../symbols/CocoonJS.Social.html#.OnRequestUserImageURLSucceedListener">CocoonJS.Social.OnRequestUserImageURLSucceedListener</a>
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestUserInfoFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestUserInfoFailed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user information request fails.
+The callback function's documentation is represented by CocoonJS.Social.OnUserInfoRequestFailedListener
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onRequestUserInfoSucceed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Social.</span><b>onRequestUserInfoSucceed</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the user information request suceeds.
+The callback function's documentation is represented by CocoonJS.Social.OnUserInfoRequestSucceedListener
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
 			
 			
 			<hr />
@@ -418,7 +1963,7 @@ ul.inheritsList
 <!-- ============================== footer ================================= -->
 		<div class="fineprint" style="clear:both">
 			
-			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Apr 13 2016 10:55:37 GMT+0200 (CEST)
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Nov 23 2016 12:12:59 GMT+0100 (CET)
 		</div>
 	</body>
 </html>

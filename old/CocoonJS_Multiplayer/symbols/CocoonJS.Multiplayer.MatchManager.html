@@ -1,0 +1,1069 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - CocoonJS.Multiplayer.MatchManager</title>
+
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+body {
+	margin: 0 auto;
+	padding: 250px 0 0 0;
+	font-family: 'Droid Sans', arial, sans-serif; 
+	background: #fff;
+	color: #494949;
+	width: 940px;
+	font-size: 15px;
+	line-height: 1.3em;
+}
+
+#header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 210px;
+	background: url(http://wiki.ludei.com/lib/tpl/ludei/static/img/body.png) no-repeat 50% 0;
+	color: #fff;
+}
+	#headerlogo {
+		position: absolute;
+		left: 50%;
+		top: 38px;
+		width: 76px;
+		height: 84px;
+		margin-left: -472px;
+		text-align: left; overflow: hidden; text-indent: -9999px;
+	}
+
+#index {
+	float: left;
+	width: 300px;
+	padding-bottom: 40px;
+}
+
+	#index a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	#index a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+	
+	#index .classList {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		margin: 0 0 0 8px;
+		font-size: 1em;
+		overflow: auto;
+	}
+		
+		#index .classList li
+		{
+			padding: 0;
+			margin: 0 0 8px 0;
+		}
+
+#content {
+	float: right;
+	width: 600px;
+	margin-top: -120px;
+	position: relative;
+	z-index: 10;
+	padding-bottom: 40px;
+}
+	
+	#content a {
+		color: #9A1A29;
+	}
+	
+.fineprint {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1em 0;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	background: #fff;
+	z-index: 20;
+}	
+
+	.fineprint a {
+		color: #494949;
+		text-decoration: none;
+	}
+
+	.fineprint a:hover {
+		color: #9A1A29;
+		text-decoration: underline;
+	}
+
+
+
+
+
+
+
+
+
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #ddd;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ddd;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:190%;
+	line-height:130%;
+	font-weight: normal;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #333;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #333 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #333 solid;
+	border-right: 1px #333 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #333 solid;
+	width: 240px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #9A1A29;
+	font-family: "Droid Sans",arial,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #444;
+	font-style: italic;
+}
+
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+	<a href="/" id="headerlogo">Home</a>
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../../index.html">Extensions Index</a>
+| <a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li></li>
+	
+	<li><a href="../symbols/CocoonJS.Multiplayer.html">CocoonJS.Multiplayer</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Multiplayer.ConnectionState.html">CocoonJS.Multiplayer.ConnectionState</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html">CocoonJS.Multiplayer.MatchManager</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Multiplayer.MatchRequest.html">CocoonJS.Multiplayer.MatchRequest</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Multiplayer.PlayerInfo.html">CocoonJS.Multiplayer.PlayerInfo</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Multiplayer.SendDataMode.html">CocoonJS.Multiplayer.SendDataMode</a></li>
+	
+</ul>
+<hr />
+
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Namespace CocoonJS.Multiplayer.MatchManager
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_CocoonJS_Multiplayer.js.html">CocoonJS_Multiplayer.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class CocoonJS.Multiplayer.MatchManager.">
+				<caption>Namespace Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#constructor">CocoonJS.Multiplayer.MatchManager</a></b>
+							</div>
+							<div class="description">This type is used to programmatically create matches to other players and to receive match invitations sent by other players.</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class CocoonJS.Multiplayer.MatchManager.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#addPlayersToMatch">addPlayersToMatch</a></b>(matchRequest, matchRequest)
+								</div>
+								<div class="description">Automatically adds players to an ongoing match owned by the user.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#cancelAutoMatch">cancelAutoMatch</a></b>()
+								</div>
+								<div class="description">Cancels the ongoing automatch request</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#createAutoMatch">createAutoMatch</a></b>(matchRequest)
+								</div>
+								<div class="description">Sends an automatch request to join the authenticated user to a match.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#createMatch">createMatch</a></b>(matchRequest)
+								</div>
+								<div class="description">Presents a system View for the matchmaking and creates a new Match</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#getMatch">getMatch</a></b>(matchRequest)
+								</div>
+								<div class="description">Get the current match reference.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#getPlayerID">getPlayerID</a></b>(matchRequest)
+								</div>
+								<div class="description">Gets the playerID attached to the match manager</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the events documented in the class CocoonJS.Multiplayer.MatchManager.">
+					<caption>Event Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Event Attributes</th>
+							<th scope="col">Event Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Multiplayer.MatchManager.<b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#.event:onInvitationReceived">onInvitationReceived</a></b>(match, error)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when an invitation has been received from another player
+The callback function's documentation is represented by CocoonJS.Social.onInvitationReceived</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Multiplayer.MatchManager.<b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#.event:onMatchFound">onMatchFound</a></b>(match, match)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a match has been found.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Multiplayer.MatchManager.<b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#.event:onMatchPlayerAdditionFailed">onMatchPlayerAdditionFailed</a></b>(match, error)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when addPlayersToMatch operation succeedes
+The callback function's documentation is represented by CocoonJS.Social.OnMatchPlayerAdditionFailedListener</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Multiplayer.MatchManager.<b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#.event:onMatchPlayerAdditionSucceeded">onMatchPlayerAdditionSucceeded</a></b>(match, error)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when addPlayersToMatch operation succeedes
+The callback function's documentation is represented by CocoonJS.Social.OnMatchPlayerAdditionSucceededListener</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Multiplayer.MatchManager.<b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#.event:onMatchRequestCanceled">onMatchRequestCanceled</a></b>(match)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a match has been canceled by the user
+The callback function's documentation is represented by CocoonJS.Social.OnMatchRequestCanceledListener</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.Multiplayer.MatchManager.<b><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html#.event:onMatchRequestFailed">onMatchRequestFailed</a></b>(match, error)
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a match creation operation has failed
+The callback function's documentation is represented by CocoonJS.Social.OnMatchRequestFailedListener</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Namespace Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>CocoonJS.Multiplayer.MatchManager</b>
+				</div>
+				
+				<div class="description">
+					This type is used to programmatically create matches to other players and to receive match invitations sent by other players.
+Your game must authenticate the related social service before you can use this.
+					
+				</div>
+				
+				
+				
+				
+					
+						<dl class="detailList">
+						<dt class="heading">Parameters:</dt>
+						
+							<dt>
+								<span class="light fixedFont">{string}</span>  <b>nativeExtensionName</b>
+								
+							</dt>
+								<dd>The name of the native ext object extension property name.</dd>
+						
+							<dt>
+								<span class="light fixedFont">{string}</span>  <b>extensionName</b>
+								
+							</dt>
+								<dd>The name of the CocoonJS object extension property name.</dd>
+						
+							<dt>
+								<span class="light fixedFont">{number}</span>  <b>matchManagerID</b>
+								
+							</dt>
+								<dd>The match manager ID user for native bridge</dd>
+						
+						</dl>
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name="addPlayersToMatch"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>addPlayersToMatch</b>(matchRequest, matchRequest)
+					
+					</div>
+					<div class="description">
+						Automatically adds players to an ongoing match owned by the user.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.MatchRequest.html">CocoonJS.Multiplayer.MatchRequest</a>}</span> <b>matchRequest</b>
+									
+								</dt>
+								<dd>The parameters for the match</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span> <b>matchRequest</b>
+									
+								</dt>
+								<dd>The match where new players will be added</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchPlayerAdditionSucceeded</dd>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchPlayerAdditionFailed</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="cancelAutoMatch"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>cancelAutoMatch</b>()
+					
+					</div>
+					<div class="description">
+						Cancels the ongoing automatch request
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchFound</dd>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchRequestFailed</dd>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchRequestCanceled</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="createAutoMatch"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>createAutoMatch</b>(matchRequest)
+					
+					</div>
+					<div class="description">
+						Sends an automatch request to join the authenticated user to a match. It doesn't present a system view while waiting to other players.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.MatchRequest.html">CocoonJS.Multiplayer.MatchRequest</a>}</span> <b>matchRequest</b>
+									
+								</dt>
+								<dd>The parameters for the match</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchFound</dd>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchRequestFailed</dd>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchRequestCanceled</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="createMatch"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>createMatch</b>(matchRequest)
+					
+					</div>
+					<div class="description">
+						Presents a system View for the matchmaking and creates a new Match
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.MatchRequest.html">CocoonJS.Multiplayer.MatchRequest</a>}</span> <b>matchRequest</b>
+									
+								</dt>
+								<dd>The parameters for the match</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchFound</dd>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchRequestFailed</dd>
+							
+								<dd>CocoonJS.Multiplayer.MatchManager.onMatchRequestCanceled</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="getMatch"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span>
+					<b>getMatch</b>(matchRequest)
+					
+					</div>
+					<div class="description">
+						Get the current match reference.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>matchRequest</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span> the current match reference</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="getPlayerID"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string}</span>
+					<b>getPlayerID</b>(matchRequest)
+					
+					</div>
+					<div class="description">
+						Gets the playerID attached to the match manager
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<b>matchRequest</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> the playerID attached to the match manager.</dd>
+							
+							</dl>
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+				<div class="sectionTitle">
+					Event Detail
+				</div>
+				
+					<a name=".event:onInvitationReceived"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.MatchManager.</span><b>onInvitationReceived</b>(match, error)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when an invitation has been received from another player
+The callback function's documentation is represented by CocoonJS.Social.onInvitationReceived
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.MatchManager.html">CocoonJS.Multiplayer.MatchManager</a>}</span> <b>match</b>
+									
+								</dt>
+								<dd>The source match manager</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>error</b>
+									
+								</dt>
+								<dd>The error message</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onMatchFound"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.MatchManager.</span><b>onMatchFound</b>(match, match)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when a match has been found. 
+The match might be returned before connections have been established between players. At this stage, all the players are in the process of connecting to each other.
+Always check the getExpectedPlayerCount value before starting a match. When its value reaches zero, all expected players are connected, and your game can begin the match.
+The callback function's documentation is represented by CocoonJS.Social.OnMatchFoundListener
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.MatchManager.html">CocoonJS.Multiplayer.MatchManager</a>}</span> <b>match</b>
+									
+								</dt>
+								<dd>The source match manager</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span> <b>match</b>
+									
+								</dt>
+								<dd>The found match, the game should start</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onMatchPlayerAdditionFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.MatchManager.</span><b>onMatchPlayerAdditionFailed</b>(match, error)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when addPlayersToMatch operation succeedes
+The callback function's documentation is represented by CocoonJS.Social.OnMatchPlayerAdditionFailedListener
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.MatchManager.html">CocoonJS.Multiplayer.MatchManager</a>}</span> <b>match</b>
+									
+								</dt>
+								<dd>The source match manager</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>error</b>
+									
+								</dt>
+								<dd>The error message</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onMatchPlayerAdditionSucceeded"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.MatchManager.</span><b>onMatchPlayerAdditionSucceeded</b>(match, error)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when addPlayersToMatch operation succeedes
+The callback function's documentation is represented by CocoonJS.Social.OnMatchPlayerAdditionSucceededListener
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.MatchManager.html">CocoonJS.Multiplayer.MatchManager</a>}</span> <b>match</b>
+									
+								</dt>
+								<dd>The source match manager</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>error</b>
+									
+								</dt>
+								<dd>The error message</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onMatchRequestCanceled"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.MatchManager.</span><b>onMatchRequestCanceled</b>(match)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when a match has been canceled by the user
+The callback function's documentation is represented by CocoonJS.Social.OnMatchRequestCanceledListener
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.MatchManager.html">CocoonJS.Multiplayer.MatchManager</a>}</span> <b>match</b>
+									
+								</dt>
+								<dd>The source match manager</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".event:onMatchRequestFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.MatchManager.</span><b>onMatchRequestFailed</b>(match, error)
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when a match creation operation has failed
+The callback function's documentation is represented by CocoonJS.Social.OnMatchRequestFailedListener
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.MatchManager.html">CocoonJS.Multiplayer.MatchManager</a>}</span> <b>match</b>
+									
+								</dt>
+								<dd>The source match manager</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>error</b>
+									
+								</dt>
+								<dd>The error message</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Nov 23 2016 12:12:55 GMT+0100 (CET)
+		</div>
+	</body>
+</html>
