@@ -250,7 +250,11 @@ ul.inheritsList
 	
 	<li><a href="../symbols/CocoonJS.App.KeyboardType.html">CocoonJS.App.KeyboardType</a></li>
 	
+	<li><a href="../symbols/CocoonJS.App.Orientations.html">CocoonJS.App.Orientations</a></li>
+	
 	<li><a href="../symbols/CocoonJS.App.StorageType.html">CocoonJS.App.StorageType</a></li>
+	
+	<li><a href="../symbols/CocoonJS.App.WebDialog.html">CocoonJS.App.WebDialog</a></li>
 	
 </ul>
 <hr />
@@ -273,7 +277,7 @@ ul.inheritsList
 				
 				
 				
-					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_CocoonJS_App.js.html">CocoonJS_App.js</a>.
+					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_src_CocoonJS_App.js.html">CocoonJS_App.js</a>.
 				
 			</p>
 
@@ -349,42 +353,6 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.addDestinationProxyObjectEventListener">addDestinationProxyObjectEventListener</a></b>(typeName, id, eventTypeName)
-								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.callDestinationProxyObjectFunction">callDestinationProxyObjectFunction</a></b>(typeName, id, functionName)
-								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.callOriginProxyObjectEventHandler">callOriginProxyObjectEventHandler</a></b>(typeName, id, eventHandlerName)
-								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.callOriginProxyObjectEventListeners">callOriginProxyObjectEventListeners</a></b>(typeName, id, eventTypeName)
-								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.captureScreen">captureScreen</a></b>(fileName, storageType)
 								</div>
 								<div class="description">Captures a image of the screen synchronously and saves it to a file.</div>
@@ -406,15 +374,6 @@ ul.inheritsList
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.createScreenCanvas">createScreenCanvas</a></b>()
 								</div>
 								<div class="description">Creates a canvas element that is automatically resized to the screen size.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.deleteDestinationProxyObject">deleteDestinationProxyObject</a></b>(typeName, id)
-								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
 							</td>
 						</tr>
 					
@@ -466,6 +425,15 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.existsPath">existsPath</a></b>(path, storageType)
+								</div>
+								<div class="description">Queries if a file exists in the specified path and storage type.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.forceToFinish">forceToFinish</a></b>()
 								</div>
 								<div class="description">Forces the app to be finished.</div>
@@ -502,15 +470,6 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.getDestinationProxyObjectAttribute">getDestinationProxyObjectAttribute</a></b>(typeName, id, attributeName)
-								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.getDeviceId">getDeviceId</a></b>()
 								</div>
 								<div class="description">Returns the device UUID</div>
@@ -538,27 +497,18 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.getPreferredOrientation">getPreferredOrientation</a></b>()
+								</div>
+								<div class="description">Retrieves the preferred orientation that has been set in the system.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.load">load</a></b>(path, storageType)
 								</div>
 								<div class="description">It allows to load a new JavaScript/HTML5 resource that can be loaded either locally (inside the platform/device storage) or using a remote URL.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.newDestinationProxyObject">newDestinationProxyObject</a></b>(typeName)
-								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.OnTextDialogFinishedListener">OnTextDialogFinishedListener</a></b>(text)
-								</div>
-								<div class="description">FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.App.onTextDialogFinished event calls.</div>
 							</td>
 						</tr>
 					
@@ -619,15 +569,6 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setDestinationProxyObjectAttribute">setDestinationProxyObjectAttribute</a></b>(typeName, id, attributeName, attributeValue)
-								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setGyroscopeUpdateIntervalInSeconds">setGyroscopeUpdateIntervalInSeconds</a></b>(updateIntervalInSeconds)
 								</div>
 								<div class="description">Setups the update interval in seconds (1 second / X frames) to receive the gyroscope updates.</div>
@@ -637,9 +578,9 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setupDestinationProxyType">setupDestinationProxyType</a></b>(typeName, eventHandlerNames)
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setPreferredOrientation">setPreferredOrientation</a></b>(preferredOrientation)
 								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
+								<div class="description">Sets the preferred orientation in the system.</div>
 							</td>
 						</tr>
 					
@@ -649,6 +590,15 @@ ul.inheritsList
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.setupOriginProxyType">setupOriginProxyType</a></b>(typeName, attributeNames, functionNames, eventHandlerNames)
 								</div>
 								<div class="description">Setups a origin proxy for a given typeName.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.share">share</a></b>(textToShare)
+								</div>
+								<div class="description">Opens a given share native window to share some specific text content in any system specific social sharing options.</div>
 							</td>
 						</tr>
 					
@@ -667,15 +617,6 @@ ul.inheritsList
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.showTextDialog">showTextDialog</a></b>(title, message, text, keyboardType, cancelButtonText, okButtonText)
 								</div>
 								<div class="description">Pops up a text dialog so the user can introduce some text and the application can get it back.</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.takedownDestinationProxyType">takedownDestinationProxyType</a></b>(typeName)
-								</div>
-								<div class="description">NOTE: This function should never be directly called.</div>
 							</td>
 						</tr>
 					
@@ -741,6 +682,15 @@ ul.inheritsList
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.event:onSuspended">onSuspended</a></b>()
 								</div>
 								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the application is suspended.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.event:onSuspending">onSuspending</a></b>()
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the application is suspending.</div>
 							</td>
 						</tr>
 					
@@ -834,208 +784,6 @@ ul.inheritsList
 				<div class="sectionTitle">
 					Method Detail
 				</div>
-				
-					<a name=".addDestinationProxyObjectEventListener"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>addDestinationProxyObjectEventListener</b>(typeName, id, eventTypeName)
-					
-					</div>
-					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the original environment whenever it is needed to work with proxy objects.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<b>typeName</b>
-									
-								</dt>
-								<dd></dd>
-							
-								<dt>
-									<b>id</b>
-									
-								</dt>
-								<dd></dd>
-							
-								<dt>
-									<b>eventTypeName</b>
-									
-								</dt>
-								<dd></dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name=".callDestinationProxyObjectFunction"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>callDestinationProxyObjectFunction</b>(typeName, id, functionName)
-					
-					</div>
-					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the origin environement whenever it is needed to work with proxy objects.
-Calls a function of a destination object idetified by it's typeName and id.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>typeName</b>
-									
-								</dt>
-								<dd>The name of the type of the proxy.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{number}</span> <b>id</b>
-									
-								</dt>
-								<dd>The id of the proxy object.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>functionName</b>
-									
-								</dt>
-								<dd>The name of the function to be called.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-							<dl class="detailList">
-							<dt class="heading">Returns:</dt>
-							
-								<dd>Whatever the function call returns.</dd>
-							
-							</dl>
-						
-						
-						
-
-					<hr />
-				
-					<a name=".callOriginProxyObjectEventHandler"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>callOriginProxyObjectEventHandler</b>(typeName, id, eventHandlerName)
-					
-					</div>
-					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the destination environment whenever it is needed to work with proxy objects.
-It calls the origin proxy object when an event handler need to be updated/called from the destination environment.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>typeName</b>
-									
-								</dt>
-								<dd>The type name of the proxified type.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{number}</span> <b>id</b>
-									
-								</dt>
-								<dd>The id of the proxy object.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>eventHandlerName</b>
-									
-								</dt>
-								<dd>The name of the event handler to be called.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name=".callOriginProxyObjectEventListeners"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>callOriginProxyObjectEventListeners</b>(typeName, id, eventTypeName)
-					
-					</div>
-					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the destination environment whenever it is needed to work with proxy objects.
-It calls the origin proxy object when all the event listeners related to a specific event need to be updated/called from the destination environment.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>typeName</b>
-									
-								</dt>
-								<dd>The type name of the proxified type.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{number}</span> <b>id</b>
-									
-								</dt>
-								<dd>The id of the proxy object.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>eventTypeName</b>
-									
-								</dt>
-								<dd>The name of the event type to call the listeners related to it.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
 				
 					<a name=".captureScreen"> </a>
 					<div class="fixedFont">&lt;static&gt; 
@@ -1202,50 +950,6 @@ depending on the device and the graphics card driver.
 
 					<hr />
 				
-					<a name=".deleteDestinationProxyObject"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>deleteDestinationProxyObject</b>(typeName, id)
-					
-					</div>
-					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the original environment whenever it is needed to work with proxy objects.
-Deletes a proxy object identifying it using it's typeName and id. Deleting a proxy object mainly means to remove the instance from the global structure
-that hold all the instances.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>typeName</b>
-									
-								</dt>
-								<dd>The name of the type of the proxy.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{number}</span> <b>id</b>
-									
-								</dt>
-								<dd>The id of the proxy object.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
 					<a name=".deleteOriginProxyObject"> </a>
 					<div class="fixedFont">&lt;static&gt; 
 					
@@ -1373,6 +1077,48 @@ function. For compatibility reasons, you can still have calls to this function e
 					
 					
 					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".existsPath"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>existsPath</b>(path, storageType)
+					
+					</div>
+					<div class="description">
+						Queries if a file exists in the specified path and storage type. If none or unknown storage type is specified, the TEMPORARY_STORAGE is used as default.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>path</b>
+									
+								</dt>
+								<dd>The relative path to look for inside the storage of the underlying system.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.StorageType.html">CocoonJS.App.StorageType</a>}</span> <b>storageType</b>
+									
+								</dt>
+								<dd>The storage type where to look for the specified path inside the system.</dd>
+							
+							</dl>
 						
 						
 						
@@ -1527,55 +1273,6 @@ It is asyncrhonous so it does not wait until the code is executed and the result
 
 					<hr />
 				
-					<a name=".getDestinationProxyObjectAttribute"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>getDestinationProxyObjectAttribute</b>(typeName, id, attributeName)
-					
-					</div>
-					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the original environment whenever it is needed to work with proxy objects.
-Retrieves the value of the corresponding attributeName of a proxy object represented by it's typeName and id.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>typeName</b>
-									
-								</dt>
-								<dd>The name of the type of the proxy.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{number}</span> <b>id</b>
-									
-								</dt>
-								<dd>The id of the proxy object.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>attributeName</b>
-									
-								</dt>
-								<dd>The name of the attribute to be retrieved.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
 					<a name=".getDeviceId"> </a>
 					<div class="fixedFont">&lt;static&gt; 
 					
@@ -1672,6 +1369,38 @@ Retrieves the value of the corresponding attributeName of a proxy object represe
 
 					<hr />
 				
+					<a name=".getPreferredOrientation"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					<span class="light">{number}</span>
+					<span class="light">CocoonJS.App.</span><b>getPreferredOrientation</b>()
+					
+					</div>
+					<div class="description">
+						Retrieves the preferred orientation that has been set in the system.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{number}</span> The preferred orientation in the system as a combination of the possible <a href="../symbols/CocoonJS.App.Orientations.html">CocoonJS.App.Orientations</a></dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
 					<a name=".load"> </a>
 					<div class="fixedFont">&lt;static&gt; 
 					
@@ -1702,86 +1431,6 @@ Retrieves the value of the corresponding attributeName of a proxy object represe
 									<i>Optional</i>
 								</dt>
 								<dd>If the path argument represents a locally stored resource, the developer can specify the storage where it is stored. If no value is passes, the <a href="../symbols/CocoonJS.App.StorageType.html#.APP_STORAGE">CocoonJS.App.StorageType.APP_STORAGE</a> value is used by default.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name=".newDestinationProxyObject"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>newDestinationProxyObject</b>(typeName)
-					
-					</div>
-					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the original environment whenever it is needed to work with proxy objects.
-Creates a new destination object instance and generates a id to reference it from the original environment.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>typeName</b>
-									
-								</dt>
-								<dd>The name of the type to be proxified and to generate an instance.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-							<dl class="detailList">
-							<dt class="heading">Returns:</dt>
-							
-								<dd>The id to be used from the original environment to identify the corresponding destination object instance.</dd>
-							
-							</dl>
-						
-						
-						
-
-					<hr />
-				
-					<a name=".OnTextDialogFinishedListener"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>OnTextDialogFinishedListener</b>(text)
-					
-					</div>
-					<div class="description">
-						FOR DOCUMENTATION PURPOSE ONLY! The documentation of the function callback for the CocoonJS.App.onTextDialogFinished event calls.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>text</b>
-									
-								</dt>
-								<dd>The text that was introduced in the text dialog when it was finished.</dd>
 							
 							</dl>
 						
@@ -1984,61 +1633,6 @@ When the auto lock is disabled the screen keeps on even when there is no user in
 
 					<hr />
 				
-					<a name=".setDestinationProxyObjectAttribute"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>setDestinationProxyObjectAttribute</b>(typeName, id, attributeName, attributeValue)
-					
-					</div>
-					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the original environment whenever it is needed to work with proxy objects.
-Sets a value to the corresponding attributeName of a proxy object represented by it's typeName and id.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>typeName</b>
-									
-								</dt>
-								<dd>The name of the type of the proxy.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{number}</span> <b>id</b>
-									
-								</dt>
-								<dd>The id of the proxy object.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>attributeName</b>
-									
-								</dt>
-								<dd>The name of the attribute to be set.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{unknown}</span> <b>attributeValue</b>
-									
-								</dt>
-								<dd>The value to be set to the attribute.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
 					<a name=".setGyroscopeUpdateIntervalInSeconds"> </a>
 					<div class="fixedFont">&lt;static&gt; 
 					
@@ -2076,16 +1670,15 @@ It defines the rate at which the devicemotion and deviceorientation events are u
 
 					<hr />
 				
-					<a name=".setupDestinationProxyType"> </a>
+					<a name=".setPreferredOrientation"> </a>
 					<div class="fixedFont">&lt;static&gt; 
 					
 					
-					<span class="light">CocoonJS.App.</span><b>setupDestinationProxyType</b>(typeName, eventHandlerNames)
+					<span class="light">CocoonJS.App.</span><b>setPreferredOrientation</b>(preferredOrientation)
 					
 					</div>
 					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the origin environment whenever it is needed to work with proxy objects.
-Setups all the structures that are needed to proxify a destination type to an origin type.
+						Sets the preferred orientation in the system.
 						
 						
 					</div>
@@ -2097,17 +1690,10 @@ Setups all the structures that are needed to proxify a destination type to an or
 							<dt class="heading">Parameters:</dt>
 							
 								<dt>
-									<span class="light fixedFont">{string}</span> <b>typeName</b>
+									<span class="light fixedFont">{number}</span> <b>preferredOrientation</b>
 									
 								</dt>
-								<dd>The name of the type to be proxified.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{array}</span> <b>eventHandlerNames</b>
-									
-								</dt>
-								<dd>An array with al the event handlers to be proxified. Needed in order to be able to create callbacks for all the event handlers
-and call to the CocoonJS counterparts accordingly.</dd>
+								<dd>The preferred orientation to be set. A combinatio of the possible <a href="../symbols/CocoonJS.App.Orientations.html">CocoonJS.App.Orientations</a></dd>
 							
 							</dl>
 						
@@ -2167,6 +1753,42 @@ IMPORTANT NOTE: These proxies only work with types that use attributes and funct
 								</dt>
 								<dd>A list of the names of the event handlers to be proxified (onXXXX like attributes that represent callbacks).
 A valid typeName and at least one valid array for attribute, function or event handler names is mandatory.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".share"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>share</b>(textToShare)
+					
+					</div>
+					<div class="description">
+						Opens a given share native window to share some specific text content in any system specific social sharing options. For example, Twitter, Facebook, SMS, Mail, ...
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>textToShare</b>
+									
+								</dt>
+								<dd>The text content that will be shared.</dd>
 							
 							</dl>
 						
@@ -2314,43 +1936,6 @@ text input in a easy way. The dialog execution events are passed to the applicat
 								<dd>CocoonJS.App.onTextDialogCancelled</dd>
 							
 							</dl>
-						
-
-					<hr />
-				
-					<a name=".takedownDestinationProxyType"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.App.</span><b>takedownDestinationProxyType</b>(typeName)
-					
-					</div>
-					<div class="description">
-						NOTE: This function should never be directly called. It will be called from the origin environment whenever it is needed to work with proxy objects.
-Takes down the proxy type at the destination environment. Just removes the data structure related to proxies that was added to the type when proxification tool place.
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>typeName</b>
-									
-								</dt>
-								<dd>The name of the type to take the proxification down.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
 						
 
 					<hr />
@@ -2504,6 +2089,32 @@ The callback function does not receive any parameter.
 
 					<hr />
 				
+					<a name=".event:onSuspending"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>onSuspending</b>()
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the application is suspending.
+The callback function does not receive any parameter.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
 					<a name=".event:onTextDialogCancelled"> </a>
 					<div class="fixedFont">&lt;static&gt; 
 					
@@ -2539,7 +2150,7 @@ The callback function does not receive any parameter.
 					</div>
 					<div class="description">
 						This CocoonJS.EventHandler object allows listening to events called when the text dialog is finished by accepting it's content.
-The callback function's documentation is represented by <a href="../symbols/CocoonJS.App.html#.OnTextDialogFinishedListener">CocoonJS.App.OnTextDialogFinishedListener</a>
+The callback function's documentation is represented by CocoonJS.App.OnTextDialogFinishedListener
 						
 						
 					</div>
@@ -2565,7 +2176,7 @@ The callback function's documentation is represented by <a href="../symbols/Coco
 <!-- ============================== footer ================================= -->
 		<div class="fineprint" style="clear:both">
 			
-			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Nov 23 2016 12:12:47 GMT+0100 (CET)
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Nov 24 2016 16:19:00 GMT+0100 (CET)
 		</div>
 	</body>
 </html>

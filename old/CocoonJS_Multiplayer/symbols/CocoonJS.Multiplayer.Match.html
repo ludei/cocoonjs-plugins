@@ -242,15 +242,13 @@ ul.inheritsList
 	
 	<li></li>
 	
-	<li><a href="../symbols/CocoonJS.Multiplayer.html">CocoonJS.Multiplayer</a></li>
-	
 	<li><a href="../symbols/CocoonJS.Multiplayer.ConnectionState.html">CocoonJS.Multiplayer.ConnectionState</a></li>
 	
 	<li><a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a></li>
 	
-	<li><a href="../symbols/CocoonJS.Multiplayer.MatchManager.html">CocoonJS.Multiplayer.MatchManager</a></li>
-	
 	<li><a href="../symbols/CocoonJS.Multiplayer.MatchRequest.html">CocoonJS.Multiplayer.MatchRequest</a></li>
+	
+	<li><a href="../symbols/CocoonJS.Multiplayer.MultiplayerService.html">CocoonJS.Multiplayer.MultiplayerService</a></li>
 	
 	<li><a href="../symbols/CocoonJS.Multiplayer.PlayerInfo.html">CocoonJS.Multiplayer.PlayerInfo</a></li>
 	
@@ -266,7 +264,7 @@ ul.inheritsList
 <!-- ============================== class title ============================ -->
 			<h1 class="classTitle">
 				
-				Namespace CocoonJS.Multiplayer.Match
+				Class CocoonJS.Multiplayer.Match
 			</h1>
 
 <!-- ============================== class summary ========================== -->			
@@ -277,14 +275,14 @@ ul.inheritsList
 				
 				
 				
-					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_CocoonJS_Multiplayer.js.html">CocoonJS_Multiplayer.js</a>.
+					<br /><i>Defined in: </i> <a href="../symbols/src/cocoonjsextensions_src_CocoonJS_Multiplayer.js.html">CocoonJS_Multiplayer.js</a>.
 				
 			</p>
 
 <!-- ============================== constructor summary ==================== -->			
 			
 			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class CocoonJS.Multiplayer.Match.">
-				<caption>Namespace Summary</caption>
+				<caption>Class Summary</caption>
 				<thead>
 					<tr>
 						<th scope="col">Constructor Attributes</th>
@@ -296,9 +294,9 @@ ul.inheritsList
 						<td class="attributes">&nbsp;</td>
 						<td class="nameDescription" >
 							<div class="fixedFont">
-								<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#constructor">CocoonJS.Multiplayer.Match</a></b>
+								<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#constructor">CocoonJS.Multiplayer.Match</a></b>(nativeExtensionName, extensionName, matchID)
 							</div>
-							<div class="description">This type provides a transmision network between a group of users.</div>
+							<div class="description">This type provides a transmission network between a group of users.</div>
 						</td>
 					</tr>
 				</tbody>
@@ -306,6 +304,67 @@ ul.inheritsList
 			
 
 <!-- ============================== properties summary ===================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class CocoonJS.Multiplayer.Match.">
+					<caption>Field Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Field Attributes</th>
+							<th scope="col">Field Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.onMatchConnectionWithPlayerFailed">onMatchConnectionWithPlayerFailed</a></b>
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a netowrk connection with a player fails
+The callback function's documentation is represented by CocoonJS.Social.OnMatchConnectionWithPlayerFailedListener</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.onMatchDataReceived">onMatchDataReceived</a></b>
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a match receives data from the network
+The callback function's documentation is represented by CocoonJS.Social.OnMatchDataReceivedListener</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.onMatchFailed">onMatchFailed</a></b>
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the match fails
+The callback function's documentation is represented by CocoonJS.Social.OnMatchFailedListener</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.onMatchStateChanged">onMatchStateChanged</a></b>
+								</div>
+								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a player connection state changes.</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
 			
 
 <!-- ============================== methods summary ======================== -->
@@ -343,6 +402,15 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.Match.html#getLocalPlayerID">getLocalPlayerID</a></b>()
+								</div>
+								<div class="description">Gets the local playerID taking part in the match.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
 								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.Match.html#getPlayerIDs">getPlayerIDs</a></b>()
 								</div>
 								<div class="description">This method returns an array with all the player identifiers taking part in the match.</div>
@@ -352,7 +420,7 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.Match.html#requestPlayersInfo">requestPlayersInfo</a></b>()
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.Match.html#requestPlayersInfo">requestPlayersInfo</a></b>(callback)
 								</div>
 								<div class="description">Requests additional information of the current players in the match</div>
 							</td>
@@ -370,7 +438,7 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.Match.html#sendDataToAllPlayers">sendDataToAllPlayers</a></b>(sendData, sendMode)
+								<div class="fixedFont"><b><a href="../symbols/CocoonJS.Multiplayer.Match.html#sendDataToAllPlayers">sendDataToAllPlayers</a></b>(data, sendMode)
 								</div>
 								<div class="description">Transmits data to all players connected to the match.</div>
 							</td>
@@ -393,97 +461,20 @@ ul.inheritsList
 			
 <!-- ============================== events summary ======================== -->
 			
-				
-				
-				<table class="summaryTable" cellspacing="0" summary="A summary of the events documented in the class CocoonJS.Multiplayer.Match.">
-					<caption>Event Summary</caption>
-					<thead>
-						<tr>
-							<th scope="col">Event Attributes</th>
-							<th scope="col">Event Name and Description</th>
-						</tr>
-					</thead>
-					<tbody>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.event:onMatchConnectionWithPlayerFailed">onMatchConnectionWithPlayerFailed</a></b>(match, playerID, error)
-								</div>
-								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a netowrk connection with a player fails
-The callback function's documentation is represented by CocoonJS.Social.OnMatchConnectionWithPlayerFailedListener</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.event:onMatchDataReceived">onMatchDataReceived</a></b>(match, data, playerID)
-								</div>
-								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a match receives data from the network
-The callback function's documentation is represented by CocoonJS.Social.OnMatchDataReceivedListener</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.event:onMatchFailed">onMatchFailed</a></b>(match, error)
-								</div>
-								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the match fails
-The callback function's documentation is represented by CocoonJS.Social.OnMatchFailedListener</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.event:onMatchPlayersInfoRequestFailed">onMatchPlayersInfoRequestFailed</a></b>(match, error)
-								</div>
-								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the match fails
-The callback function's documentation is represented by CocoonJS.Social.OnMatchPlayersInfoRequestFailedListener</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.event:onMatchPlayersInfoRequestSuceeded">onMatchPlayersInfoRequestSuceeded</a></b>(match, playersInfo)
-								</div>
-								<div class="description">This CocoonJS.EventHandler object allows listening to events called when the match fails
-The callback function's documentation is represented by CocoonJS.Social.OnMatchPlayersInfoRequestSuceededListener</div>
-							</td>
-						</tr>
-					
-						<tr>
-							<td class="attributes">&lt;static&gt; &nbsp;</td>
-							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.Multiplayer.Match.<b><a href="../symbols/CocoonJS.Multiplayer.Match.html#.event:onMatchStateChanged">onMatchStateChanged</a></b>(match, playerID, The)
-								</div>
-								<div class="description">This CocoonJS.EventHandler object allows listening to events called when a player connection state changes.</div>
-							</td>
-						</tr>
-					
-					</tbody>
-				</table>
-				
-				
-				
-			
 
 <!-- ============================== constructor details ==================== -->		
 			
 			<div class="details"><a name="constructor"> </a>
 				<div class="sectionTitle">
-					Namespace Detail
+					Class Detail
 				</div>
 				
 				<div class="fixedFont">
-						<b>CocoonJS.Multiplayer.Match</b>
+						<b>CocoonJS.Multiplayer.Match</b>(nativeExtensionName, extensionName, matchID)
 				</div>
 				
 				<div class="description">
-					This type provides a transmision network between a group of users.
+					This type provides a transmission network between a group of users.
 The match might be returned before connections have been established between players. At this stage, all the players are in the process of connecting to each other.
 Always check the getExpectedPlayerCount value before starting a match. When its value reaches zero, all expected players are connected, and your game can begin the match.
 Do not forget to call the start method of the match when your game is ready to process received messages via onMatchDataReceived listener.
@@ -528,6 +519,103 @@ Do not forget to call the start method of the match when your game is ready to p
 			
 
 <!-- ============================== field details ========================== -->		
+			
+				<div class="sectionTitle">
+					Field Detail
+				</div>
+				
+					<a name=".onMatchConnectionWithPlayerFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchConnectionWithPlayerFailed</b>
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when a netowrk connection with a player fails
+The callback function's documentation is represented by CocoonJS.Social.OnMatchConnectionWithPlayerFailedListener
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".onMatchDataReceived"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchDataReceived</b>
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when a match receives data from the network
+The callback function's documentation is represented by CocoonJS.Social.OnMatchDataReceivedListener
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".onMatchFailed"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchFailed</b>
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when the match fails
+The callback function's documentation is represented by CocoonJS.Social.OnMatchFailedListener
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".onMatchStateChanged"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchStateChanged</b>
+					
+					</div>
+					<div class="description">
+						This CocoonJS.EventHandler object allows listening to events called when a player connection state changes.
+The callback function's documentation is represented by CocoonJS.Social.OnMatchStateChangedListener
+						
+						
+					</div>
+					
+					
+
+						
+						
+						
+						
+
+					
+				
 			
 
 <!-- ============================== method details ========================= -->		
@@ -606,6 +694,38 @@ Do not forget to call the start method of the match when your game is ready to p
 
 					<hr />
 				
+					<a name="getLocalPlayerID"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string}</span>
+					<b>getLocalPlayerID</b>()
+					
+					</div>
+					<div class="description">
+						Gets the local playerID taking part in the match.
+						
+						
+					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string}</span> the playerID attached to the match manager.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
 					<a name="getPlayerIDs"> </a>
 					<div class="fixedFont">
 					
@@ -642,7 +762,7 @@ Do not forget to call the start method of the match when your game is ready to p
 					<div class="fixedFont">
 					
 					
-					<b>requestPlayersInfo</b>()
+					<b>requestPlayersInfo</b>(callback)
 					
 					</div>
 					<div class="description">
@@ -654,20 +774,22 @@ Do not forget to call the start method of the match when your game is ready to p
 					
 					
 						
-						
-						
-						
-						
-						
-						
 							<dl class="detailList">
-							<dt class="heading">See:</dt>
+							<dt class="heading">Parameters:</dt>
 							
-								<dd>CocoonJS.Multiplayer.Match.onMatchPlayersInfoRequestSuceeded</dd>
-							
-								<dd>CocoonJS.Multiplayer.Match.onMatchPlayersInfoRequestFailed</dd>
+								<dt>
+									<span class="light fixedFont">{Function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>The callback function. Response params: players array and error</dd>
 							
 							</dl>
+						
+						
+						
+						
+						
+						
 						
 
 					<hr />
@@ -675,7 +797,7 @@ Do not forget to call the start method of the match when your game is ready to p
 					<a name="sendData"> </a>
 					<div class="fixedFont">
 					
-					
+					<span class="light">{boolean}</span>
 					<b>sendData</b>(data, playerIDs, sendMode)
 					
 					</div>
@@ -715,6 +837,13 @@ Do not forget to call the start method of the match when your game is ready to p
 						
 						
 						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> TRUE if the data was successfully queued for transmission; FALSE if the match was unable to queue the data</dd>
+							
+							</dl>
+						
 						
 						
 							<dl class="detailList">
@@ -736,8 +865,8 @@ Do not forget to call the start method of the match when your game is ready to p
 					<a name="sendDataToAllPlayers"> </a>
 					<div class="fixedFont">
 					
-					
-					<b>sendDataToAllPlayers</b>(sendData, sendMode)
+					<span class="light">{boolean}</span>
+					<b>sendDataToAllPlayers</b>(data, sendMode)
 					
 					</div>
 					<div class="description">
@@ -753,7 +882,7 @@ Do not forget to call the start method of the match when your game is ready to p
 							<dt class="heading">Parameters:</dt>
 							
 								<dt>
-									<span class="light fixedFont">{string}</span> <b>sendData</b>
+									<span class="light fixedFont">{string}</span> <b>data</b>
 									
 								</dt>
 								<dd>The data to transmit</dd>
@@ -769,6 +898,13 @@ Do not forget to call the start method of the match when your game is ready to p
 						
 						
 						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> TRUE if the data was successfully queued for transmission; FALSE if the match was unable to queue the data</dd>
+							
+							</dl>
 						
 						
 						
@@ -824,287 +960,6 @@ Do not forget to call the start method of the match when your game is ready to p
 			
 <!-- ============================== event details ========================= -->		
 			
-				<div class="sectionTitle">
-					Event Detail
-				</div>
-				
-					<a name=".event:onMatchConnectionWithPlayerFailed"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchConnectionWithPlayerFailed</b>(match, playerID, error)
-					
-					</div>
-					<div class="description">
-						This CocoonJS.EventHandler object allows listening to events called when a netowrk connection with a player fails
-The callback function's documentation is represented by CocoonJS.Social.OnMatchConnectionWithPlayerFailedListener
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span> <b>match</b>
-									
-								</dt>
-								<dd>The source match.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>playerID</b>
-									
-								</dt>
-								<dd>The player whose state has changed</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>error</b>
-									
-								</dt>
-								<dd>The error message</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name=".event:onMatchDataReceived"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchDataReceived</b>(match, data, playerID)
-					
-					</div>
-					<div class="description">
-						This CocoonJS.EventHandler object allows listening to events called when a match receives data from the network
-The callback function's documentation is represented by CocoonJS.Social.OnMatchDataReceivedListener
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span> <b>match</b>
-									
-								</dt>
-								<dd>The source match.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>data</b>
-									
-								</dt>
-								<dd>The received data</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>playerID</b>
-									
-								</dt>
-								<dd>The playerID where the data is received from.</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name=".event:onMatchFailed"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchFailed</b>(match, error)
-					
-					</div>
-					<div class="description">
-						This CocoonJS.EventHandler object allows listening to events called when the match fails
-The callback function's documentation is represented by CocoonJS.Social.OnMatchFailedListener
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span> <b>match</b>
-									
-								</dt>
-								<dd>The source match.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>error</b>
-									
-								</dt>
-								<dd>The error message</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name=".event:onMatchPlayersInfoRequestFailed"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchPlayersInfoRequestFailed</b>(match, error)
-					
-					</div>
-					<div class="description">
-						This CocoonJS.EventHandler object allows listening to events called when the match fails
-The callback function's documentation is represented by CocoonJS.Social.OnMatchPlayersInfoRequestFailedListener
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span> <b>match</b>
-									
-								</dt>
-								<dd>The source match.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>error</b>
-									
-								</dt>
-								<dd>The error message</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name=".event:onMatchPlayersInfoRequestSuceeded"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchPlayersInfoRequestSuceeded</b>(match, playersInfo)
-					
-					</div>
-					<div class="description">
-						This CocoonJS.EventHandler object allows listening to events called when the match fails
-The callback function's documentation is represented by CocoonJS.Social.OnMatchPlayersInfoRequestSuceededListener
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span> <b>match</b>
-									
-								</dt>
-								<dd>The source match.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{array}</span> <b>playersInfo</b>
-									
-								</dt>
-								<dd>The array of <a href="../symbols/CocoonJS.Multiplayer.PlayerInfo.html">CocoonJS.Multiplayer.PlayerInfo</a> objects</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					<hr />
-				
-					<a name=".event:onMatchStateChanged"> </a>
-					<div class="fixedFont">&lt;static&gt; 
-					
-					
-					<span class="light">CocoonJS.Multiplayer.Match.</span><b>onMatchStateChanged</b>(match, playerID, The)
-					
-					</div>
-					<div class="description">
-						This CocoonJS.EventHandler object allows listening to events called when a player connection state changes.
-The callback function's documentation is represented by CocoonJS.Social.OnMatchStateChangedListener
-						
-						
-					</div>
-					
-					
-					
-						
-							<dl class="detailList">
-							<dt class="heading">Parameters:</dt>
-							
-								<dt>
-									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.Match.html">CocoonJS.Multiplayer.Match</a>}</span> <b>match</b>
-									
-								</dt>
-								<dd>The source match.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{string}</span> <b>playerID</b>
-									
-								</dt>
-								<dd>The player whose state has changed</dd>
-							
-								<dt>
-									<span class="light fixedFont">{<a href="../symbols/CocoonJS.Multiplayer.ConnectionState.html">CocoonJS.Multiplayer.ConnectionState</a>}</span> <b>The</b>
-									
-								</dt>
-								<dd>new connection state of the player</dd>
-							
-							</dl>
-						
-						
-						
-						
-						
-						
-						
-
-					
-				
-			
 			
 			<hr />
 		</div>
@@ -1113,7 +968,7 @@ The callback function's documentation is represented by CocoonJS.Social.OnMatchS
 <!-- ============================== footer ================================= -->
 		<div class="fineprint" style="clear:both">
 			
-			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Nov 23 2016 12:12:55 GMT+0100 (CET)
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Nov 24 2016 16:19:09 GMT+0100 (CET)
 		</div>
 	</body>
 </html>
