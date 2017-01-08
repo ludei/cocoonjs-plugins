@@ -3,7 +3,7 @@ CocoonJS Plugins
 
 Ludei's plugins (also called extensions) are multiplatform Javascript APIs, that work in any of the three environments of CocoonJS: Canvas+, WebView+ and System webview.
 
-Visit [http://doc.ludei.com/latest/](http://doc.ludei.com/latest/) where you'll find detailed documentation for all of the CocoonJS javascript plugins.
+Visit [http://docs.cocoon.io/](http://docs.cocoon.io/) where you'll find detailed documentation for all of the CocoonJS javascript plugins.
 
 You can find the final, minified files in the **"build/"** directory.
 
@@ -35,5 +35,5 @@ This command will create a folder called build/ that will contain cocoon.js and 
 Useful links
 --------------------
 How to use: https://www.ludei.com/cocoonjs/how-to-use/  
-Documentation: http://doc.ludei.com/latest/  
+Documentation: http://docs.cocoon.io/  
 Cloud compiler: http://cloud.ludei.com
