@@ -582,11 +582,14 @@ Cocoon.define("Cocoon.Social" , function(extension){
             });
         },
 
-        publishMessageWithDialog: function(message, callback) {
-            this.fb.showShareDialog(fromCocoonMessageToFBMessage(message), function(response){
-                 if (callback) {
-                     callback(response.error);
-                 }
+        publishMessageWithDialog: function (message, callback) {
+            this.fb.showShareDialog(fromCocoonMessageToFBMessage(message), function (response) {
+                if (callback) {
+                    if (response.error)
+                        callback(response.error)
+                    else if(!response.post_id)
+                        callback("Not posted");
+                }
             });
         },
 
