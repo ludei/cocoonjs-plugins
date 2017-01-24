@@ -1024,330 +1024,347 @@
 <span class='line'>1017</span> 
 <span class='line'>1018</span> </span><span class="WHIT">    </span><span class="COMM">/**
 <span class='line'>1019</span>      * Captures a image of the screen synchronously and saves it to a file. Sync mode allows to capture the screen in the middle of a frame rendering.
-<span class='line'>1020</span>      * @param {string} fileName Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default
-<span class='line'>1021</span>      * @param {CocoonJS.App.StorageType} storageType The developer can specify the storage where it is stored. If no value is passed, the {@link CocoonJS.App.StorageType.TMP_STORAGE} value is used by default.
-<span class='line'>1022</span>      * @param {CocoonJS.App.CaptureType} captureType. Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface 2: only captures system views]. @see CocoonJS.App.CaptureType
-<span class='line'>1023</span>      * @return The URL of the saved file.
-<span class='line'>1024</span>      * @throws exception if the image fails to be stored or there is another error.
-<span class='line'>1025</span>      * @see CocoonJS.App.onCaptureScreenSucceeded
-<span class='line'>1026</span>      * @see CocoonJS.App.onCaptureScreenFailed
-<span class='line'>1027</span>      */</span><span class="WHIT">
-<span class='line'>1028</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.captureScreen</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">fileName</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureType</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1029</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1030</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"captureScreen"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">fileName</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureType</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1031</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1032</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1033</span> 
-<span class='line'>1034</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1035</span>      * Captures a image of the screen asynchronously and saves it to a file.
-<span class='line'>1036</span>      * Async mode captures a final frame as soon as possible.
-<span class='line'>1037</span>      * @param {string} Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default
-<span class='line'>1038</span>      * @param {CocoonJS.App.StorageType} [storageType] The developer can specify the storage where it is stored. If no value is passed, the {@link CocoonJS.App.StorageType.TMP_STORAGE} value is used by default.
-<span class='line'>1039</span>      * @param {CocoonJS.App.CaptureType} captureType. Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface, 2: only captures system views]. @see CocoonJS.App.CaptureType
-<span class='line'>1040</span>      * @param {function} callback. Response callback, check the error property to monitor errors. Check the 'url' property to get the URL of the saved Image
-<span class='line'>1041</span>      */</span><span class="WHIT">
-<span class='line'>1042</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.captureScreenAsync</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">fileName</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1043</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1044</span> </span><span class="WHIT">            </span><span class="NAME">window.ext.IDTK_APP.makeCallAsync</span><span class="PUNC">(</span><span class="STRN">"captureScreen"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">fileName</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1045</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1046</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1047</span> 
-<span class='line'>1048</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1049</span>      * Returns the device UUID
-<span class='line'>1050</span>      * @return {string} The device UUID
-<span class='line'>1051</span>      */</span><span class="WHIT">
-<span class='line'>1052</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.getDeviceId</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1053</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1054</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"getDeviceId"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1055</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1056</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1057</span> 
-<span class='line'>1058</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1059</span>      * Structure that defines the getDeviceInfo returned information
-<span class='line'>1060</span>      */</span><span class="WHIT">
-<span class='line'>1061</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.DeviceInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1062</span> 
-<span class='line'>1063</span> </span><span class="WHIT">        </span><span class="COMM">/**
-<span class='line'>1064</span>         * The operating system name (ios, android,...)
-<span class='line'>1065</span>         * @type string
-<span class='line'>1066</span>         */</span><span class="WHIT">
-<span class='line'>1067</span> </span><span class="WHIT">        </span><span class="NAME">os</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1068</span> 
-<span class='line'>1069</span> </span><span class="WHIT">        </span><span class="COMM">/**
-<span class='line'>1070</span>         * The operating system version (4.2.2, 5.0,...)
-<span class='line'>1071</span>         * @type string
-<span class='line'>1072</span>         */</span><span class="WHIT">
-<span class='line'>1073</span> </span><span class="WHIT">        </span><span class="NAME">version</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1020</span>      * @function captureScreen
+<span class='line'>1021</span>      * @param {string} fileName Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default
+<span class='line'>1022</span>      * @param {CocoonJS.App.StorageType} storageType The developer can specify the storage where it is stored. If no value is passed, the {@link CocoonJS.App.StorageType.TMP_STORAGE} value is used by default.
+<span class='line'>1023</span>      * @param {CocoonJS.App.CaptureType} captureType Optional value to choose capture type. See {@link CocoonJS.App.CaptureType}.
+<span class='line'>1024</span>      * - 0: Captures everything.
+<span class='line'>1025</span>      * - 1: Only captures cocoonjs surface.
+<span class='line'>1026</span>      * - 2: Only captures system views.
+<span class='line'>1027</span>      * @param {boolean} saveToGallery Optional value to specify if the capture image should be stored in the device image gallery or not.
+<span class='line'>1028</span>      * @throws exception if the image fails to be stored or there is another error.
+<span class='line'>1029</span>      * @return The URL of the saved file.
+<span class='line'>1030</span>      * @example
+<span class='line'>1031</span>      * CocoonJS.App.captureScreen("myScreenshot.png");
+<span class='line'>1032</span>      * @see CocoonJS.App.onCaptureScreenSucceeded
+<span class='line'>1033</span>      * @see CocoonJS.App.onCaptureScreenFailed
+<span class='line'>1034</span>      */</span><span class="WHIT">
+<span class='line'>1035</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.captureScreen</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">fileName</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureType</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1036</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1037</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"captureScreen"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">fileName</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureType</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1038</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1039</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1040</span> 
+<span class='line'>1041</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1042</span>      * Captures a image of the screen asynchronously and saves it to a file.
+<span class='line'>1043</span>      * Async mode captures a final frame as soon as possible.
+<span class='line'>1044</span>      * @function captureScreenAsync
+<span class='line'>1045</span>      * @memberof CocoonJS.App
+<span class='line'>1046</span>      * @param {string} fileName Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default
+<span class='line'>1047</span>      * @param {CocoonJS.App.StorageType} storageType The developer can specify the storage where it is stored. If no value is passed, the {@see CocoonJS.App.StorageType.TEMPORARY_STORAGE} value is used by default.
+<span class='line'>1048</span>      * @param {CocoonJS.App.CaptureType} captureType Optional value to choose capture type. See {@link CocoonJS.App.CaptureType}.
+<span class='line'>1049</span>      * - 0: Captures everything.
+<span class='line'>1050</span>      * - 1: Only captures cocoonjs surface.
+<span class='line'>1051</span>      * - 2: Only captures system views.
+<span class='line'>1052</span>      * @param {boolean} saveToGallery Optional value to specify if the capture image should be stored in the device image gallery or not.
+<span class='line'>1053</span>      * @param {function} callback Response callback, check the error property to monitor errors. Check the 'url' property to get the URL of the saved Image
+<span class='line'>1054</span>      * @example
+<span class='line'>1055</span>      * CocoonJS.App.captureScreenAsync("myScreenshot.png", CocoonJS.App.StorageType.TEMPORARY_STORAGE, false, CocoonJS.App.CaptureType.EVERYTHING, function(url, err){
+<span class='line'>1056</span>      * ...
+<span class='line'>1057</span>      * });
+<span class='line'>1058</span>      */</span><span class="WHIT">
+<span class='line'>1059</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.captureScreenAsync</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">fileName</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1060</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1061</span> </span><span class="WHIT">            </span><span class="NAME">window.ext.IDTK_APP.makeCallAsync</span><span class="PUNC">(</span><span class="STRN">"captureScreen"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">fileName</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">captureType</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1062</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1063</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1064</span> 
+<span class='line'>1065</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1066</span>      * Returns the device UUID
+<span class='line'>1067</span>      * @return {string} The device UUID
+<span class='line'>1068</span>      */</span><span class="WHIT">
+<span class='line'>1069</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.getDeviceId</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1070</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1071</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"getDeviceId"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1072</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1073</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
 <span class='line'>1074</span> 
-<span class='line'>1075</span> </span><span class="WHIT">        </span><span class="COMM">/**
-<span class='line'>1076</span>         * The operating system screen density in dpi
-<span class='line'>1077</span>         * @type string
-<span class='line'>1078</span>         */</span><span class="WHIT">
-<span class='line'>1079</span> </span><span class="WHIT">        </span><span class="NAME">dpi</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1080</span> 
-<span class='line'>1081</span> </span><span class="WHIT">        </span><span class="COMM">/**
-<span class='line'>1082</span>         * The device manufacturer (apple, samsung, lg,...)
-<span class='line'>1083</span>         * @type string
-<span class='line'>1084</span>         */</span><span class="WHIT">
-<span class='line'>1085</span> </span><span class="WHIT">        </span><span class="NAME">brand</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1086</span> 
-<span class='line'>1087</span> </span><span class="WHIT">        </span><span class="COMM">/**
-<span class='line'>1088</span>         * The device model (iPhone 4S, SAMSUNG-SGH-I997, SAMSUNG-SGH-I997R, etc)
-<span class='line'>1089</span>         * @type string
-<span class='line'>1090</span>         */</span><span class="WHIT">
-<span class='line'>1091</span> </span><span class="WHIT">        </span><span class="NAME">model</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1092</span> 
-<span class='line'>1093</span> </span><span class="WHIT">        </span><span class="COMM">/**
-<span class='line'>1094</span>         * The phone IMEI
-<span class='line'>1095</span>         * Android: The phone IMEI is returned or null if the device has not telepohny
-<span class='line'>1096</span>         * iOS: null is returned as we cannot get the IMEI in iOS, no public API available for that yet.
-<span class='line'>1097</span>         * @type string
-<span class='line'>1098</span>         */</span><span class="WHIT">
-<span class='line'>1099</span> </span><span class="WHIT">        </span><span class="NAME">imei</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1100</span> 
-<span class='line'>1101</span> </span><span class="WHIT">        </span><span class="COMM">/**
-<span class='line'>1102</span>         * The platform Id
-<span class='line'>1103</span>         * Android: The ANDROID_ID is used.
-<span class='line'>1104</span>         * iOS: The OpenUDID is used as there is no Android ANDROID_ID equivalent in iOS
-<span class='line'>1105</span>         * @type string
-<span class='line'>1106</span>         */</span><span class="WHIT">
-<span class='line'>1107</span> </span><span class="WHIT">        </span><span class="NAME">platformId</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1108</span> 
-<span class='line'>1109</span> </span><span class="WHIT">        </span><span class="COMM">/**
-<span class='line'>1110</span>         * The Odin generated id https://code.google.com/p/odinmobile/
-<span class='line'>1111</span>         * @type string
-<span class='line'>1112</span>         */</span><span class="WHIT">
-<span class='line'>1113</span> </span><span class="WHIT">        </span><span class="NAME">odin</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1114</span> 
-<span class='line'>1115</span> </span><span class="WHIT">        </span><span class="COMM">/**
-<span class='line'>1116</span>         * The OpenUDID generated Id https://github.com/ylechelle/OpenUDID
-<span class='line'>1117</span>         * @type string
-<span class='line'>1118</span>         */</span><span class="WHIT">
-<span class='line'>1119</span> </span><span class="WHIT">        </span><span class="NAME">openudid</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="WHIT">
-<span class='line'>1120</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1121</span> 
-<span class='line'>1122</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1123</span>      * Returns the device Info
-<span class='line'>1124</span>      * @return {CocoonJS.App.DeviceInfo} The device Info
-<span class='line'>1125</span>      */</span><span class="WHIT">
-<span class='line'>1126</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.getDeviceInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1127</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1128</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"getDeviceInfo"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1129</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1130</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1075</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1076</span>      * Structure that defines the getDeviceInfo returned information
+<span class='line'>1077</span>      */</span><span class="WHIT">
+<span class='line'>1078</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.DeviceInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1079</span> 
+<span class='line'>1080</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>1081</span>         * The operating system name (ios, android,...)
+<span class='line'>1082</span>         * @type string
+<span class='line'>1083</span>         */</span><span class="WHIT">
+<span class='line'>1084</span> </span><span class="WHIT">        </span><span class="NAME">os</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1085</span> 
+<span class='line'>1086</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>1087</span>         * The operating system version (4.2.2, 5.0,...)
+<span class='line'>1088</span>         * @type string
+<span class='line'>1089</span>         */</span><span class="WHIT">
+<span class='line'>1090</span> </span><span class="WHIT">        </span><span class="NAME">version</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1091</span> 
+<span class='line'>1092</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>1093</span>         * The operating system screen density in dpi
+<span class='line'>1094</span>         * @type string
+<span class='line'>1095</span>         */</span><span class="WHIT">
+<span class='line'>1096</span> </span><span class="WHIT">        </span><span class="NAME">dpi</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1097</span> 
+<span class='line'>1098</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>1099</span>         * The device manufacturer (apple, samsung, lg,...)
+<span class='line'>1100</span>         * @type string
+<span class='line'>1101</span>         */</span><span class="WHIT">
+<span class='line'>1102</span> </span><span class="WHIT">        </span><span class="NAME">brand</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1103</span> 
+<span class='line'>1104</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>1105</span>         * The device model (iPhone 4S, SAMSUNG-SGH-I997, SAMSUNG-SGH-I997R, etc)
+<span class='line'>1106</span>         * @type string
+<span class='line'>1107</span>         */</span><span class="WHIT">
+<span class='line'>1108</span> </span><span class="WHIT">        </span><span class="NAME">model</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1109</span> 
+<span class='line'>1110</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>1111</span>         * The phone IMEI
+<span class='line'>1112</span>         * Android: The phone IMEI is returned or null if the device has not telepohny
+<span class='line'>1113</span>         * iOS: null is returned as we cannot get the IMEI in iOS, no public API available for that yet.
+<span class='line'>1114</span>         * @type string
+<span class='line'>1115</span>         */</span><span class="WHIT">
+<span class='line'>1116</span> </span><span class="WHIT">        </span><span class="NAME">imei</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1117</span> 
+<span class='line'>1118</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>1119</span>         * The platform Id
+<span class='line'>1120</span>         * Android: The ANDROID_ID is used.
+<span class='line'>1121</span>         * iOS: The OpenUDID is used as there is no Android ANDROID_ID equivalent in iOS
+<span class='line'>1122</span>         * @type string
+<span class='line'>1123</span>         */</span><span class="WHIT">
+<span class='line'>1124</span> </span><span class="WHIT">        </span><span class="NAME">platformId</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1125</span> 
+<span class='line'>1126</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>1127</span>         * The Odin generated id https://code.google.com/p/odinmobile/
+<span class='line'>1128</span>         * @type string
+<span class='line'>1129</span>         */</span><span class="WHIT">
+<span class='line'>1130</span> </span><span class="WHIT">        </span><span class="NAME">odin</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="PUNC">,</span><span class="WHIT">
 <span class='line'>1131</span> 
-<span class='line'>1132</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1133</span>      *
-<span class='line'>1134</span>      * @constructor
-<span class='line'>1135</span>      */</span><span class="WHIT">
-<span class='line'>1136</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.WebDialog</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1137</span> 
-<span class='line'>1138</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1139</span> </span><span class="WHIT">            </span><span class="NAME">this.webDialogID</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"createWebDialog"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1140</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1141</span> </span><span class="WHIT">        </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1142</span> </span><span class="WHIT">            </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">iframe</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">document.createElement</span><span class="PUNC">(</span><span class="STRN">"iframe"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1143</span> </span><span class="WHIT">            </span><span class="NAME">iframe.id</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"CocoonJSWebDialogIFrame"</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1144</span> </span><span class="WHIT">            </span><span class="NAME">iframe.name</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"CocoonJSWebDialogIFrame"</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1145</span> </span><span class="WHIT">            </span><span class="NAME">iframe.style.cssText</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"position:fixed;left:0;top:0;bottom:0;right:0; width:100%; height:100%;margin:0;padding:0;"</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1146</span> </span><span class="WHIT">            </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">me</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">this</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1147</span> </span><span class="WHIT">            </span><span class="NAME">iframe.onload</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1148</span> </span><span class="WHIT">                </span><span class="NAME">me.iframeloaded</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1149</span> </span><span class="WHIT">                </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">js</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"CocoonJS = {}; CocoonJS.WebDialog = {}; CocoonJS.WebDialog.close = function()"</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
-<span class='line'>1150</span> </span><span class="WHIT">                    </span><span class="STRN">"{"</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
-<span class='line'>1151</span> </span><span class="WHIT">                    </span><span class="STRN">"   window.parent.CocoonJSCloseWebDialog();"</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
-<span class='line'>1152</span> </span><span class="WHIT">                    </span><span class="STRN">"};"</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1153</span> </span><span class="WHIT">                </span><span class="NAME">me.evalIframe</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1154</span> </span><span class="WHIT">                </span><span class="KEYW">for</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">i</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="NAME">i</span><span class="WHIT"> </span><span class="PUNC">&lt;</span><span class="WHIT"> </span><span class="NAME">me.pendingEvals.length</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="PUNC">++</span><span class="NAME">i</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1155</span> </span><span class="WHIT">                    </span><span class="NAME">me.evalIframe</span><span class="PUNC">(</span><span class="NAME">me.pendingEvals</span><span class="PUNC">[</span><span class="NAME">i</span><span class="PUNC">]</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1156</span> </span><span class="WHIT">                </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1157</span> </span><span class="WHIT">                </span><span class="NAME">me.pendingEvals</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1158</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1159</span> </span><span class="WHIT">            </span><span class="NAME">iframe.onerror</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1160</span> </span><span class="WHIT">                </span><span class="NAME">me.close</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1161</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1162</span> </span><span class="WHIT">            </span><span class="NAME">this.iframe</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">iframe</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1163</span> </span><span class="WHIT">            </span><span class="NAME">this.pendingEvals</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1164</span> 
-<span class='line'>1165</span> </span><span class="WHIT">            </span><span class="NAME">window.CocoonJSCloseWebDialog</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1166</span> </span><span class="WHIT">               </span><span class="NAME">me.close</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1167</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1168</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1169</span> 
-<span class='line'>1170</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1171</span> 
-<span class='line'>1172</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.WebDialog.prototype</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1173</span> 
-<span class='line'>1174</span> </span><span class="WHIT">        </span><span class="NAME">show</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">url</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1175</span> </span><span class="WHIT">            </span><span class="NAME">this.closeCallback</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1176</span> </span><span class="WHIT">                </span><span class="NAME">CocoonJS.App.enableTouchInCocoonJS</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1177</span> </span><span class="WHIT">                </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT">
-<span class='line'>1178</span> </span><span class="WHIT">                    </span><span class="NAME">callback</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1179</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1180</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1181</span> </span><span class="WHIT">                </span><span class="NAME">CocoonJS.App.disableTouchInCocoonJS</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1182</span> </span><span class="WHIT">                </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCallAsync</span><span class="PUNC">(</span><span class="STRN">"showWebDialog"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.webDialogID</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">url</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.closeCallback</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1183</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1184</span> </span><span class="WHIT">            </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1185</span> </span><span class="WHIT">                </span><span class="NAME">this.iframe.src</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">url</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1186</span> </span><span class="WHIT">                </span><span class="NAME">document.body.appendChild</span><span class="PUNC">(</span><span class="NAME">this.iframe</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1187</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1132</span> </span><span class="WHIT">        </span><span class="COMM">/**
+<span class='line'>1133</span>         * The OpenUDID generated Id https://github.com/ylechelle/OpenUDID
+<span class='line'>1134</span>         * @type string
+<span class='line'>1135</span>         */</span><span class="WHIT">
+<span class='line'>1136</span> </span><span class="WHIT">        </span><span class="NAME">openudid</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">null</span><span class="WHIT">
+<span class='line'>1137</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1138</span> 
+<span class='line'>1139</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1140</span>      * Returns the device Info
+<span class='line'>1141</span>      * @return {CocoonJS.App.DeviceInfo} The device Info
+<span class='line'>1142</span>      */</span><span class="WHIT">
+<span class='line'>1143</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.getDeviceInfo</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1144</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1145</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"getDeviceInfo"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1146</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1147</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1148</span> 
+<span class='line'>1149</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1150</span>      *
+<span class='line'>1151</span>      * @constructor
+<span class='line'>1152</span>      */</span><span class="WHIT">
+<span class='line'>1153</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.WebDialog</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1154</span> 
+<span class='line'>1155</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1156</span> </span><span class="WHIT">            </span><span class="NAME">this.webDialogID</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"createWebDialog"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1157</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1158</span> </span><span class="WHIT">        </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1159</span> </span><span class="WHIT">            </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">iframe</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">document.createElement</span><span class="PUNC">(</span><span class="STRN">"iframe"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1160</span> </span><span class="WHIT">            </span><span class="NAME">iframe.id</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"CocoonJSWebDialogIFrame"</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1161</span> </span><span class="WHIT">            </span><span class="NAME">iframe.name</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"CocoonJSWebDialogIFrame"</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1162</span> </span><span class="WHIT">            </span><span class="NAME">iframe.style.cssText</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"position:fixed;left:0;top:0;bottom:0;right:0; width:100%; height:100%;margin:0;padding:0;"</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1163</span> </span><span class="WHIT">            </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">me</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">this</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1164</span> </span><span class="WHIT">            </span><span class="NAME">iframe.onload</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1165</span> </span><span class="WHIT">                </span><span class="NAME">me.iframeloaded</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">true</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1166</span> </span><span class="WHIT">                </span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">js</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">"CocoonJS = {}; CocoonJS.WebDialog = {}; CocoonJS.WebDialog.close = function()"</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
+<span class='line'>1167</span> </span><span class="WHIT">                    </span><span class="STRN">"{"</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
+<span class='line'>1168</span> </span><span class="WHIT">                    </span><span class="STRN">"   window.parent.CocoonJSCloseWebDialog();"</span><span class="WHIT"> </span><span class="PUNC">+</span><span class="WHIT">
+<span class='line'>1169</span> </span><span class="WHIT">                    </span><span class="STRN">"};"</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1170</span> </span><span class="WHIT">                </span><span class="NAME">me.evalIframe</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1171</span> </span><span class="WHIT">                </span><span class="KEYW">for</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="KEYW">var</span><span class="WHIT"> </span><span class="NAME">i</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="NAME">i</span><span class="WHIT"> </span><span class="PUNC">&lt;</span><span class="WHIT"> </span><span class="NAME">me.pendingEvals.length</span><span class="PUNC">;</span><span class="WHIT"> </span><span class="PUNC">++</span><span class="NAME">i</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1172</span> </span><span class="WHIT">                    </span><span class="NAME">me.evalIframe</span><span class="PUNC">(</span><span class="NAME">me.pendingEvals</span><span class="PUNC">[</span><span class="NAME">i</span><span class="PUNC">]</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1173</span> </span><span class="WHIT">                </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1174</span> </span><span class="WHIT">                </span><span class="NAME">me.pendingEvals</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1175</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1176</span> </span><span class="WHIT">            </span><span class="NAME">iframe.onerror</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1177</span> </span><span class="WHIT">                </span><span class="NAME">me.close</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1178</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1179</span> </span><span class="WHIT">            </span><span class="NAME">this.iframe</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">iframe</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1180</span> </span><span class="WHIT">            </span><span class="NAME">this.pendingEvals</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">[</span><span class="PUNC">]</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1181</span> 
+<span class='line'>1182</span> </span><span class="WHIT">            </span><span class="NAME">window.CocoonJSCloseWebDialog</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1183</span> </span><span class="WHIT">               </span><span class="NAME">me.close</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1184</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1185</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1186</span> 
+<span class='line'>1187</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
 <span class='line'>1188</span> 
-<span class='line'>1189</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1190</span> </span><span class="WHIT">        </span><span class="NAME">close</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1191</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1192</span> </span><span class="WHIT">                </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCallAsync</span><span class="PUNC">(</span><span class="STRN">"closeWebDialog"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.webDialogID</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1193</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1194</span> </span><span class="WHIT">            </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1195</span> </span><span class="WHIT">                </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.iframe.parentNode</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1196</span> </span><span class="WHIT">                    </span><span class="NAME">this.iframe.parentNode.removeChild</span><span class="PUNC">(</span><span class="NAME">this.iframe</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1197</span> </span><span class="WHIT">                </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1198</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1199</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.closeCallback</span><span class="PUNC">)</span><span class="WHIT">
-<span class='line'>1200</span> </span><span class="WHIT">                </span><span class="NAME">this.closeCallback</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1201</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1202</span> </span><span class="WHIT">        </span><span class="NAME">evalIframe</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1203</span> </span><span class="WHIT">            </span><span class="NAME">window.frames</span><span class="PUNC">[</span><span class="STRN">"CocoonJSWebDialogIFrame"</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">eval</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1204</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
-<span class='line'>1205</span> </span><span class="WHIT">        </span><span class="NAME">eval</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1206</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1207</span> </span><span class="WHIT">                </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCallAsync</span><span class="PUNC">(</span><span class="STRN">"evalWebDialog"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.webDialogID</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1208</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1209</span> </span><span class="WHIT">            </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1210</span> </span><span class="WHIT">                </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.iframeloaded</span><span class="PUNC">)</span><span class="WHIT">
-<span class='line'>1211</span> </span><span class="WHIT">                    </span><span class="NAME">this.evalIframe</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1212</span> </span><span class="WHIT">                </span><span class="KEYW">else</span><span class="WHIT">
-<span class='line'>1213</span> </span><span class="WHIT">                    </span><span class="NAME">this.pendingEvals.push</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1214</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1215</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1216</span> 
-<span class='line'>1217</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1218</span> 
-<span class='line'>1219</span> 
-<span class='line'>1220</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1221</span>     * Retrieves the preferred orientation that has been set in the system.
-<span class='line'>1222</span>     * @return {number} The preferred orientation in the system as a combination of the possible {@link CocoonJS.App.Orientations}
-<span class='line'>1223</span>     */</span><span class="WHIT">
-<span class='line'>1224</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.getPreferredOrientation</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1225</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1226</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"getPreferredOrientation"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1227</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1228</span> </span><span class="WHIT">        </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1229</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1230</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1231</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1232</span> 
-<span class='line'>1233</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1234</span>     * Sets the preferred orientation in the system.
-<span class='line'>1235</span>     * @param {number} preferredOrientation The preferred orientation to be set. A combinatio of the possible {@link CocoonJS.App.Orientations}
-<span class='line'>1236</span>     */</span><span class="WHIT">
-<span class='line'>1237</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.setPreferredOrientation</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">preferredOrientation</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1238</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1239</span> </span><span class="WHIT">            </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"setPreferredOrientation"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">preferredOrientation</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1240</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1241</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1242</span> 
-<span class='line'>1243</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1244</span>     * Queries if a file exists in the specified path and storage type. If none or unknown storage type is specified, the TEMPORARY_STORAGE is used as default.
-<span class='line'>1245</span>     * @param {string} path The relative path to look for inside the storage of the underlying system.
-<span class='line'>1246</span>     * @param {CocoonJS.App.StorageType} storageType The storage type where to look for the specified path inside the system.
-<span class='line'>1247</span>     */</span><span class="WHIT">
-<span class='line'>1248</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.existsPath</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">path</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1249</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
-<span class='line'>1250</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"existsPath"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">path</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1251</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1252</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">false</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1253</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
-<span class='line'>1254</span> 
-<span class='line'>1255</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1256</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the text dialog is finished by accepting it's content.
-<span class='line'>1257</span>      * The callback function's documentation is represented by {@link CocoonJS.App.OnTextDialogFinishedListener}
-<span class='line'>1258</span>      * @event
-<span class='line'>1259</span>      * @static
-<span class='line'>1260</span>      * @memberOf CocoonJS.App
-<span class='line'>1261</span>      */</span><span class="WHIT">
-<span class='line'>1262</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onTextDialogFinished</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"ontextdialogfinish"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1263</span> 
-<span class='line'>1264</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1265</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the text dialog is finished by dismissing it's content.
-<span class='line'>1266</span>      * The callback function does not receive any parameter.
-<span class='line'>1267</span>      * @event
-<span class='line'>1268</span>      * @static
-<span class='line'>1269</span>      * @memberOf CocoonJS.App
-<span class='line'>1270</span>      */</span><span class="WHIT">
-<span class='line'>1271</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onTextDialogCancelled</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"ontextdialogcancel"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1272</span> 
-<span class='line'>1273</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1274</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the text dialog is finished by accepting it's content.
-<span class='line'>1275</span>      * The callback function does not receive any parameter.
-<span class='line'>1276</span>      * @event
-<span class='line'>1277</span>      * @static
-<span class='line'>1278</span>      * @memberOf CocoonJS.App
-<span class='line'>1279</span>      */</span><span class="WHIT">
-<span class='line'>1280</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onMessageBoxConfirmed</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onmessageboxconfirmed"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1281</span> 
-<span class='line'>1282</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1283</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the text dialog is finished by dismissing it's content.
-<span class='line'>1284</span>      * The callback function does not receive any parameter.
-<span class='line'>1285</span>      * @event
-<span class='line'>1286</span>      * @static
-<span class='line'>1287</span>      * @memberOf CocoonJS.App
-<span class='line'>1288</span>      */</span><span class="WHIT">
-<span class='line'>1289</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onMessageBoxDenied</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onmessageboxdenied"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1290</span> 
-<span class='line'>1291</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1292</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the application is suspended.
-<span class='line'>1293</span>      * The callback function does not receive any parameter.
-<span class='line'>1294</span>      * @event
-<span class='line'>1295</span>      * @static
-<span class='line'>1296</span>      * @memberOf CocoonJS.App
-<span class='line'>1297</span>      */</span><span class="WHIT">
-<span class='line'>1298</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onSuspended</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onsuspended"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1299</span> 
-<span class='line'>1300</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1301</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the application is suspending.
-<span class='line'>1302</span>      * The callback function does not receive any parameter.
-<span class='line'>1303</span>      * @event
-<span class='line'>1304</span>      * @static
-<span class='line'>1305</span>      * @memberOf CocoonJS.App
-<span class='line'>1306</span>      */</span><span class="WHIT">
-<span class='line'>1307</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onSuspending</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onsuspending"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1308</span> 
-<span class='line'>1309</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1310</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the application is activated.
-<span class='line'>1311</span>      * The callback function does not receive any parameter.
-<span class='line'>1312</span>      * @event
-<span class='line'>1313</span>      * @static
-<span class='line'>1314</span>      * @memberOf CocoonJS.App
-<span class='line'>1315</span>      */</span><span class="WHIT">
-<span class='line'>1316</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onActivated</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onactivated"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1317</span> 
-<span class='line'>1318</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1319</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when headphones are plugged-in the device.
-<span class='line'>1320</span>      * The callback function does not receive any parameter.
-<span class='line'>1321</span>      * @event
-<span class='line'>1322</span>      * @static
-<span class='line'>1323</span>      * @memberOf CocoonJS.App
-<span class='line'>1324</span>      */</span><span class="WHIT">
-<span class='line'>1325</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onHeadphonesPluggedIn</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onheadphonespluggedin"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1326</span> 
-<span class='line'>1327</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1328</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when headphones are unplugged from the device.
-<span class='line'>1329</span>      * The callback function does not receive any parameter.
-<span class='line'>1330</span>      * @event
-<span class='line'>1331</span>      * @static
-<span class='line'>1332</span>      * @memberOf CocoonJS.App
-<span class='line'>1333</span>      */</span><span class="WHIT">
-<span class='line'>1334</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onHeadphonesUnplugged</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onheadphonesunplugged"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1335</span> 
-<span class='line'>1336</span> 
-<span class='line'>1337</span> </span><span class="WHIT">    </span><span class="COMM">/**
-<span class='line'>1338</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the application receives a memory warning notification.
-<span class='line'>1339</span>      * The callback function does not receive any parameter.
-<span class='line'>1340</span>      * @event
-<span class='line'>1341</span>      * @static
-<span class='line'>1342</span>      * @memberOf CocoonJS.App
-<span class='line'>1343</span>      */</span><span class="WHIT">
-<span class='line'>1344</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onMemoryWarning</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onmemorywarning"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1345</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
-<span class='line'>1346</span> </span></pre></body></html>
+<span class='line'>1189</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.WebDialog.prototype</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1190</span> 
+<span class='line'>1191</span> </span><span class="WHIT">        </span><span class="NAME">show</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">url</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1192</span> </span><span class="WHIT">            </span><span class="NAME">this.closeCallback</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1193</span> </span><span class="WHIT">                </span><span class="NAME">CocoonJS.App.enableTouchInCocoonJS</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1194</span> </span><span class="WHIT">                </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">callback</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>1195</span> </span><span class="WHIT">                    </span><span class="NAME">callback</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1196</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1197</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1198</span> </span><span class="WHIT">                </span><span class="NAME">CocoonJS.App.disableTouchInCocoonJS</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1199</span> </span><span class="WHIT">                </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCallAsync</span><span class="PUNC">(</span><span class="STRN">"showWebDialog"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.webDialogID</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">url</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.closeCallback</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1200</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1201</span> </span><span class="WHIT">            </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1202</span> </span><span class="WHIT">                </span><span class="NAME">this.iframe.src</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">url</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1203</span> </span><span class="WHIT">                </span><span class="NAME">document.body.appendChild</span><span class="PUNC">(</span><span class="NAME">this.iframe</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1204</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1205</span> 
+<span class='line'>1206</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1207</span> </span><span class="WHIT">        </span><span class="NAME">close</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1208</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1209</span> </span><span class="WHIT">                </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCallAsync</span><span class="PUNC">(</span><span class="STRN">"closeWebDialog"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.webDialogID</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1210</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1211</span> </span><span class="WHIT">            </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1212</span> </span><span class="WHIT">                </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.iframe.parentNode</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1213</span> </span><span class="WHIT">                    </span><span class="NAME">this.iframe.parentNode.removeChild</span><span class="PUNC">(</span><span class="NAME">this.iframe</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1214</span> </span><span class="WHIT">                </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1215</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1216</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.closeCallback</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>1217</span> </span><span class="WHIT">                </span><span class="NAME">this.closeCallback</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1218</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1219</span> </span><span class="WHIT">        </span><span class="NAME">evalIframe</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1220</span> </span><span class="WHIT">            </span><span class="NAME">window.frames</span><span class="PUNC">[</span><span class="STRN">"CocoonJSWebDialogIFrame"</span><span class="PUNC">]</span><span class="PUNC">.</span><span class="NAME">eval</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1221</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="PUNC">,</span><span class="WHIT">
+<span class='line'>1222</span> </span><span class="WHIT">        </span><span class="NAME">eval</span><span class="PUNC">:</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1223</span> </span><span class="WHIT">            </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1224</span> </span><span class="WHIT">                </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCallAsync</span><span class="PUNC">(</span><span class="STRN">"evalWebDialog"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">this.webDialogID</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1225</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1226</span> </span><span class="WHIT">            </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1227</span> </span><span class="WHIT">                </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">this.iframeloaded</span><span class="PUNC">)</span><span class="WHIT">
+<span class='line'>1228</span> </span><span class="WHIT">                    </span><span class="NAME">this.evalIframe</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1229</span> </span><span class="WHIT">                </span><span class="KEYW">else</span><span class="WHIT">
+<span class='line'>1230</span> </span><span class="WHIT">                    </span><span class="NAME">this.pendingEvals.push</span><span class="PUNC">(</span><span class="NAME">js</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1231</span> </span><span class="WHIT">            </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1232</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1233</span> 
+<span class='line'>1234</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1235</span> 
+<span class='line'>1236</span> 
+<span class='line'>1237</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1238</span>     * Retrieves the preferred orientation that has been set in the system.
+<span class='line'>1239</span>     * @return {number} The preferred orientation in the system as a combination of the possible {@link CocoonJS.App.Orientations}
+<span class='line'>1240</span>     */</span><span class="WHIT">
+<span class='line'>1241</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.getPreferredOrientation</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1242</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1243</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"getPreferredOrientation"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1244</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1245</span> </span><span class="WHIT">        </span><span class="KEYW">else</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1246</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1247</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1248</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1249</span> 
+<span class='line'>1250</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1251</span>     * Sets the preferred orientation in the system.
+<span class='line'>1252</span>     * @param {number} preferredOrientation The preferred orientation to be set. A combinatio of the possible {@link CocoonJS.App.Orientations}
+<span class='line'>1253</span>     */</span><span class="WHIT">
+<span class='line'>1254</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.setPreferredOrientation</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">preferredOrientation</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1255</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1256</span> </span><span class="WHIT">            </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"setPreferredOrientation"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">preferredOrientation</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1257</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1258</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1259</span> 
+<span class='line'>1260</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1261</span>     * Queries if a file exists in the specified path and storage type. If none or unknown storage type is specified, the TEMPORARY_STORAGE is used as default.
+<span class='line'>1262</span>     * @param {string} path The relative path to look for inside the storage of the underlying system.
+<span class='line'>1263</span>     * @param {CocoonJS.App.StorageType} storageType The storage type where to look for the specified path inside the system.
+<span class='line'>1264</span>     */</span><span class="WHIT">
+<span class='line'>1265</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.existsPath</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">function</span><span class="PUNC">(</span><span class="NAME">path</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1266</span> </span><span class="WHIT">        </span><span class="KEYW">if</span><span class="WHIT"> </span><span class="PUNC">(</span><span class="NAME">CocoonJS.App.nativeExtensionObjectAvailable</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'>1267</span> </span><span class="WHIT">            </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="NAME">window.ext.IDTK_APP.makeCall</span><span class="PUNC">(</span><span class="STRN">"existsPath"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">path</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">storageType</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1268</span> </span><span class="WHIT">        </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1269</span> </span><span class="WHIT">        </span><span class="KEYW">return</span><span class="WHIT"> </span><span class="KEYW">false</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1270</span> </span><span class="WHIT">    </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>1271</span> 
+<span class='line'>1272</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1273</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the text dialog is finished by accepting it's content.
+<span class='line'>1274</span>      * The callback function's documentation is represented by {@link CocoonJS.App.OnTextDialogFinishedListener}
+<span class='line'>1275</span>      * @event
+<span class='line'>1276</span>      * @static
+<span class='line'>1277</span>      * @memberOf CocoonJS.App
+<span class='line'>1278</span>      */</span><span class="WHIT">
+<span class='line'>1279</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onTextDialogFinished</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"ontextdialogfinish"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1280</span> 
+<span class='line'>1281</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1282</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the text dialog is finished by dismissing it's content.
+<span class='line'>1283</span>      * The callback function does not receive any parameter.
+<span class='line'>1284</span>      * @event
+<span class='line'>1285</span>      * @static
+<span class='line'>1286</span>      * @memberOf CocoonJS.App
+<span class='line'>1287</span>      */</span><span class="WHIT">
+<span class='line'>1288</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onTextDialogCancelled</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"ontextdialogcancel"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1289</span> 
+<span class='line'>1290</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1291</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the text dialog is finished by accepting it's content.
+<span class='line'>1292</span>      * The callback function does not receive any parameter.
+<span class='line'>1293</span>      * @event
+<span class='line'>1294</span>      * @static
+<span class='line'>1295</span>      * @memberOf CocoonJS.App
+<span class='line'>1296</span>      */</span><span class="WHIT">
+<span class='line'>1297</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onMessageBoxConfirmed</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onmessageboxconfirmed"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1298</span> 
+<span class='line'>1299</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1300</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the text dialog is finished by dismissing it's content.
+<span class='line'>1301</span>      * The callback function does not receive any parameter.
+<span class='line'>1302</span>      * @event
+<span class='line'>1303</span>      * @static
+<span class='line'>1304</span>      * @memberOf CocoonJS.App
+<span class='line'>1305</span>      */</span><span class="WHIT">
+<span class='line'>1306</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onMessageBoxDenied</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onmessageboxdenied"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1307</span> 
+<span class='line'>1308</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1309</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the application is suspended.
+<span class='line'>1310</span>      * The callback function does not receive any parameter.
+<span class='line'>1311</span>      * @event
+<span class='line'>1312</span>      * @static
+<span class='line'>1313</span>      * @memberOf CocoonJS.App
+<span class='line'>1314</span>      */</span><span class="WHIT">
+<span class='line'>1315</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onSuspended</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onsuspended"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1316</span> 
+<span class='line'>1317</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1318</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the application is suspending.
+<span class='line'>1319</span>      * The callback function does not receive any parameter.
+<span class='line'>1320</span>      * @event
+<span class='line'>1321</span>      * @static
+<span class='line'>1322</span>      * @memberOf CocoonJS.App
+<span class='line'>1323</span>      */</span><span class="WHIT">
+<span class='line'>1324</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onSuspending</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onsuspending"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1325</span> 
+<span class='line'>1326</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1327</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the application is activated.
+<span class='line'>1328</span>      * The callback function does not receive any parameter.
+<span class='line'>1329</span>      * @event
+<span class='line'>1330</span>      * @static
+<span class='line'>1331</span>      * @memberOf CocoonJS.App
+<span class='line'>1332</span>      */</span><span class="WHIT">
+<span class='line'>1333</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onActivated</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onactivated"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1334</span> 
+<span class='line'>1335</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1336</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when headphones are plugged-in the device.
+<span class='line'>1337</span>      * The callback function does not receive any parameter.
+<span class='line'>1338</span>      * @event
+<span class='line'>1339</span>      * @static
+<span class='line'>1340</span>      * @memberOf CocoonJS.App
+<span class='line'>1341</span>      */</span><span class="WHIT">
+<span class='line'>1342</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onHeadphonesPluggedIn</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onheadphonespluggedin"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1343</span> 
+<span class='line'>1344</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1345</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when headphones are unplugged from the device.
+<span class='line'>1346</span>      * The callback function does not receive any parameter.
+<span class='line'>1347</span>      * @event
+<span class='line'>1348</span>      * @static
+<span class='line'>1349</span>      * @memberOf CocoonJS.App
+<span class='line'>1350</span>      */</span><span class="WHIT">
+<span class='line'>1351</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onHeadphonesUnplugged</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onheadphonesunplugged"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1352</span> 
+<span class='line'>1353</span> 
+<span class='line'>1354</span> </span><span class="WHIT">    </span><span class="COMM">/**
+<span class='line'>1355</span>      * This {@link CocoonJS.EventHandler} object allows listening to events called when the application receives a memory warning notification.
+<span class='line'>1356</span>      * The callback function does not receive any parameter.
+<span class='line'>1357</span>      * @event
+<span class='line'>1358</span>      * @static
+<span class='line'>1359</span>      * @memberOf CocoonJS.App
+<span class='line'>1360</span>      */</span><span class="WHIT">
+<span class='line'>1361</span> </span><span class="WHIT">    </span><span class="NAME">CocoonJS.App.onMemoryWarning</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="KEYW">new</span><span class="WHIT"> </span><span class="NAME">CocoonJS.EventHandler</span><span class="PUNC">(</span><span class="STRN">"IDTK_APP"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"App"</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"onmemorywarning"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1362</span> </span><span class="PUNC">}</span><span class="PUNC">)</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'>1363</span> </span></pre></body></html>

@@ -353,7 +353,7 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.captureScreen">captureScreen</a></b>(fileName, storageType)
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.captureScreen">captureScreen</a></b>(fileName, storageType, captureType, saveToGallery)
 								</div>
 								<div class="description">Captures a image of the screen synchronously and saves it to a file.</div>
 							</td>
@@ -362,7 +362,7 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
-								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.captureScreenAsync">captureScreenAsync</a></b>(Desired, storageType)
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.captureScreenAsync">captureScreenAsync</a></b>(fileName, storageType, captureType, saveToGallery, callback)
 								</div>
 								<div class="description">Captures a image of the screen asynchronously and saves it to a file.</div>
 							</td>
@@ -816,7 +816,7 @@ ul.inheritsList
 					<div class="fixedFont">&lt;static&gt; 
 					
 					
-					<span class="light">CocoonJS.App.</span><b>captureScreen</b>(fileName, storageType)
+					<span class="light">CocoonJS.App.</span><b>captureScreen</b>(fileName, storageType, captureType, saveToGallery)
 					
 					</div>
 					<div class="description">
@@ -824,6 +824,10 @@ ul.inheritsList
 						
 						
 					</div>
+					
+					
+					
+					<pre class="code">CocoonJS.App.captureScreen("myScreenshot.png");</pre>
 					
 					
 					
@@ -844,10 +848,19 @@ ul.inheritsList
 								<dd>The developer can specify the storage where it is stored. If no value is passed, the CocoonJS.App.StorageType.TMP_STORAGE value is used by default.</dd>
 							
 								<dt>
-									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.CaptureType.html">CocoonJS.App.CaptureType</a>}</span> <b>captureType.</b>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.CaptureType.html">CocoonJS.App.CaptureType</a>}</span> <b>captureType</b>
 									
 								</dt>
-								<dd>Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface 2: only captures system views]. @see CocoonJS.App.CaptureType</dd>
+								<dd>Optional value to choose capture type. See <a href="../symbols/CocoonJS.App.CaptureType.html">CocoonJS.App.CaptureType</a>.
+- 0: Captures everything.
+- 1: Only captures cocoonjs surface.
+- 2: Only captures system views.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{boolean}</span> <b>saveToGallery</b>
+									
+								</dt>
+								<dd>Optional value to specify if the capture image should be stored in the device image gallery or not.</dd>
 							
 							</dl>
 						
@@ -890,7 +903,7 @@ ul.inheritsList
 					<div class="fixedFont">&lt;static&gt; 
 					
 					
-					<span class="light">CocoonJS.App.</span><b>captureScreenAsync</b>(Desired, storageType)
+					<span class="light">CocoonJS.App.</span><b>captureScreenAsync</b>(fileName, storageType, captureType, saveToGallery, callback)
 					
 					</div>
 					<div class="description">
@@ -902,30 +915,45 @@ Async mode captures a final frame as soon as possible.
 					
 					
 					
+					<pre class="code">CocoonJS.App.captureScreenAsync("myScreenshot.png", CocoonJS.App.StorageType.TEMPORARY_STORAGE, false, CocoonJS.App.CaptureType.EVERYTHING, function(url, err){
+...
+});</pre>
+					
+					
+					
 						
 							<dl class="detailList">
 							<dt class="heading">Parameters:</dt>
 							
 								<dt>
-									<span class="light fixedFont">{string}</span> <b>Desired</b>
+									<span class="light fixedFont">{string}</span> <b>fileName</b>
 									
 								</dt>
-								<dd>file name and format (png or jpg). If no value is passed, "capture.png" value is used by default</dd>
+								<dd>Desired file name and format (png or jpg). If no value is passed, "capture.png" value is used by default</dd>
 							
 								<dt>
 									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.StorageType.html">CocoonJS.App.StorageType</a>}</span> <b>storageType</b>
-									<i>Optional</i>
-								</dt>
-								<dd>The developer can specify the storage where it is stored. If no value is passed, the CocoonJS.App.StorageType.TMP_STORAGE value is used by default.</dd>
-							
-								<dt>
-									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.CaptureType.html">CocoonJS.App.CaptureType</a>}</span> <b>captureType.</b>
 									
 								</dt>
-								<dd>Optional value to choose capture type. [0: captures everything, 1: only captures cocoonjs surface, 2: only captures system views]. @see CocoonJS.App.CaptureType</dd>
+								<dd>The developer can specify the storage where it is stored. If no value is passed, the {@see CocoonJS.App.StorageType.TEMPORARY_STORAGE} value is used by default.</dd>
 							
 								<dt>
-									<span class="light fixedFont">{function}</span> <b>callback.</b>
+									<span class="light fixedFont">{<a href="../symbols/CocoonJS.App.CaptureType.html">CocoonJS.App.CaptureType</a>}</span> <b>captureType</b>
+									
+								</dt>
+								<dd>Optional value to choose capture type. See <a href="../symbols/CocoonJS.App.CaptureType.html">CocoonJS.App.CaptureType</a>.
+- 0: Captures everything.
+- 1: Only captures cocoonjs surface.
+- 2: Only captures system views.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{boolean}</span> <b>saveToGallery</b>
+									
+								</dt>
+								<dd>Optional value to specify if the capture image should be stored in the device image gallery or not.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback</b>
 									
 								</dt>
 								<dd>Response callback, check the error property to monitor errors. Check the 'url' property to get the URL of the saved Image</dd>
@@ -2281,7 +2309,7 @@ The callback function's documentation is represented by CocoonJS.App.OnTextDialo
 <!-- ============================== footer ================================= -->
 		<div class="fineprint" style="clear:both">
 			
-			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Fri Jan 06 2017 15:41:34 GMT+0100 (CET)
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Tue Jan 24 2017 12:54:51 GMT+0100 (CET)
 		</div>
 	</body>
 </html>
