@@ -407,6 +407,15 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&lt;static&gt; &nbsp;</td>
 							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.dismissKeyboard">dismissKeyboard</a></b>()
+								</div>
+								<div class="description">Dismisses a keyboard which was previusly shown by <a href="../symbols/CocoonJS.App.html#.showKeyboard">CocoonJS.App.showKeyboard</a></div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.enableTouchInCocoonJS">enableTouchInCocoonJS</a></b>()
 								</div>
 								<div class="description">Enables the touch events in the CocoonJS environment.</div>
@@ -599,6 +608,15 @@ ul.inheritsList
 								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.share">share</a></b>(textToShare)
 								</div>
 								<div class="description">Opens a given share native window to share some specific text content in any system specific social sharing options.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">CocoonJS.App.<b><a href="../symbols/CocoonJS.App.html#.showKeyboard">showKeyboard</a></b>(param, callbacks)
+								</div>
+								<div class="description">Shows a keyboard to receive user input.</div>
 							</td>
 						</tr>
 					
@@ -1079,6 +1097,57 @@ function. For compatibility reasons, you can still have calls to this function e
 						
 						
 					</div>
+					
+					
+					
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".dismissKeyboard"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>dismissKeyboard</b>()
+					
+					</div>
+					<div class="description">
+						Dismisses a keyboard which was previusly shown by <a href="../symbols/CocoonJS.App.html#.showKeyboard">CocoonJS.App.showKeyboard</a>
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+var text = "";
+CocoonJS.App.showKeyboard({
+    type: CocoonJS.App.KeyboardType.TEXT,
+}, {
+    insertText: function(inserted) {
+        if (inserted === "A") { //Custom keyboard hide
+            CocoonJS.App.dismissKeyboard();
+        }
+        text += inserted;
+        console.log(text);
+    },
+    deleteBackward: function() {
+        text = text.slice(0, text.length - 1);
+        console.log(text);
+    },
+    done: function() {
+        console.log("user clicked done key");
+    },
+    cancel: function() {
+        console.log("user dismissed keyboard");
+    }
+});</pre>
 					
 					
 					
@@ -1856,6 +1925,77 @@ A valid typeName and at least one valid array for attribute, function or event h
 
 					<hr />
 				
+					<a name=".showKeyboard"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">CocoonJS.App.</span><b>showKeyboard</b>(param, callbacks)
+					
+					</div>
+					<div class="description">
+						Shows a keyboard to receive user input. The developer has to process input events and render the resulting text.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+var text = "";
+CocoonJS.App.showKeyboard({
+    type: CocoonJS.App.KeyboardType.TEXT,
+}, {
+    insertText: function(inserted) {
+        text += inserted;
+        console.log(text);
+    },
+    deleteBackward: function() {
+        text = text.slice(0, text.length - 1);
+        console.log(text);
+    },
+    done: function() {
+        console.log("user clicked done key");
+    },
+    cancel: function() {
+        console.log("user dismissed keyboard");
+    }
+});</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{object}</span> <b>param</b>
+									
+								</dt>
+								<dd>Object information.</dd>
+							
+								<dt>
+									<b>param.type</b>
+									<i>Optional</i>
+								</dt>
+								<dd>{CocoonJS.App.KeyboardType} Default value is CocoonJS.App.KeyboardType.TEXT. The keyboard type to be used when the text has to be introduced.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{callback}</span> <b>callbacks</b>
+									
+								</dt>
+								<dd>- <i>insertText</i>, <i>deleteBackward</i>, <i>done</i>, <i>cancel</i> callbacks called when the user clicks a key, confirms or cancels the keyboard session.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
 					<a name=".showMessageBox"> </a>
 					<div class="fixedFont">&lt;static&gt; 
 					
@@ -2309,7 +2449,7 @@ The callback function's documentation is represented by CocoonJS.App.OnTextDialo
 <!-- ============================== footer ================================= -->
 		<div class="fineprint" style="clear:both">
 			
-			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Thu Mar 23 2017 10:01:02 GMT+0100 (CET)
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Mon Aug 28 2017 12:52:34 GMT+0200 (CEST)
 		</div>
 	</body>
 </html>
